@@ -65,7 +65,7 @@ Useful Gradle tasks and flags:
 - `test`: runs unit tests (if any).
 
 
-### **Setup Instructions**
+## **Setup Instructions**
 
 1. **Clone the Repository:**
    First, clone the repository to your local machine:
