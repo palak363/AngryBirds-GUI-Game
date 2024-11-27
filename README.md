@@ -2,8 +2,6 @@
 
 A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
 
-This project was generated with a template including simple application launchers and an `ApplicationAdapter` extension that draws libGDX logo.
-
 ## Platforms
 
 - `core`: Main module with the application logic shared by all platforms.
@@ -29,8 +27,78 @@ Useful Gradle tasks and flags:
 - `lwjgl3:run`: starts the application.
 - `test`: runs unit tests (if any).
 
-Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
-For example, `core:clean` removes `build` folder only from the `core` project.
+Here are the steps to go from Git to running your project in short:
+
+---
+
+### **Steps from Git to Running the Game**
+
+1. **Clone the Repository:**
+   First, clone the repository to your local machine:
+   ```bash
+   git clone <repository-url>
+   cd <project-directory>
+   ```
+
+2. **Setup Gradle Wrapper:**
+   The project includes a Gradle wrapper, so you don't need to install Gradle manually.
+
+   For **Windows**:
+   ```bash
+   gradlew build
+   ```
+
+   For **Linux/Mac**:
+   ```bash
+   ./gradlew build
+   ```
+
+3. **Run the Game:**
+   Once Gradle is set up, run the game using the following command:
+   ```bash
+   ./gradlew lwjgl3:run
+   ```
+
+4. **Build the Game (optional):**
+   To create a JAR file, use:
+   ```bash
+   ./gradlew lwjgl3:jar
+   ```
+
+   Run the JAR file:
+   ```bash
+   java -jar lwjgl3/build/libs/your-jar-file.jar
+   ```
+
+5. **Testing:**
+   To run unit tests, execute:
+   ```bash
+   ./gradlew test
+   ```
+
+6. **Clean (optional):**
+   To remove build artifacts, use:
+   ```bash
+   ./gradlew clean
+   ```
+
+---
+
+### **Additional Setup for IDE (optional)**
+
+- **For Eclipse**:
+   ```bash
+   ./gradlew eclipse
+   ```
+
+- **For IntelliJ IDEA**:
+   ```bash
+   ./gradlew idea
+   ```
+
+---
+
+These steps should guide you from setting up the project to running the game and verifying it with tests.
 
 ### Online Sources Referenced
 
