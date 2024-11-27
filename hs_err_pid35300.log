@@ -1,0 +1,2180 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fff1ad941eb, pid=35300, tid=13208
+#
+# JRE version: Java(TM) SE Runtime Environment (22.0.1+8) (build 22.0.1+8-16)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (22.0.1+8-16, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# C  [igxelpicd64.dll+0xc141eb]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 -Duser.country=GB -Duser.language=en -Duser.variant com.bitbrawlers.angrybirds.lwjgl3.Lwjgl3Launcher
+
+Host: 12th Gen Intel(R) Core(TM) i7-1260P, 16 cores, 31G,  Windows 11 , 64 bit Build 22621 (10.0.22621.3958)
+Time: Sat Oct 19 18:12:11 2024 India Standard Time elapsed time: 7.776672 seconds (0d 0h 0m 7s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000166983e8810):  JavaThread "main"             [_thread_in_native, id=13208, stack(0x0000000255600000,0x0000000255700000) (1024K)]
+
+Stack: [0x0000000255600000,0x0000000255700000],  sp=0x00000002556f87b8,  free space=993k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [igxelpicd64.dll+0xc141eb]  (no source info available)
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 1119  org.lwjgl.opengl.GL11C.nglDrawElements(IIIJ)V (0 bytes) @ 0x00000166a9d5d486 [0x00000166a9d5d420+0x0000000000000066]
+J 1117 c1 org.lwjgl.opengl.GL11C.glDrawElements(ILjava/nio/ShortBuffer;)V (16 bytes) @ 0x00000166a2353084 [0x00000166a2352e60+0x0000000000000224]
+J 1115 c1 com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20.glDrawElements(IIILjava/nio/Buffer;)V (232 bytes) @ 0x00000166a2355a5c [0x00000166a2354940+0x000000000000111c]
+J 1102 c1 com.badlogic.gdx.graphics.Mesh.render(Lcom/badlogic/gdx/graphics/glutils/ShaderProgram;IIIZ)V (324 bytes) @ 0x00000166a234ad34 [0x00000166a234a7a0+0x0000000000000594]
+J 1111 c1 com.badlogic.gdx.graphics.Mesh.render(Lcom/badlogic/gdx/graphics/glutils/ShaderProgram;III)V (14 bytes) @ 0x00000166a234f844 [0x00000166a234f7c0+0x0000000000000084]
+J 1088 c1 com.badlogic.gdx.graphics.g2d.SpriteBatch.flush()V (196 bytes) @ 0x00000166a234449c [0x00000166a2343640+0x0000000000000e5c]
+J 1095 c1 com.badlogic.gdx.graphics.g2d.SpriteBatch.draw(Lcom/badlogic/gdx/graphics/Texture;FFFF)V (279 bytes) @ 0x00000166a2347654 [0x00000166a2347400+0x0000000000000254]
+J 1194 c1 com.bitbrawlers.angrybirds.x.render(F)V (412 bytes) @ 0x00000166a23704c4 [0x00000166a236fde0+0x00000000000006e4]
+J 1189 c1 com.badlogic.gdx.backends.lwjgl3.Lwjgl3Window.update()Z (217 bytes) @ 0x00000166a236d94c [0x00000166a236c980+0x0000000000000fcc]
+j  com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application.loop()V+111
+j  com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application.<init>(Lcom/badlogic/gdx/ApplicationListener;Lcom/badlogic/gdx/backends/lwjgl3/Lwjgl3ApplicationConfiguration;)V+269
+j  com.bitbrawlers.angrybirds.lwjgl3.Lwjgl3Launcher.createApplication()Lcom/badlogic/gdx/backends/lwjgl3/Lwjgl3Application;+14
+j  com.bitbrawlers.angrybirds.lwjgl3.Lwjgl3Launcher.main([Ljava/lang/String;)V+7
+v  ~StubRoutines::call_stub 0x00000166a95c100d
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000016700eed008
+
+
+Registers:
+RAX=0x000000007fac98c7, RBX=0x000001670a79a840, RCX=0x000001670d504e40, RDX=0x0000016700eed008
+RSP=0x00000002556f87b8, RBP=0x00000002556f88c0, RSI=0x00000002556fbef0, RDI=0x000001670adaeb60
+R8 =0x000000000000ebb1, R9 =0x0000000000000014, R10=0x000001670d504c80, R11=0x0000000000000000
+R12=0x0000000000000004, R13=0x0000000000000014, R14=0x000000000003b084, R15=0x000001670a7ca230
+RIP=0x00007fff1ad941eb, EFLAGS=0x0000000000010206
+
+
+Register to memory mapping:
+
+RAX=0x000000007fac98c7 is an unknown value
+RBX=0x000001670a79a840 points into unknown readable memory: 0x00000167072a6340 | 40 63 2a 07 67 01 00 00
+RCX=0x000001670d504e40 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+RDX=0x0000016700eed008 is an unknown value
+RSP=0x00000002556f87b8 is pointing into the stack for thread: 0x00000166983e8810
+RBP=0x00000002556f88c0 is pointing into the stack for thread: 0x00000166983e8810
+RSI=0x00000002556fbef0 is pointing into the stack for thread: 0x00000166983e8810
+RDI=0x000001670adaeb60 points into unknown readable memory: 0x00007fff1af76270 | 70 62 f7 1a ff 7f 00 00
+R8 =0x000000000000ebb1 is an unknown value
+R9 =0x0000000000000014 is an unknown value
+R10=0x000001670d504c80 points into unknown readable memory: 0xfefffffffeffffff | ff ff ff fe ff ff ff fe
+R11=0x0 is null
+R12=0x0000000000000004 is an unknown value
+R13=0x0000000000000014 is an unknown value
+R14=0x000000000003b084 is an unknown value
+R15=0x000001670a7ca230 points into unknown readable memory: 0xffffffff00000000 | 00 00 00 00 ff ff ff ff
+
+Top of Stack: (sp=0x00000002556f87b8)
+0x00000002556f87b8:   00007fff1a4b448d 000001670a79a840
+0x00000002556f87c8:   000001670a7ca268 000001670a79a840
+0x00000002556f87d8:   00007fff570ff886 00000167014c9e00
+0x00000002556f87e8:   0000016706e00000 00000002556f8968
+0x00000002556f87f8:   00007fffce9b753b 0000000000000000
+0x00000002556f8808:   00000000000000b3 0000000100000100
+0x00000002556f8818:   0000000140000000 000000000000ec21
+0x00000002556f8828:   00007fff00000000 00000002556f8900
+0x00000002556f8838:   0000016600000000 000001670a7ca268
+0x00000002556f8848:   00000002556fbef0 0000016600000000
+0x00000002556f8858:   000001670a887ec8 000001670a7ca262
+0x00000002556f8868:   0000000000000000 0000000000000000
+0x00000002556f8878:   000000000000013a 000001670ac19d10
+0x00000002556f8888:   0000000000000002 0000000000000000
+0x00000002556f8898:   0000016707dcd830 000001670a79a840
+0x00000002556f88a8:   00007fff00000000 2aaaaaaaaaaaaaab
+0x00000002556f88b8:   0000016708730368 0000000000000000
+0x00000002556f88c8:   0000016698296300 00000002556f8a90
+0x00000002556f88d8:   0000000000000000 00000166982902ac
+0x00000002556f88e8:   000001670ac2cd70 000001670873036c
+0x00000002556f88f8:   0000000000000002 0000016707dccd10
+0x00000002556f8908:   0000000000000028 0000036800000000
+0x00000002556f8918:   0000000000000030 0000000000000000
+0x00000002556f8928:   0000000000000003 0000000000000000
+0x00000002556f8938:   00000002556f89e9 00000166983b0000
+0x00000002556f8948:   00007fffe8dacc7a 0000016698290000
+0x00000002556f8958:   0000000000000004 00000002556f8970
+0x00000002556f8968:   0000004000000000 0000000000000000
+0x00000002556f8978:   0000000000000000 0000000000000002
+0x00000002556f8988:   0000000000000000 0000000000000000
+0x00000002556f8998:   0000000000000000 0000000000000000
+0x00000002556f89a8:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x00007fff1ad941eb)
+0x00007fff1ad940eb:   2c 85 c0 75 04 44 89 51 20 45 85 c9 75 04 44 89
+0x00007fff1ad940fb:   51 24 45 85 c0 75 04 44 89 51 28 85 d2 75 04 44
+0x00007fff1ad9410b:   89 51 2c 48 8b c1 c3 cc cc cc cc cc cc cc cc cc
+0x00007fff1ad9411b:   cc cc cc cc cc 33 c0 39 41 2c 74 06 b8 04 00 00
+0x00007fff1ad9412b:   00 c3 39 41 28 74 06 b8 03 00 00 00 c3 39 41 24
+0x00007fff1ad9413b:   74 06 b8 02 00 00 00 c3 39 41 20 0f 95 c0 c3 cc
+0x00007fff1ad9414b:   cc cc cc cc cc 45 85 c0 74 16 45 8b c9 45 8b c0
+0x00007fff1ad9415b:   8a 02 49 03 d1 88 01 48 ff c1 49 83 e8 01 75 f0
+0x00007fff1ad9416b:   c3 cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+0x00007fff1ad9417b:   cc cc cc cc cc 45 85 c0 74 19 45 8b c9 45 8b c0
+0x00007fff1ad9418b:   0f b7 02 49 03 d1 66 89 01 48 8d 49 02 49 83 e8
+0x00007fff1ad9419b:   01 75 ed c3 cc cc cc cc cc cc cc cc cc cc cc cc
+0x00007fff1ad941ab:   cc cc cc cc cc 45 85 c0 74 1f 45 8b c9 45 8b c0
+0x00007fff1ad941bb:   0f b7 02 66 89 01 48 8d 49 03 8a 42 02 49 03 d1
+0x00007fff1ad941cb:   88 41 ff 49 83 e8 01 75 e7 c3 cc cc cc cc cc cc
+0x00007fff1ad941db:   cc cc cc cc cc 45 85 c0 74 17 45 8b c9 45 8b c0
+0x00007fff1ad941eb:   8b 02 49 03 d1 89 01 48 8d 49 04 49 83 e8 01 75
+0x00007fff1ad941fb:   ef c3 cc cc cc cc cc cc cc cc cc cc cc cc cc cc
+0x00007fff1ad9420b:   cc cc cc cc cc 45 85 c0 74 1f 45 8b c9 45 8b c0
+0x00007fff1ad9421b:   8b 02 89 01 48 8d 49 06 0f b7 42 04 49 03 d1 66
+0x00007fff1ad9422b:   89 41 fe 49 83 e8 01 75 e7 c3 cc cc cc cc cc cc
+0x00007fff1ad9423b:   cc cc cc cc cc 45 85 c0 74 19 45 8b c9 45 8b c0
+0x00007fff1ad9424b:   48 8b 02 49 03 d1 48 89 01 48 8d 49 08 49 83 e8
+0x00007fff1ad9425b:   01 75 ed c3 cc cc cc cc cc cc cc cc cc cc cc cc
+0x00007fff1ad9426b:   cc cc cc cc cc 45 85 c0 74 1f 45 8b c9 45 8b c0
+0x00007fff1ad9427b:   48 8b 02 48 89 01 48 8d 49 0c 8b 42 08 49 03 d1
+0x00007fff1ad9428b:   89 41 fc 49 83 e8 01 75 e7 c3 cc cc cc cc cc cc
+0x00007fff1ad9429b:   cc cc cc cc cc 48 89 5c 24 08 45 85 c0 74 33 41
+0x00007fff1ad942ab:   8b d9 45 8b c8 4c 8b d2 4c 8b c1 4c 2b d1 41 bb
+0x00007fff1ad942bb:   02 00 00 00 4b 8b 04 02 49 89 00 4d 8d 40 08 49
+0x00007fff1ad942cb:   83 eb 01 75 ef 48 83 c1 10 48 03 d3 49 83 e9 01
+0x00007fff1ad942db:   75 d3 48 8b 5c 24 08 c3 cc cc cc cc cc cc cc cc 
+
+
+Stack slot to memory mapping:
+
+stack at sp + 0 slots: 0x00007fff1a4b448d igxelpicd64.dll
+stack at sp + 1 slots: 0x000001670a79a840 points into unknown readable memory: 0x00000167072a6340 | 40 63 2a 07 67 01 00 00
+stack at sp + 2 slots: 0x000001670a7ca268 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+stack at sp + 3 slots: 0x000001670a79a840 points into unknown readable memory: 0x00000167072a6340 | 40 63 2a 07 67 01 00 00
+stack at sp + 4 slots: 0x00007fff570ff886 jvm.dll
+stack at sp + 5 slots: 0x00000167014c9e00 is pointing into metadata
+stack at sp + 6 slots: 0x0000016706e00000 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+stack at sp + 7 slots: 0x00000002556f8968 is pointing into the stack for thread: 0x00000166983e8810
+
+
+Compiled method (n/a) 7920 1119     n 0       org.lwjgl.opengl.GL11C::nglDrawElements (native)
+ total in heap  [0x00000166a9d5d290,0x00000166a9d5d650] = 960
+ relocation     [0x00000166a9d5d3e8,0x00000166a9d5d420] = 56
+ main code      [0x00000166a9d5d420,0x00000166a9d5d645] = 549
+ stub code      [0x00000166a9d5d645,0x00000166a9d5d648] = 3
+ oops           [0x00000166a9d5d648,0x00000166a9d5d650] = 8
+
+[Constant Pool (empty)]
+
+[MachCode]
+[Entry Point]
+  # {method} {0x0000016701654d10} 'nglDrawElements' '(IIIJ)V' in 'org/lwjgl/opengl/GL11C'
+  # parm0:    rdx       = int
+  # parm1:    r8        = int
+  # parm2:    r9        = int
+  # parm3:    rdi:rdi   = long
+  #           [sp+0x80]  (sp of caller)
+  0x00000166a9d5d420: 448b 5208 | 49bb 0000 | 00bf 6601 | 0000 4d03 | d349 3bc2 | 0f84 0600 
+
+  0x00000166a9d5d438: ;   {runtime_call ic_miss_stub}
+  0x00000166a9d5d438: 0000 e941 | 138b ff90 
+[Verified Entry Point]
+  0x00000166a9d5d440: 8984 2400 | 80ff ff55 | 488b ec48 | 83ec 7090 | 4181 7f20 | 0100 0000 
+
+  0x00000166a9d5d458: ;   {runtime_call StubRoutines (final stubs)}
+  0x00000166a9d5d458: 7405 e881 | 7889 ff48 | 897c 2428 | 4c89 4c24 | 204d 8bc8 
+
+  0x00000166a9d5d46c: ;   {oop(a 'java/lang/Class'{0x0000000624d528c0} = 'org/lwjgl/opengl/GL11C')}
+  0x00000166a9d5d46c: 4c8b c249 | bec0 28d5 | 2406 0000 | 004c 8974 | 2460 4c8d | 7424 6049 | 8bd6 c5f8 
+
+  0x00000166a9d5d488: ;   {internal_word}
+  0x00000166a9d5d488: 7749 ba86 | d4d5 a966 | 0100 004d | 8997 a803 | 0000 4989 | a7a0 0300 
+
+  0x00000166a9d5d4a0: ;   {external_word}
+  0x00000166a9d5d4a0: 0049 ba9c | 305f 57ff | 7f00 0041 | 803a 000f | 844e 0000 | 0052 4150 
+
+  0x00000166a9d5d4b8: ;   {metadata({method} {0x0000016701654d10} 'nglDrawElements' '(IIIJ)V' in 'org/lwjgl/opengl/GL11C')}
+  0x00000166a9d5d4b8: 4151 48ba | 084d 6501 | 6701 0000 | 498b cf48 | 83ec 2040 | f6c4 0f0f | 8419 0000 | 0048 83ec 
+  0x00000166a9d5d4d8: ;   {runtime_call}
+  0x00000166a9d5d4d8: 0848 b840 | b50f 57ff | 7f00 00ff | d048 83c4 | 08e9 0c00 
+
+  0x00000166a9d5d4ec: ;   {runtime_call}
+  0x00000166a9d5d4ec: 0000 48b8 | 40b5 0f57 | ff7f 0000 | ffd0 4883 | c420 4159 | 4158 5a49 | 8d8f c003 | 0000 41c7 
+  0x00000166a9d5d50c: 8754 0400 | 0004 0000 
+
+  0x00000166a9d5d514: ;   {runtime_call}
+  0x00000166a9d5d514: 0048 b8e0 | c649 91ff | 7f00 00ff | d0c5 f877 | 41c7 8754 | 0400 0005 | 0000 00f0 | 8344 24c0 
+  0x00000166a9d5d534: 0049 3baf | 5804 0000 | 0f87 0e00 | 0000 4183 | bf50 0400 | 0000 0f84 | 2300 0000 | c5f8 7749 
+  0x00000166a9d5d554: 8bcf 4c8b | e448 83ec | 2048 83e4 
+
+  0x00000166a9d5d560: ;   {runtime_call}
+  0x00000166a9d5d560: f048 b8d0 | 1eda 56ff | 7f00 00ff | d049 8be4 | 4d33 e441 | c787 5404 | 0000 0800 | 0000 4183 
+  0x00000166a9d5d580: bfd0 0400 | 0002 0f84 | 9400 0000 
+
+  0x00000166a9d5d58c: ;   {external_word}
+  0x00000166a9d5d58c: 49ba 9c30 | 5f57 ff7f | 0000 4180 | 3a00 0f84 | 4400 0000 
+
+  0x00000166a9d5d5a0: ;   {metadata({method} {0x0000016701654d10} 'nglDrawElements' '(IIIJ)V' in 'org/lwjgl/opengl/GL11C')}
+  0x00000166a9d5d5a0: 48ba 084d | 6501 6701 | 0000 498b | cf48 83ec | 2040 f6c4 | 0f0f 8419 | 0000 0048 
+
+  0x00000166a9d5d5bc: ;   {runtime_call}
+  0x00000166a9d5d5bc: 83ec 0848 | b840 b50f | 57ff 7f00 | 00ff d048 | 83c4 08e9 | 0c00 0000 
+
+  0x00000166a9d5d5d4: ;   {runtime_call}
+  0x00000166a9d5d5d4: 48b8 40b5 | 0f57 ff7f | 0000 ffd0 | 4883 c420 | 49c7 87a0 | 0300 0000 | 0000 0049 | c787 a803 
+  0x00000166a9d5d5f4: 0000 0000 | 0000 c5f8 | 7749 8b8f | 3004 0000 | c781 0001 | 0000 0000 | 0000 c949 | 837f 0800 
+  0x00000166a9d5d614: 0f85 0100 
+
+  0x00000166a9d5d618: ;   {runtime_call StubRoutines (initial stubs)}
+  0x00000166a9d5d618: 0000 c3e9 | e038 86ff | c5f8 774c | 8be4 4883 | ec20 4883 
+
+  0x00000166a9d5d62c: ;   {runtime_call}
+  0x00000166a9d5d62c: e4f0 48b8 | 90ed 0f57 | ff7f 0000 | ffd0 498b | e44d 33e4 | e947 ffff | fff4 f4f4 
+[/MachCode]
+
+
+Compiled method (c1) 7926 1117       3       org.lwjgl.opengl.GL11C::glDrawElements (16 bytes)
+ total in heap  [0x00000166a2352c90,0x00000166a2353350] = 1728
+ relocation     [0x00000166a2352de8,0x00000166a2352e60] = 120
+ main code      [0x00000166a2352e60,0x00000166a2353190] = 816
+ stub code      [0x00000166a2353190,0x00000166a23531e0] = 80
+ oops           [0x00000166a23531e0,0x00000166a23531e8] = 8
+ metadata       [0x00000166a23531e8,0x00000166a2353210] = 40
+ scopes data    [0x00000166a2353210,0x00000166a2353298] = 136
+ scopes pcs     [0x00000166a2353298,0x00000166a2353338] = 160
+ dependencies   [0x00000166a2353338,0x00000166a2353340] = 8
+ nul chk table  [0x00000166a2353340,0x00000166a2353350] = 16
+
+[Constant Pool (empty)]
+
+[MachCode]
+[Verified Entry Point]
+  # {method} {0x00000167016550e8} 'glDrawElements' '(ILjava/nio/ShortBuffer;)V' in 'org/lwjgl/opengl/GL11C'
+  # parm0:    rdx       = int
+  # parm1:    r8:r8     = 'java/nio/ShortBuffer'
+  #           [sp+0xd0]  (sp of caller)
+  0x00000166a2352e60: 8984 2400 | 80ff ff55 | 4881 ecc0 | 0000 0090 | 4181 7f20 | 0100 0000 
+
+  0x00000166a2352e78: ;   {runtime_call StubRoutines (final stubs)}
+  0x00000166a2352e78: 7405 e861 
+
+  0x00000166a2352e7c: ;   {metadata(method data for {method} {0x00000167016550e8} 'glDrawElements' '(ILjava/nio/ShortBuffer;)V' in 'org/lwjgl/opengl/GL11C')}
+  0x00000166a2352e7c: 1e2a 0749 | b970 6675 | 0167 0100 | 0041 8bb1 | cc00 0000 | 83c6 0241 | 89b1 cc00 | 0000 81e6 
+  0x00000166a2352e9c: fe07 0000 | 85f6 0f84 | fa01 0000 
+
+  0x00000166a2352ea8: ; implicit exception: dispatches to 0x00000166a23530c3
+  0x00000166a2352ea8: 493b 004d 
+
+  0x00000166a2352eac: ;   {metadata(method data for {method} {0x00000167016550e8} 'glDrawElements' '(ILjava/nio/ShortBuffer;)V' in 'org/lwjgl/opengl/GL11C')}
+  0x00000166a2352eac: 8bc8 48be | 7066 7501 | 6701 0000 | 4883 8618 | 0100 0001 
+
+  0x00000166a2352ec0: ;   {metadata(method data for {method} {0x00000166bf048a50} 'remaining' '()I' in 'java/nio/Buffer')}
+  0x00000166a2352ec0: 49b9 a8cf | 1601 6701 | 0000 418b | b1cc 0000 | 0083 c602 | 4189 b1cc | 0000 0081 | e6fe ff1f 
+  0x00000166a2352ee0: 0085 f60f | 84df 0100 | 0045 8b48 | 1c41 8b70 | 1844 2bce 
+
+  0x00000166a2352ef4: ;   {metadata(method data for {method} {0x00000166bf048a50} 'remaining' '()I' in 'java/nio/Buffer')}
+  0x00000166a2352ef4: 4585 c948 | bfa8 cf16 | 0167 0100 | 0048 c7c3 | 1801 0000 | 7e07 48c7 | c328 0100 | 0048 8b04 
+  0x00000166a2352f14: 1f48 8d40 | 0148 8904 | 1f0f 8e15 
+
+  0x00000166a2352f20: ;   {metadata(method data for {method} {0x00000166bf048a50} 'remaining' '()I' in 'java/nio/Buffer')}
+  0x00000166a2352f20: 0000 0048 | bfa8 cf16 | 0167 0100 | 00ff 8738 | 0100 00e9 | 0600 0000 | 41b9 0000 | 0000 4489 
+  0x00000166a2352f40: 8c24 ac00 | 0000 8994 | 24a8 0000 
+
+  0x00000166a2352f4c: ;   {metadata(method data for {method} {0x00000167016550e8} 'glDrawElements' '(ILjava/nio/ShortBuffer;)V' in 'org/lwjgl/opengl/GL11C')}
+  0x00000166a2352f4c: 0048 bf70 | 6675 0167 | 0100 0048 | 8387 4801 
+
+  0x00000166a2352f5c: ;   {metadata(method data for {method} {0x000001670144a778} 'memAddress' '(Ljava/nio/ShortBuffer;)J' in 'org/lwjgl/system/MemoryUtil')}
+  0x00000166a2352f5c: 0000 0148 | bf20 6875 | 0167 0100 | 008b 9fcc | 0000 0083 | c302 899f | cc00 0000 | 81e3 feff 
+  0x00000166a2352f7c: 1f00 85db | 0f84 6301 | 0000 498b 
+
+  0x00000166a2352f88: ;   {metadata(method data for {method} {0x000001670144a778} 'memAddress' '(Ljava/nio/ShortBuffer;)J' in 'org/lwjgl/system/MemoryUtil')}
+  0x00000166a2352f88: f848 bb20 | 6875 0167 | 0100 0048 | 8383 1801 
+
+  0x00000166a2352f98: ;   {metadata(method data for {method} {0x000001670144a778} 'memAddress' '(Ljava/nio/ShortBuffer;)J' in 'org/lwjgl/system/MemoryUtil')}
+  0x00000166a2352f98: 0000 0148 | bf20 6875 | 0167 0100 | 0048 8387 | 4801 0000 
+
+  0x00000166a2352fac: ;   {metadata(method data for {method} {0x000001670144a490} 'memAddress0' '(Ljava/nio/Buffer;)J' in 'org/lwjgl/system/MemoryUtil')}
+  0x00000166a2352fac: 0148 bfb0 | 4e55 0167 | 0100 008b | 9fcc 0000 | 0083 c302 | 899f cc00 | 0000 81e3 | feff 1f00 
+  0x00000166a2352fcc: 85db 0f84 | 3601 0000 
+
+  0x00000166a2352fd4: ;   {oop(a 'sun/misc/Unsafe'{0x000000062571d9b8})}
+  0x00000166a2352fd4: 48bf b8d9 | 7125 0600 
+
+  0x00000166a2352fdc: ;   {metadata(method data for {method} {0x000001670144a490} 'memAddress0' '(Ljava/nio/Buffer;)J' in 'org/lwjgl/system/MemoryUtil')}
+  0x00000166a2352fdc: 0000 48bb | b04e 5501 | 6701 0000 | 4883 8318 | 0100 0001 
+
+  0x00000166a2352ff0: ;   {metadata(method data for {method} {0x00000167011539d8} 'getLong' '(Ljava/lang/Object;J)J' in 'sun/misc/Unsafe')}
+  0x00000166a2352ff0: 48bf d0f8 | 1801 6701 | 0000 8b9f | cc00 0000 | 83c3 0289 | 9fcc 0000 | 0081 e3fe | ff1f 0085 
+  0x00000166a2353010: db0f 8414 | 0100 0048 | c7c7 1000 | 0000 498b 
+
+  0x00000166a2353020: ;   {metadata(method data for {method} {0x000001670144a778} 'memAddress' '(Ljava/nio/ShortBuffer;)J' in 'org/lwjgl/system/MemoryUtil')}
+  0x00000166a2353020: 1c38 49b8 | 2068 7501 | 6701 0000 | 4983 8058 | 0100 0001 | 488b d641 | b801 0000 | 004c 8bcb 
+  0x00000166a2353040: 0f1f 8000 
+
+  0x00000166a2353044: ;   {static_call}
+  0x00000166a2353044: 0000 00e8 
+
+  0x00000166a2353048: ; ImmutableOopMap {}
+                      ;*invokestatic address {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.system.MemoryUtil::memAddress@9 (line 764)
+                      ; - org.lwjgl.opengl.GL11C::glDrawElements@9 (line 586)
+  0x00000166a2353048: b4a0 a007 
+
+  0x00000166a235304c: ;   {other}
+  0x00000166a235304c: 0f1f 8400 | bc03 0000 
+
+  0x00000166a2353054: ;   {metadata(method data for {method} {0x00000167016550e8} 'glDrawElements' '(ILjava/nio/ShortBuffer;)V' in 'org/lwjgl/opengl/GL11C')}
+  0x00000166a2353054: 48ba 7066 | 7501 6701 | 0000 4883 | 8258 0100 | 0001 8b94 | 24a8 0000 | 0044 8b84 | 24ac 0000 
+  0x00000166a2353074: 0041 b903 | 1400 0048 
+
+  0x00000166a235307c: ;   {static_call}
+  0x00000166a235307c: 8bf8 90e8 
+
+  0x00000166a2353080: ; ImmutableOopMap {}
+                      ;*invokestatic nglDrawElements {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11C::glDrawElements@12 (line 586)
+  0x00000166a2353080: bca3 a007 
+
+  0x00000166a2353084: ;   {other}
+  0x00000166a2353084: 0f1f 8400 | f403 0001 | 4881 c4c0 | 0000 005d 
+
+  0x00000166a2353094: ;   {poll_return}
+  0x00000166a2353094: 493b a758 | 0400 000f | 87ab 0000 
+
+  0x00000166a23530a0: ;   {metadata({method} {0x00000167016550e8} 'glDrawElements' '(ILjava/nio/ShortBuffer;)V' in 'org/lwjgl/opengl/GL11C')}
+  0x00000166a23530a0: 00c3 49ba | e050 6501 | 6701 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000166a23530b8: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a23530b8: ffe8 c242 
+
+  0x00000166a23530bc: ; ImmutableOopMap {r8=Oop }
+                      ;*synchronization entry
+                      ; - org.lwjgl.opengl.GL11C::glDrawElements@-1 (line 586)
+  0x00000166a23530bc: 3807 e9e5 
+
+  0x00000166a23530c0: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000166a23530c0: fdff ffe8 
+
+  0x00000166a23530c4: ; ImmutableOopMap {r8=Oop }
+                      ;*invokevirtual remaining {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11C::glDrawElements@2 (line 586)
+  0x00000166a23530c4: 38e8 3707 
+
+  0x00000166a23530c8: ;   {metadata({method} {0x00000166bf048a50} 'remaining' '()I' in 'java/nio/Buffer')}
+  0x00000166a23530c8: 49ba 488a | 04bf 6601 | 0000 4c89 | 5424 0848 | c704 24ff 
+
+  0x00000166a23530dc: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a23530dc: ffff ffe8 
+
+  0x00000166a23530e0: ; ImmutableOopMap {r8=Oop }
+                      ;*synchronization entry
+                      ; - java.nio.Buffer::remaining@-1 (line 521)
+                      ; - org.lwjgl.opengl.GL11C::glDrawElements@2 (line 586)
+  0x00000166a23530e0: 9c42 3807 | e900 feff 
+
+  0x00000166a23530e8: ;   {metadata({method} {0x000001670144a778} 'memAddress' '(Ljava/nio/ShortBuffer;)J' in 'org/lwjgl/system/MemoryUtil')}
+  0x00000166a23530e8: ff49 ba70 | a744 0167 | 0100 004c | 8954 2408 | 48c7 0424 | ffff ffff 
+
+  0x00000166a2353100: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2353100: e87b 4238 
+
+  0x00000166a2353104: ; ImmutableOopMap {r8=Oop }
+                      ;*synchronization entry
+                      ; - org.lwjgl.system.MemoryUtil::memAddress@-1 (line 764)
+                      ; - org.lwjgl.opengl.GL11C::glDrawElements@9 (line 586)
+  0x00000166a2353104: 07e9 7cfe 
+
+  0x00000166a2353108: ;   {metadata({method} {0x000001670144a490} 'memAddress0' '(Ljava/nio/Buffer;)J' in 'org/lwjgl/system/MemoryUtil')}
+  0x00000166a2353108: ffff 49ba | 88a4 4401 | 6701 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000166a2353120: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2353120: ffe8 5a42 
+
+  0x00000166a2353124: ; ImmutableOopMap {r8=Oop }
+                      ;*synchronization entry
+                      ; - org.lwjgl.system.MemoryUtil::memAddress0@-1 (line 730)
+                      ; - org.lwjgl.system.MemoryUtil::memAddress@6 (line 764)
+                      ; - org.lwjgl.opengl.GL11C::glDrawElements@9 (line 586)
+  0x00000166a2353124: 3807 e9a9 
+
+  0x00000166a2353128: ;   {metadata({method} {0x00000167011539d8} 'getLong' '(Ljava/lang/Object;J)J' in 'sun/misc/Unsafe')}
+  0x00000166a2353128: feff ff49 | bad0 3915 | 0167 0100 | 004c 8954 | 2408 48c7 | 0424 ffff 
+
+  0x00000166a2353140: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2353140: ffff e839 
+
+  0x00000166a2353144: ; ImmutableOopMap {r8=Oop }
+                      ;*synchronization entry
+                      ; - sun.misc.Unsafe::getLong@-1 (line 267)
+                      ; - org.lwjgl.system.MemoryUtil::memAddress0@7 (line 730)
+                      ; - org.lwjgl.system.MemoryUtil::memAddress@6 (line 764)
+                      ; - org.lwjgl.opengl.GL11C::glDrawElements@9 (line 586)
+  0x00000166a2353144: 4238 07e9 | cbfe ffff 
+
+  0x00000166a235314c: ;   {internal_word}
+  0x00000166a235314c: 49ba 9430 | 35a2 6601 | 0000 4d89 | 9770 0400 
+
+  0x00000166a235315c: ;   {runtime_call SafepointBlob}
+  0x00000166a235315c: 00e9 9e25 | 2c07 498b | 8708 0500 | 0049 c787 | 0805 0000 | 0000 0000 | 49c7 8710 | 0500 0000 
+  0x00000166a235317c: 0000 0048 | 81c4 c000 
+
+  0x00000166a2353184: ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00000166a2353184: 0000 5de9 | 74d8 3707 | f4f4 f4f4 
+[Stub Code]
+  0x00000166a2353190: ;   {no_reloc}
+  0x00000166a2353190: 48bb 0000 | 0000 0000 
+
+  0x00000166a2353198: ;   {runtime_call}
+  0x00000166a2353198: 0000 e9fb 
+
+  0x00000166a235319c: ;   {static_stub}
+  0x00000166a235319c: ffff ff48 | bb00 0000 | 0000 0000 
+
+  0x00000166a23531a8: ;   {runtime_call}
+  0x00000166a23531a8: 00e9 fbff 
+
+  0x00000166a23531ac: ;   {runtime_call handle_exception_from_callee Runtime1 stub}
+  0x00000166a23531ac: ffff e84d 
+
+  0x00000166a23531b0: ;   {external_word}
+  0x00000166a23531b0: 0538 0748 | b9c0 1837 | 57ff 7f00 | 0048 83e4 
+
+  0x00000166a23531c0: ;   {runtime_call}
+  0x00000166a23531c0: f048 b8c0 | 94fe 56ff | 7f00 00ff 
+
+  0x00000166a23531cc: ;   {section_word}
+  0x00000166a23531cc: d0f4 49ba | ce31 35a2 | 6601 0000 
+
+  0x00000166a23531d8: ;   {runtime_call DeoptimizationBlob}
+  0x00000166a23531d8: 4152 e9c1 | 172c 07f4 
+[/MachCode]
+
+
+Compiled method (c1) 7936 1115       3       com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements (232 bytes)
+ total in heap  [0x00000166a2354590,0x00000166a2356a40] = 9392
+ relocation     [0x00000166a23546e8,0x00000166a2354938] = 592
+ main code      [0x00000166a2354940,0x00000166a2356180] = 6208
+ stub code      [0x00000166a2356180,0x00000166a23562b0] = 304
+ oops           [0x00000166a23562b0,0x00000166a23562c8] = 24
+ metadata       [0x00000166a23562c8,0x00000166a2356320] = 88
+ scopes data    [0x00000166a2356320,0x00000166a23566a8] = 904
+ scopes pcs     [0x00000166a23566a8,0x00000166a23569f8] = 848
+ dependencies   [0x00000166a23569f8,0x00000166a2356a00] = 8
+ nul chk table  [0x00000166a2356a00,0x00000166a2356a40] = 64
+
+[Constant Pool (empty)]
+
+[MachCode]
+[Entry Point]
+  # {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20'
+  # this:     rdx:rdx   = 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20'
+  # parm0:    r8        = int
+  # parm1:    r9        = int
+  # parm2:    rdi       = int
+  # parm3:    rsi:rsi   = 'java/nio/Buffer'
+  #           [sp+0xd0]  (sp of caller)
+  0x00000166a2354940: 448b 5208 | 49bb 0000 | 00bf 6601 | 0000 4d03 | d34c 3bd0 
+
+  0x00000166a2354954: ;   {runtime_call ic_miss_stub}
+  0x00000166a2354954: 0f85 269e | 2b07 660f | 1f44 0000 
+[Verified Entry Point]
+  0x00000166a2354960: 8984 2400 | 80ff ff55 | 4881 ecc0 | 0000 0090 | 4181 7f20 | 0100 0000 
+
+  0x00000166a2354978: ;   {runtime_call StubRoutines (final stubs)}
+  0x00000166a2354978: 7405 e861 | 032a 0744 | 8984 2480 
+
+  0x00000166a2354984: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2354984: 0000 0048 | b8e0 4275 | 0167 0100 | 008b 88cc | 0000 0083 | c102 8988 | cc00 0000 | 81e1 fe07 
+  0x00000166a23549a4: 0000 85c9 | 0f84 5814 | 0000 4885 
+
+  0x00000166a23549b0: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a23549b0: f648 b9e0 | 4275 0167 | 0100 0075 | 0c80 8911 | 0100 0001 | e9af 0000 | 008b 5e08 | 49ba 0000 
+  0x00000166a23549d0: 00bf 6601 | 0000 4903 | da48 3b99 | 2001 0000 | 750d 4883 | 8128 0100 | 0001 e960 | 0000 0048 
+  0x00000166a23549f0: 3b99 3001 | 0000 750d | 4883 8138 | 0100 0001 | e94a 0000 | 0048 83b9 | 2001 0000 | 0075 1748 
+  0x00000166a2354a10: 8999 2001 | 0000 48c7 | 8128 0100 | 0001 0000 | 00e9 2900 | 0000 4883 | b930 0100 | 0000 7517 
+  0x00000166a2354a30: 4889 9930 | 0100 0048 | c781 3801 | 0000 0100 | 0000 e908 | 0000 0048 | 8381 1801 
+
+  0x00000166a2354a4c: ;   {metadata('java/nio/ShortBuffer')}
+  0x00000166a2354a4c: 0000 0148 | bba0 7304 | c066 0100 | 008b 4e08 | 49ba 0000 | 00bf 6601 | 0000 4903 | ca48 3b59 
+  0x00000166a2354a6c: 400f 8505 | 0000 00e9 | 0500 0000 | 4833 d2eb | 0748 c7c2 | 0100 0000 
+
+  0x00000166a2354a84: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2354a84: 85d2 48ba | e042 7501 | 6701 0000 | 48c7 c048 | 0100 0074 | 0748 c7c0 | 5801 0000 | 488b 0c02 
+  0x00000166a2354aa4: 488d 4901 | 4889 0c02 | 0f84 3200 | 0000 81ff | 0314 0000 
+
+  0x00000166a2354ab8: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2354ab8: 48ba e042 | 7501 6701 | 0000 48c7 | c078 0100 | 0074 0748 | c7c0 6801 | 0000 488b | 0c02 488d 
+  0x00000166a2354ad8: 4901 4889 | 0c02 0f84 | df0c 0000 
+
+  0x00000166a2354ae4: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2354ae4: 4885 f648 | b9e0 4275 | 0167 0100 | 0075 0c80 | 8999 0200 | 0001 e9af | 0000 008b | 5e08 49ba 
+  0x00000166a2354b04: 0000 00bf | 6601 0000 | 4903 da48 | 3b99 a802 | 0000 750d | 4883 81b0 | 0200 0001 | e960 0000 
+  0x00000166a2354b24: 0048 3b99 | b802 0000 | 750d 4883 | 81c0 0200 | 0001 e94a | 0000 0048 | 83b9 a802 | 0000 0075 
+  0x00000166a2354b44: 1748 8999 | a802 0000 | 48c7 81b0 | 0200 0001 | 0000 00e9 | 2900 0000 | 4883 b9b8 | 0200 0000 
+  0x00000166a2354b64: 7517 4889 | 99b8 0200 | 0048 c781 | c002 0000 | 0100 0000 | e908 0000 | 0048 8381 | a002 0000 
+  0x00000166a2354b84: ;   {metadata('java/nio/ByteBuffer')}
+  0x00000166a2354b84: 0148 bbb8 | 3f0a bf66 | 0100 008b | 4e08 49ba | 0000 00bf | 6601 0000 | 4903 ca48 | 3b59 400f 
+  0x00000166a2354ba4: 8505 0000 | 00e9 0500 | 0000 4833 | d2eb 0748 | c7c2 0100 | 0000 85d2 
+
+  0x00000166a2354bbc: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2354bbc: 48ba e042 | 7501 6701 | 0000 48c7 | c0d0 0200 | 0074 0748 | c7c0 e002 | 0000 488b | 0c02 488d 
+  0x00000166a2354bdc: 4901 4889 | 0c02 0f84 | 3200 0000 | 81ff 0314 
+
+  0x00000166a2354bec: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2354bec: 0000 48ba | e042 7501 | 6701 0000 | 48c7 c000 | 0300 0074 | 0748 c7c0 | f002 0000 | 488b 0c02 
+  0x00000166a2354c0c: 488d 4901 | 4889 0c02 | 0f84 e806 | 0000 4885 
+
+  0x00000166a2354c1c: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2354c1c: f648 b9e0 | 4275 0167 | 0100 0075 | 0c80 8951 | 0400 0001 | e9af 0000 | 008b 5e08 | 49ba 0000 
+  0x00000166a2354c3c: 00bf 6601 | 0000 4903 | da48 3b99 | 6004 0000 | 750d 4883 | 8168 0400 | 0001 e960 | 0000 0048 
+  0x00000166a2354c5c: 3b99 7004 | 0000 750d | 4883 8178 | 0400 0001 | e94a 0000 | 0048 83b9 | 6004 0000 | 0075 1748 
+  0x00000166a2354c7c: 8999 6004 | 0000 48c7 | 8168 0400 | 0001 0000 | 00e9 2900 | 0000 4883 | b970 0400 | 0000 7517 
+  0x00000166a2354c9c: 4889 9970 | 0400 0048 | c781 7804 | 0000 0100 | 0000 e908 | 0000 0048 | 8381 5804 
+
+  0x00000166a2354cb8: ;   {metadata('java/nio/ByteBuffer')}
+  0x00000166a2354cb8: 0000 0148 | bbb8 3f0a | bf66 0100 | 008b 4e08 | 49ba 0000 | 00bf 6601 | 0000 4903 | ca48 3b59 
+  0x00000166a2354cd8: 400f 8505 | 0000 00e9 | 0500 0000 | 4833 d2eb | 0748 c7c2 | 0100 0000 
+
+  0x00000166a2354cf0: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2354cf0: 85d2 48ba | e042 7501 | 6701 0000 | 48c7 c088 | 0400 0074 | 0748 c7c0 | 9804 0000 | 488b 0c02 
+  0x00000166a2354d10: 488d 4901 | 4889 0c02 | 0f84 3200 | 0000 81ff | 0114 0000 
+
+  0x00000166a2354d24: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2354d24: 48ba e042 | 7501 6701 | 0000 48c7 | c7b8 0400 | 0074 0748 | c7c7 a804 | 0000 488b | 043a 488d 
+  0x00000166a2354d44: 4001 4889 | 043a 0f84 | 9c02 0000 | 4889 7424 | 7066 6690 
+
+  0x00000166a2354d58: ;   {no_reloc}
+  0x00000166a2354d58: e9d9 1000 | 0000 0000 | 0000 80ba | 2001 0000 | 050f 85d6 | 1000 0049 | 8b87 b801 | 0000 488d 
+  0x00000166a2354d78: 7828 493b | bfc8 0100 | 000f 87be | 1000 0049 | 89bf b801 | 0000 48c7 | 0001 0000 | 0048 8bca 
+  0x00000166a2354d98: 49ba 0000 | 00bf 6601 | 0000 492b | ca89 4808 | 4833 c989 | 480c 4833 | c948 8948 | 1048 8948 
+  0x00000166a2354db8: 1848 8948 | 2048 8944 | 2478 660f | 1f44 0000 
+
+  0x00000166a2354dc8: ;   {no_reloc}
+  0x00000166a2354dc8: e994 1000 | 0000 0000 | 0000 498b | 87b8 0100 | 0048 8d78 | 1849 3bbf | c801 0000 | 0f87 8110 
+  0x00000166a2354de8: 0000 4989 | bfb8 0100 | 0048 c700 | 0100 0000 | 488b ca49 | ba00 0000 | bf66 0100 | 0049 2bca 
+  0x00000166a2354e08: 8948 0848 | 33c9 8948 | 0c48 33c9 | 4889 4810 | 4889 4424 | 684c 8bc0 
+
+  0x00000166a2354e20: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2354e20: 48ba e042 | 7501 6701 | 0000 4883 | 82e0 0500 
+
+  0x00000166a2354e30: ;   {metadata(method data for {method} {0x00000166bf427e20} '<init>' '()V' in 'java/lang/StringBuilder')}
+  0x00000166a2354e30: 0001 49b8 | e0ae 0001 | 6701 0000 | 418b 90cc | 0000 0083 | c202 4189 | 90cc 0000 | 0081 e2fe 
+  0x00000166a2354e50: ff1f 0085 | d20f 841d | 1000 004c 
+
+  0x00000166a2354e5c: ;   {metadata(method data for {method} {0x00000166bf427e20} '<init>' '()V' in 'java/lang/StringBuilder')}
+  0x00000166a2354e5c: 8bc0 48ba | e0ae 0001 | 6701 0000 | 4883 8218 | 0100 0001 | 41b8 1000 | 0000 488b | d066 0f1f 
+  0x00000166a2354e7c: ;   {optimized virtual_call}
+  0x00000166a2354e7c: 4400 00e8 
+
+  0x00000166a2354e80: ; ImmutableOopMap {[104]=Oop [112]=Oop [120]=Oop }
+                      ;*invokespecial <init> {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.lang.StringBuilder::<init>@3 (line 106)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@200 (line 301)
+  0x00000166a2354e80: fc9b 2b07 
+
+  0x00000166a2354e84: ;   {other}
+  0x00000166a2354e84: 0f1f 8400 | f408 0000 | 488b 4424 
+
+  0x00000166a2354e90: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2354e90: 6849 b8e0 | 4275 0167 | 0100 0049 | 8380 f005 
+
+  0x00000166a2354ea0: ;   {metadata(method data for {method} {0x00000166bf427c10} 'append' '(Ljava/lang/String;)Ljava/lang/StringBuilder;' in 'java/lang/StringBuilder')}
+  0x00000166a2354ea0: 0000 0149 | b810 b200 | 0167 0100 | 0041 8b90 | cc00 0000 | 83c2 0241 | 8990 cc00 | 0000 81e2 
+  0x00000166a2354ec0: feff 1f00 | 85d2 0f84 | cd0f 0000 | 488b 4424 
+
+  0x00000166a2354ed0: ;   {metadata(method data for {method} {0x00000166bf427c10} 'append' '(Ljava/lang/String;)Ljava/lang/StringBuilder;' in 'java/lang/StringBuilder')}
+  0x00000166a2354ed0: 6849 b810 | b200 0167 | 0100 0049 | 8380 1801 
+
+  0x00000166a2354ee0: ;   {oop("Can't use "{0x0000000625bd7770})}
+  0x00000166a2354ee0: 0000 0149 | b870 77bd | 2506 0000 | 0048 8b54 | 2468 0f1f 
+
+  0x00000166a2354ef4: ;   {optimized virtual_call}
+  0x00000166a2354ef4: 4400 00e8 
+
+  0x00000166a2354ef8: ; ImmutableOopMap {[104]=Oop [112]=Oop [120]=Oop }
+                      ;*invokespecial append {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.lang.StringBuilder::append@2 (line 179)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@205 (line 301)
+  0x00000166a2354ef8: 849b 2b07 
+
+  0x00000166a2354efc: ;   {other}
+  0x00000166a2354efc: 0f1f 8400 | 6c09 0001 | 488b 7424 | 7048 3b06 
+
+  0x00000166a2354f0c: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2354f0c: 488b d648 | bfe0 4275 | 0167 0100 | 0048 8387 | 2006 0000 | 018b 5608 | 49ba 0000 | 00bf 6601 
+  0x00000166a2354f2c: 0000 4903 | d248 8b52 | 7048 8b12 
+
+  0x00000166a2354f38: ; implicit exception: dispatches to 0x00000166a2355ebf
+  0x00000166a2354f38: 483b 0248 
+
+  0x00000166a2354f3c: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2354f3c: 8bf2 48bf | e042 7501 | 6701 0000 | 4883 8750 | 0600 0001 
+
+  0x00000166a2354f50: ;   {metadata(method data for {method} {0x00000166bf42f600} 'getName' '()Ljava/lang/String;' in 'java/lang/Class')}
+  0x00000166a2354f50: 48be 2851 | 0501 6701 | 0000 8bbe | cc00 0000 | 83c7 0289 | becc 0000 | 0081 e7fe | ff1f 0085 
+  0x00000166a2354f70: ff0f 844d | 0f00 008b | 722c 48c1 | e603 4885 
+
+  0x00000166a2354f80: ;   {metadata(method data for {method} {0x00000166bf42f600} 'getName' '()Ljava/lang/String;' in 'java/lang/Class')}
+  0x00000166a2354f80: f648 bf28 | 5105 0167 | 0100 0048 | c7c3 1801 | 0000 7407 | 48c7 c328 | 0100 0048 | 8b04 1f48 
+  0x00000166a2354fa0: 8d40 0148 | 8904 1f0f | 8415 0000 
+
+  0x00000166a2354fac: ;   {metadata(method data for {method} {0x00000166bf42f600} 'getName' '()Ljava/lang/String;' in 'java/lang/Class')}
+  0x00000166a2354fac: 0048 ba28 | 5105 0167 | 0100 00ff | 8238 0100 | 00e9 090c | 0000 488b 
+
+  0x00000166a2354fc4: ;   {metadata(method data for {method} {0x00000166bf42f600} 'getName' '()Ljava/lang/String;' in 'java/lang/Class')}
+  0x00000166a2354fc4: f248 bf28 | 5105 0167 | 0100 0048 | 8387 5001 
+
+  0x00000166a2354fd4: ;   {optimized virtual_call}
+  0x00000166a2354fd4: 0000 01e8 
+
+  0x00000166a2354fd8: ; ImmutableOopMap {[104]=Oop [120]=Oop }
+                      ;*invokevirtual initClassName {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.lang.Class::getName@14 (line 988)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@213 (line 301)
+  0x00000166a2354fd8: a49a 2b07 
+
+  0x00000166a2354fdc: ;   {other}
+  0x00000166a2354fdc: 0f1f 8400 | 4c0a 0002 | 488b f0e9 | df0b 0000 
+
+  0x00000166a2354fec: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2354fec: 4885 f648 | bfe0 4275 | 0167 0100 | 0075 0c80 | 8fc1 0400 | 0001 e9af | 0000 008b | 5e08 49ba 
+  0x00000166a235500c: 0000 00bf | 6601 0000 | 4903 da48 | 3b9f d004 | 0000 750d | 4883 87d8 | 0400 0001 | e960 0000 
+  0x00000166a235502c: 0048 3b9f | e004 0000 | 750d 4883 | 87e8 0400 | 0001 e94a | 0000 0048 | 83bf d004 | 0000 0075 
+  0x00000166a235504c: 1748 899f | d004 0000 | 48c7 87d8 | 0400 0001 | 0000 00e9 | 2900 0000 | 4883 bfe0 | 0400 0000 
+  0x00000166a235506c: 7517 4889 | 9fe0 0400 | 0048 c787 | e804 0000 | 0100 0000 | e908 0000 | 0048 8387 | c804 0000 
+  0x00000166a235508c: ;   {metadata('java/nio/ByteBuffer')}
+  0x00000166a235508c: 0148 bbb8 | 3f0a bf66 | 0100 008b | 7e08 49ba | 0000 00bf | 6601 0000 | 4903 fa48 | 3b5f 400f 
+  0x00000166a23550ac: 8534 0e00 | 00e9 0000 | 0000 483b | 0648 8bd6 
+
+  0x00000166a23550bc: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a23550bc: 48bf e042 | 7501 6701 | 0000 4883 | 87f8 0400 | 0001 8b56 | 1848 8bfe 
+
+  0x00000166a23550d4: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a23550d4: 48bb e042 | 7501 6701 | 0000 4883 | 8328 0500 | 0001 8b7e | 1c48 8bde 
+
+  0x00000166a23550ec: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a23550ec: 48b8 e042 | 7501 6701 | 0000 8b5b | 0849 ba00 | 0000 bf66 | 0100 0049 | 03da 483b | 9860 0500 
+  0x00000166a235510c: 0075 0d48 | 8380 6805 | 0000 01e9 | 6000 0000 | 483b 9870 | 0500 0075 | 0d48 8380 | 7805 0000 
+  0x00000166a235512c: 01e9 4a00 | 0000 4883 | b860 0500 | 0000 7517 | 4889 9860 | 0500 0048 | c780 6805 | 0000 0100 
+  0x00000166a235514c: 0000 e929 | 0000 0048 | 83b8 7005 | 0000 0075 | 1748 8998 | 7005 0000 | 48c7 8078 | 0500 0001 
+  0x00000166a235516c: 0000 00e9 | 0800 0000 | 4883 8058 | 0500 0001 | 4103 d14c | 8bc2 488b | d689 bc24 | 8400 0000 
+  0x00000166a235518c: 4889 b424 | 8800 0000 | 9048 b8ff | ffff ffff 
+
+  0x00000166a235519c: ;   {virtual_call}
+  0x00000166a235519c: ffff ffe8 
+
+  0x00000166a23551a0: ; ImmutableOopMap {[136]=Oop }
+                      ;*invokevirtual limit {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@171 (line 297)
+  0x00000166a23551a0: dc9b 2b07 
+
+  0x00000166a23551a4: ;   {other}
+  0x00000166a23551a4: 0f1f 8400 | 140c 0003 
+
+  0x00000166a23551ac: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a23551ac: 48ba e042 | 7501 6701 | 0000 4883 | 8288 0500 
+
+  0x00000166a23551bc: ;   {metadata(method data for {method} {0x0000016701626a58} 'glDrawElements' '(ILjava/nio/ByteBuffer;)V' in 'org/lwjgl/opengl/GL11')}
+  0x00000166a23551bc: 0001 48ba | c869 7501 | 6701 0000 | 448b 82cc | 0000 0041 | 83c0 0244 | 8982 cc00 | 0000 4181 
+  0x00000166a23551dc: e0fe ff1f | 0045 85c0 | 0f84 090d 
+
+  0x00000166a23551e8: ;   {metadata(method data for {method} {0x0000016701626a58} 'glDrawElements' '(ILjava/nio/ByteBuffer;)V' in 'org/lwjgl/opengl/GL11')}
+  0x00000166a23551e8: 0000 48ba | c869 7501 | 6701 0000 | 4883 8218 | 0100 0001 | 8b94 2480 | 0000 004c | 8b84 2488 
+  0x00000166a2355208: 0000 000f 
+
+  0x00000166a235520c: ;   {static_call}
+  0x00000166a235520c: 1f40 00e8 
+
+  0x00000166a2355210: ; ImmutableOopMap {[136]=Oop }
+                      ;*invokestatic glDrawElements {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawElements@2 (line 1899)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@178 (line 298)
+  0x00000166a2355210: 6c9e 2b07 
+
+  0x00000166a2355214: ;   {other}
+  0x00000166a2355214: 0f1f 8400 | 840c 0004 | 488b b424 | 8800 0000 
+
+  0x00000166a2355224: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2355224: 49b8 e042 | 7501 6701 | 0000 8b76 | 0849 ba00 | 0000 bf66 | 0100 0049 | 03f2 493b | b0a0 0500 
+  0x00000166a2355244: 0075 0d49 | 8380 a805 | 0000 01e9 | 6000 0000 | 493b b0b0 | 0500 0075 | 0d49 8380 | b805 0000 
+  0x00000166a2355264: 01e9 4a00 | 0000 4983 | b8a0 0500 | 0000 7517 | 4989 b0a0 | 0500 0049 | c780 a805 | 0000 0100 
+  0x00000166a2355284: 0000 e929 | 0000 0049 | 83b8 b005 | 0000 0075 | 1749 89b0 | b005 0000 | 49c7 80b8 | 0500 0001 
+  0x00000166a23552a4: 0000 00e9 | 0800 0000 | 4983 8098 | 0500 0001 | 448b 8424 | 8400 0000 | 488b 9424 | 8800 0000 
+  0x00000166a23552c4: 9048 b8ff | ffff ffff 
+
+  0x00000166a23552cc: ;   {virtual_call}
+  0x00000166a23552cc: ffff ffe8 
+
+  0x00000166a23552d0: ; ImmutableOopMap {}
+                      ;*invokevirtual limit {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@185 (line 299)
+  0x00000166a23552d0: ac9a 2b07 
+
+  0x00000166a23552d4: ;   {other}
+  0x00000166a23552d4: 0f1f 8400 | 440d 0005 
+
+  0x00000166a23552dc: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a23552dc: 48ba e042 | 7501 6701 | 0000 ff82 | c805 0000 | 4881 c4c0 | 0000 005d 
+
+  0x00000166a23552f4: ;   {poll_return}
+  0x00000166a23552f4: 493b a758 | 0400 000f | 8713 0c00 | 00c3 4489 | 8c24 9000 | 0000 4885 
+
+  0x00000166a235530c: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a235530c: f648 bfe0 | 4275 0167 | 0100 0075 | 0c80 8f09 | 0300 0001 | e9af 0000 | 008b 5e08 | 49ba 0000 
+  0x00000166a235532c: 00bf 6601 | 0000 4903 | da48 3b9f | 1803 0000 | 750d 4883 | 8720 0300 | 0001 e960 | 0000 0048 
+  0x00000166a235534c: 3b9f 2803 | 0000 750d | 4883 8730 | 0300 0001 | e94a 0000 | 0048 83bf | 1803 0000 | 0075 1748 
+  0x00000166a235536c: 899f 1803 | 0000 48c7 | 8720 0300 | 0001 0000 | 00e9 2900 | 0000 4883 | bf28 0300 | 0000 7517 
+  0x00000166a235538c: 4889 9f28 | 0300 0048 | c787 3003 | 0000 0100 | 0000 e908 | 0000 0048 | 8387 1003 
+
+  0x00000166a23553a8: ;   {metadata('java/nio/ByteBuffer')}
+  0x00000166a23553a8: 0000 0148 | bbb8 3f0a | bf66 0100 | 008b 7e08 | 49ba 0000 | 00bf 6601 | 0000 4903 | fa48 3b5f 
+  0x00000166a23553c8: 400f 855b | 0b00 00e9 | 0000 0000 | 488b d648 | 3b02 488b 
+
+  0x00000166a23553dc: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a23553dc: f248 bfe0 | 4275 0167 | 0100 008b | 7608 49ba | 0000 00bf | 6601 0000 | 4903 f248 | 3bb7 4803 
+  0x00000166a23553fc: 0000 750d | 4883 8750 | 0300 0001 | e960 0000 | 0048 3bb7 | 5803 0000 | 750d 4883 | 8760 0300 
+  0x00000166a235541c: 0001 e94a | 0000 0048 | 83bf 4803 | 0000 0075 | 1748 89b7 | 4803 0000 | 48c7 8750 | 0300 0001 
+  0x00000166a235543c: 0000 00e9 | 2900 0000 | 4883 bf58 | 0300 0000 | 7517 4889 | b758 0300 | 0048 c787 | 6003 0000 
+  0x00000166a235545c: 0100 0000 | e908 0000 | 0048 8387 | 4003 0000 | 0148 b8ff | ffff ffff 
+
+  0x00000166a2355474: ;   {virtual_call}
+  0x00000166a2355474: ffff ffe8 
+
+  0x00000166a2355478: ; ImmutableOopMap {}
+                      ;*invokevirtual asShortBuffer {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@83 (line 287)
+  0x00000166a2355478: 0499 2b07 
+
+  0x00000166a235547c: ;   {other}
+  0x00000166a235547c: 0f1f 8400 | ec0e 0006 
+
+  0x00000166a2355484: ; implicit exception: dispatches to 0x00000166a2355f38
+  0x00000166a2355484: 483b 004c 
+
+  0x00000166a2355488: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2355488: 8bc0 48ba | e042 7501 | 6701 0000 | 4883 8270 | 0300 0001 | 448b 4018 
+
+  0x00000166a23554a0: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a23554a0: 488b d048 | bee0 4275 | 0167 0100 | 0048 8386 | a003 0000 | 018b 701c 
+
+  0x00000166a23554b8: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a23554b8: 488b d048 | bfe0 4275 | 0167 0100 | 008b 5208 | 49ba 0000 | 00bf 6601 | 0000 4903 | d248 3b97 
+  0x00000166a23554d8: d803 0000 | 750d 4883 | 87e0 0300 | 0001 e960 | 0000 0048 | 3b97 e803 | 0000 750d | 4883 87f0 
+  0x00000166a23554f8: 0300 0001 | e94a 0000 | 0048 83bf | d803 0000 | 0075 1748 | 8997 d803 | 0000 48c7 | 87e0 0300 
+  0x00000166a2355518: 0001 0000 | 00e9 2900 | 0000 4883 | bfe8 0300 | 0000 7517 | 4889 97e8 | 0300 0048 | c787 f003 
+  0x00000166a2355538: 0000 0100 | 0000 e908 | 0000 0048 | 8387 d003 | 0000 0144 | 0384 2490 
+
+  0x00000166a2355550: ;   {metadata(method data for {method} {0x000001670108cdf8} 'limit' '(I)Ljava/nio/Buffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2355550: 0000 0048 | baf8 bc1c | 0167 0100 | 008b bacc | 0000 0083 | c702 89ba | cc00 0000 | 81e7 feff 
+  0x00000166a2355570: 1f00 85ff | 0f84 c309 | 0000 488b 
+
+  0x00000166a235557c: ;   {metadata(method data for {method} {0x000001670108cdf8} 'limit' '(I)Ljava/nio/Buffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a235557c: d048 bff8 | bc1c 0167 | 0100 0048 | 8387 1801 
+
+  0x00000166a235558c: ;   {metadata(method data for {method} {0x000001670108bb20} 'limit' '(I)Ljava/nio/ShortBuffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a235558c: 0000 0148 | ba88 be1c | 0167 0100 | 008b bacc | 0000 0083 | c702 89ba | cc00 0000 | 81e7 feff 
+  0x00000166a23555ac: 1f00 85ff | 0f84 a809 | 0000 488b 
+
+  0x00000166a23555b8: ;   {metadata(method data for {method} {0x000001670108bb20} 'limit' '(I)Ljava/nio/ShortBuffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a23555b8: d048 bf88 | be1c 0167 | 0100 0048 | 8387 1801 | 0000 0148 | 8bd0 89b4 | 2494 0000 | 0048 8984 
+  0x00000166a23555d8: 2498 0000 
+
+  0x00000166a23555dc: ;   {optimized virtual_call}
+  0x00000166a23555dc: 0066 90e8 
+
+  0x00000166a23555e0: ; ImmutableOopMap {[152]=Oop }
+                      ;*invokespecial limit {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.nio.ShortBuffer::limit@2 (line 1571)
+                      ; - java.nio.ShortBuffer::limit@2 (line 288)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@108 (line 290)
+  0x00000166a23555e0: 9c94 2b07 
+
+  0x00000166a23555e4: ;   {other}
+  0x00000166a23555e4: 0f1f 8400 | 5410 0007 
+
+  0x00000166a23555ec: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a23555ec: 48ba e042 | 7501 6701 | 0000 4883 | 8200 0400 
+
+  0x00000166a23555fc: ;   {metadata(method data for {method} {0x0000016701626b38} 'glDrawElements' '(ILjava/nio/ShortBuffer;)V' in 'org/lwjgl/opengl/GL11')}
+  0x00000166a23555fc: 0001 48ba | 0065 7501 | 6701 0000 | 448b 82cc | 0000 0041 | 83c0 0244 | 8982 cc00 | 0000 4181 
+  0x00000166a235561c: e0fe ff1f | 0045 85c0 | 0f84 5509 
+
+  0x00000166a2355628: ;   {metadata(method data for {method} {0x0000016701626b38} 'glDrawElements' '(ILjava/nio/ShortBuffer;)V' in 'org/lwjgl/opengl/GL11')}
+  0x00000166a2355628: 0000 48ba | 0065 7501 | 6701 0000 | 4883 8218 | 0100 0001 | 8b94 2480 | 0000 004c | 8b84 2498 
+  0x00000166a2355648: 0000 000f 
+
+  0x00000166a235564c: ;   {static_call}
+  0x00000166a235564c: 1f40 00e8 
+
+  0x00000166a2355650: ; ImmutableOopMap {[152]=Oop }
+                      ;*invokestatic glDrawElements {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawElements@2 (line 1913)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@115 (line 291)
+  0x00000166a2355650: 2c9a 2b07 
+
+  0x00000166a2355654: ;   {other}
+  0x00000166a2355654: 0f1f 8400 | c410 0008 | 488b 8424 | 9800 0000 
+
+  0x00000166a2355664: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2355664: 49b8 e042 | 7501 6701 | 0000 8b40 | 0849 ba00 | 0000 bf66 | 0100 0049 | 03c2 493b | 8018 0400 
+  0x00000166a2355684: 0075 0d49 | 8380 2004 | 0000 01e9 | 6000 0000 | 493b 8028 | 0400 0075 | 0d49 8380 | 3004 0000 
+  0x00000166a23556a4: 01e9 4a00 | 0000 4983 | b818 0400 | 0000 7517 | 4989 8018 | 0400 0049 | c780 2004 | 0000 0100 
+  0x00000166a23556c4: 0000 e929 | 0000 0049 | 83b8 2804 | 0000 0075 | 1749 8980 | 2804 0000 | 49c7 8030 | 0400 0001 
+  0x00000166a23556e4: 0000 00e9 | 0800 0000 | 4983 8010 | 0400 0001 
+
+  0x00000166a23556f4: ;   {metadata(method data for {method} {0x000001670108cdf8} 'limit' '(I)Ljava/nio/Buffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a23556f4: 49b8 f8bc | 1c01 6701 | 0000 418b | 90cc 0000 | 0083 c202 | 4189 90cc | 0000 0081 | e2fe ff1f 
+  0x00000166a2355714: 0085 d20f | 8483 0800 | 0048 8b84 | 2498 0000 
+
+  0x00000166a2355724: ;   {metadata(method data for {method} {0x000001670108cdf8} 'limit' '(I)Ljava/nio/Buffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2355724: 0049 b8f8 | bc1c 0167 | 0100 0049 | 8380 1801 
+
+  0x00000166a2355734: ;   {metadata(method data for {method} {0x000001670108bb20} 'limit' '(I)Ljava/nio/ShortBuffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2355734: 0000 0149 | b888 be1c | 0167 0100 | 0041 8b90 | cc00 0000 | 83c2 0241 | 8990 cc00 | 0000 81e2 
+  0x00000166a2355754: feff 1f00 | 85d2 0f84 | 6108 0000 | 488b 8424 | 9800 0000 
+
+  0x00000166a2355768: ;   {metadata(method data for {method} {0x000001670108bb20} 'limit' '(I)Ljava/nio/ShortBuffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2355768: 49b8 88be | 1c01 6701 | 0000 4983 | 8018 0100 | 0001 448b | 8424 9400 | 0000 488b | 9424 9800 
+  0x00000166a2355788: 0000 0f1f 
+
+  0x00000166a235578c: ;   {optimized virtual_call}
+  0x00000166a235578c: 4400 00e8 
+
+  0x00000166a2355790: ; ImmutableOopMap {[152]=Oop }
+                      ;*invokespecial limit {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.nio.ShortBuffer::limit@2 (line 1571)
+                      ; - java.nio.ShortBuffer::limit@2 (line 288)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@122 (line 292)
+  0x00000166a2355790: ec92 2b07 
+
+  0x00000166a2355794: ;   {other}
+  0x00000166a2355794: 0f1f 8400 | 0412 0009 
+
+  0x00000166a235579c: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a235579c: 49b8 e042 | 7501 6701 | 0000 41ff | 8040 0400 | 0048 81c4 | c000 0000 
+
+  0x00000166a23557b4: ;   {poll_return}
+  0x00000166a23557b4: 5d49 3ba7 | 5804 0000 | 0f87 2008 | 0000 c348 
+
+  0x00000166a23557c4: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a23557c4: 85f6 48bf | e042 7501 | 6701 0000 | 750c 808f | 8101 0000 | 01e9 af00 | 0000 8b5e | 0849 ba00 
+  0x00000166a23557e4: 0000 bf66 | 0100 0049 | 03da 483b | 9f90 0100 | 0075 0d48 | 8387 9801 | 0000 01e9 | 6000 0000 
+  0x00000166a2355804: 483b 9fa0 | 0100 0075 | 0d48 8387 | a801 0000 | 01e9 4a00 | 0000 4883 | bf90 0100 | 0000 7517 
+  0x00000166a2355824: 4889 9f90 | 0100 0048 | c787 9801 | 0000 0100 | 0000 e929 | 0000 0048 | 83bf a001 | 0000 0075 
+  0x00000166a2355844: 1748 899f | a001 0000 | 48c7 87a8 | 0100 0001 | 0000 00e9 | 0800 0000 | 4883 8788 | 0100 0001 
+  0x00000166a2355864: ;   {metadata('java/nio/ShortBuffer')}
+  0x00000166a2355864: 48bb a073 | 04c0 6601 | 0000 8b7e | 0849 ba00 | 0000 bf66 | 0100 0049 | 03fa 483b | 5f40 0f85 
+  0x00000166a2355884: 7007 0000 | e900 0000 | 0048 3b06 
+
+  0x00000166a2355890: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2355890: 488b d648 | bfe0 4275 | 0167 0100 | 0048 8387 | b801 0000 | 018b 5618 
+
+  0x00000166a23558a8: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a23558a8: 488b fe48 | bbe0 4275 | 0167 0100 | 0048 8383 | e801 0000 | 018b 7e1c 
+
+  0x00000166a23558c0: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a23558c0: 488b de48 | b8e0 4275 | 0167 0100 | 008b 5b08 | 49ba 0000 | 00bf 6601 | 0000 4903 | da48 3b98 
+  0x00000166a23558e0: 2002 0000 | 750d 4883 | 8028 0200 | 0001 e960 | 0000 0048 | 3b98 3002 | 0000 750d | 4883 8038 
+  0x00000166a2355900: 0200 0001 | e94a 0000 | 0048 83b8 | 2002 0000 | 0075 1748 | 8998 2002 | 0000 48c7 | 8028 0200 
+  0x00000166a2355920: 0001 0000 | 00e9 2900 | 0000 4883 | b830 0200 | 0000 7517 | 4889 9830 | 0200 0048 | c780 3802 
+  0x00000166a2355940: 0000 0100 | 0000 e908 | 0000 0048 | 8380 1802 | 0000 0141 
+
+  0x00000166a2355954: ;   {metadata(method data for {method} {0x000001670108cdf8} 'limit' '(I)Ljava/nio/Buffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2355954: 03d1 48bb | f8bc 1c01 | 6701 0000 | 8b83 cc00 | 0000 83c0 | 0289 83cc | 0000 0025 | feff 1f00 
+  0x00000166a2355974: 85c0 0f84 | 8a06 0000 
+
+  0x00000166a235597c: ;   {metadata(method data for {method} {0x000001670108cdf8} 'limit' '(I)Ljava/nio/Buffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a235597c: 488b de48 | b8f8 bc1c | 0167 0100 | 0048 8380 | 1801 0000 
+
+  0x00000166a2355990: ;   {metadata(method data for {method} {0x000001670108bb20} 'limit' '(I)Ljava/nio/ShortBuffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2355990: 0148 bb88 | be1c 0167 | 0100 008b | 83cc 0000 | 0083 c002 | 8983 cc00 | 0000 25fe | ff1f 0085 
+  0x00000166a23559b0: c00f 8470 | 0600 0048 
+
+  0x00000166a23559b8: ;   {metadata(method data for {method} {0x000001670108bb20} 'limit' '(I)Ljava/nio/ShortBuffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a23559b8: 8bde 48b8 | 88be 1c01 | 6701 0000 | 4883 8018 | 0100 0001 | 4c8b c248 | 8bd6 89bc | 24a8 0000 
+  0x00000166a23559d8: 0048 89b4 | 24a0 0000 | 0066 0f1f 
+
+  0x00000166a23559e4: ;   {optimized virtual_call}
+  0x00000166a23559e4: 4400 00e8 
+
+  0x00000166a23559e8: ; ImmutableOopMap {[160]=Oop }
+                      ;*invokespecial limit {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.nio.ShortBuffer::limit@2 (line 1571)
+                      ; - java.nio.ShortBuffer::limit@2 (line 288)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@42 (line 283)
+  0x00000166a23559e8: 54b4 a007 
+
+  0x00000166a23559ec: ;   {other}
+  0x00000166a23559ec: 0f1f 8400 | 5c14 000a 
+
+  0x00000166a23559f4: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a23559f4: 48ba e042 | 7501 6701 | 0000 4883 | 8248 0200 
+
+  0x00000166a2355a04: ;   {metadata(method data for {method} {0x0000016701626b38} 'glDrawElements' '(ILjava/nio/ShortBuffer;)V' in 'org/lwjgl/opengl/GL11')}
+  0x00000166a2355a04: 0001 48ba | 0065 7501 | 6701 0000 | 448b 82cc | 0000 0041 | 83c0 0244 | 8982 cc00 | 0000 4181 
+  0x00000166a2355a24: e0fe ff1f | 0045 85c0 | 0f84 1606 
+
+  0x00000166a2355a30: ;   {metadata(method data for {method} {0x0000016701626b38} 'glDrawElements' '(ILjava/nio/ShortBuffer;)V' in 'org/lwjgl/opengl/GL11')}
+  0x00000166a2355a30: 0000 48ba | 0065 7501 | 6701 0000 | 4883 8218 | 0100 0001 | 8b94 2480 | 0000 004c | 8b84 24a0 
+  0x00000166a2355a50: 0000 000f 
+
+  0x00000166a2355a54: ;   {static_call}
+  0x00000166a2355a54: 1f40 00e8 
+
+  0x00000166a2355a58: ; ImmutableOopMap {[160]=Oop }
+                      ;*invokestatic glDrawElements {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.lwjgl.opengl.GL11::glDrawElements@2 (line 1913)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@49 (line 284)
+  0x00000166a2355a58: 04d4 ffff 
+
+  0x00000166a2355a5c: ;   {other}
+  0x00000166a2355a5c: 0f1f 8400 | cc14 000b | 488b b424 | a000 0000 
+
+  0x00000166a2355a6c: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2355a6c: 49b8 e042 | 7501 6701 | 0000 8b76 | 0849 ba00 | 0000 bf66 | 0100 0049 | 03f2 493b | b060 0200 
+  0x00000166a2355a8c: 0075 0d49 | 8380 6802 | 0000 01e9 | 6000 0000 | 493b b070 | 0200 0075 | 0d49 8380 | 7802 0000 
+  0x00000166a2355aac: 01e9 4a00 | 0000 4983 | b860 0200 | 0000 7517 | 4989 b060 | 0200 0049 | c780 6802 | 0000 0100 
+  0x00000166a2355acc: 0000 e929 | 0000 0049 | 83b8 7002 | 0000 0075 | 1749 89b0 | 7002 0000 | 49c7 8078 | 0200 0001 
+  0x00000166a2355aec: 0000 00e9 | 0800 0000 | 4983 8058 | 0200 0001 
+
+  0x00000166a2355afc: ;   {metadata(method data for {method} {0x000001670108cdf8} 'limit' '(I)Ljava/nio/Buffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2355afc: 49b8 f8bc | 1c01 6701 | 0000 418b | 90cc 0000 | 0083 c202 | 4189 90cc | 0000 0081 | e2fe ff1f 
+  0x00000166a2355b1c: 0085 d20f | 8444 0500 | 0048 8bb4 | 24a0 0000 
+
+  0x00000166a2355b2c: ;   {metadata(method data for {method} {0x000001670108cdf8} 'limit' '(I)Ljava/nio/Buffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2355b2c: 0049 b8f8 | bc1c 0167 | 0100 0049 | 8380 1801 
+
+  0x00000166a2355b3c: ;   {metadata(method data for {method} {0x000001670108bb20} 'limit' '(I)Ljava/nio/ShortBuffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2355b3c: 0000 0149 | b888 be1c | 0167 0100 | 0041 8b90 | cc00 0000 | 83c2 0241 | 8990 cc00 | 0000 81e2 
+  0x00000166a2355b5c: feff 1f00 | 85d2 0f84 | 2205 0000 | 488b b424 | a000 0000 
+
+  0x00000166a2355b70: ;   {metadata(method data for {method} {0x000001670108bb20} 'limit' '(I)Ljava/nio/ShortBuffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2355b70: 49b8 88be | 1c01 6701 | 0000 4983 | 8018 0100 | 0001 448b | 8424 a800 | 0000 488b | 9424 a000 
+  0x00000166a2355b90: 0000 0f1f 
+
+  0x00000166a2355b94: ;   {optimized virtual_call}
+  0x00000166a2355b94: 4400 00e8 
+
+  0x00000166a2355b98: ; ImmutableOopMap {[160]=Oop }
+                      ;*invokespecial limit {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.nio.ShortBuffer::limit@2 (line 1571)
+                      ; - java.nio.ShortBuffer::limit@2 (line 288)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@56 (line 285)
+  0x00000166a2355b98: a4b2 a007 
+
+  0x00000166a2355b9c: ;   {other}
+  0x00000166a2355b9c: 0f1f 8400 | 0c16 000c 
+
+  0x00000166a2355ba4: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2355ba4: 49b8 e042 | 7501 6701 | 0000 41ff | 8088 0200 | 0048 81c4 | c000 0000 
+
+  0x00000166a2355bbc: ;   {poll_return}
+  0x00000166a2355bbc: 5d49 3ba7 | 5804 0000 | 0f87 e104 | 0000 c348 | 8b44 2468 
+
+  0x00000166a2355bd0: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2355bd0: 4c8b c048 | bae0 4275 | 0167 0100 | 0048 8382 | 8006 0000 
+
+  0x00000166a2355be4: ;   {metadata(method data for {method} {0x00000166bf427c10} 'append' '(Ljava/lang/String;)Ljava/lang/StringBuilder;' in 'java/lang/StringBuilder')}
+  0x00000166a2355be4: 0149 b810 | b200 0167 | 0100 0041 | 8b90 cc00 | 0000 83c2 | 0241 8990 | cc00 0000 | 81e2 feff 
+  0x00000166a2355c04: 1f00 85d2 | 0f84 b304 | 0000 4c8b 
+
+  0x00000166a2355c10: ;   {metadata(method data for {method} {0x00000166bf427c10} 'append' '(Ljava/lang/String;)Ljava/lang/StringBuilder;' in 'java/lang/StringBuilder')}
+  0x00000166a2355c10: c048 ba10 | b200 0167 | 0100 0048 | 8382 1801 | 0000 014c | 8bc6 488b | d066 0f1f 
+
+  0x00000166a2355c2c: ;   {optimized virtual_call}
+  0x00000166a2355c2c: 4400 00e8 
+
+  0x00000166a2355c30: ; ImmutableOopMap {[104]=Oop [120]=Oop }
+                      ;*invokespecial append {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.lang.StringBuilder::append@2 (line 179)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@216 (line 301)
+  0x00000166a2355c30: 4c8e 2b07 
+
+  0x00000166a2355c34: ;   {other}
+  0x00000166a2355c34: 0f1f 8400 | a416 000d | 488b 4424 
+
+  0x00000166a2355c40: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2355c40: 6849 b8e0 | 4275 0167 | 0100 0049 | 8380 b006 
+
+  0x00000166a2355c50: ;   {metadata(method data for {method} {0x00000166bf427c10} 'append' '(Ljava/lang/String;)Ljava/lang/StringBuilder;' in 'java/lang/StringBuilder')}
+  0x00000166a2355c50: 0000 0149 | b810 b200 | 0167 0100 | 0041 8b90 | cc00 0000 | 83c2 0241 | 8990 cc00 | 0000 81e2 
+  0x00000166a2355c70: feff 1f00 | 85d2 0f84 | 6604 0000 | 488b 4424 
+
+  0x00000166a2355c80: ;   {metadata(method data for {method} {0x00000166bf427c10} 'append' '(Ljava/lang/String;)Ljava/lang/StringBuilder;' in 'java/lang/StringBuilder')}
+  0x00000166a2355c80: 6849 b810 | b200 0167 | 0100 0049 | 8380 1801 
+
+  0x00000166a2355c90: ;   {oop(" with this method. Use ShortBuffer or ByteBuffer instead. Blame LWJGL"{0x0000000625971530})}
+  0x00000166a2355c90: 0000 0149 | b830 1597 | 2506 0000 | 0048 8b54 | 2468 0f1f 
+
+  0x00000166a2355ca4: ;   {optimized virtual_call}
+  0x00000166a2355ca4: 4400 00e8 
+
+  0x00000166a2355ca8: ; ImmutableOopMap {[104]=Oop [120]=Oop }
+                      ;*invokespecial append {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.lang.StringBuilder::append@2 (line 179)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@221 (line 301)
+  0x00000166a2355ca8: d48d 2b07 
+
+  0x00000166a2355cac: ;   {other}
+  0x00000166a2355cac: 0f1f 8400 | 1c17 000e | 488b 4424 
+
+  0x00000166a2355cb8: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2355cb8: 6848 bae0 | 4275 0167 | 0100 0048 | 8382 e006 
+
+  0x00000166a2355cc8: ;   {metadata(method data for {method} {0x00000166bf0085b8} 'toString' '()Ljava/lang/String;' in 'java/lang/StringBuilder')}
+  0x00000166a2355cc8: 0000 0148 | ba18 ba00 | 0167 0100 | 008b b2cc | 0000 0083 | c602 89b2 | cc00 0000 | 81e6 feff 
+  0x00000166a2355ce8: 1f00 85f6 | 0f84 1104 
+
+  0x00000166a2355cf0: ;   {metadata('java/lang/String')}
+  0x00000166a2355cf0: 0000 48ba | 60e4 00bf | 6601 0000 | 498b 87b8 | 0100 0048 | 8d78 1849 | 3bbf c801 | 0000 0f87 
+  0x00000166a2355d10: 1004 0000 | 4989 bfb8 | 0100 0048 | c700 0100 | 0000 488b | ca49 ba00 | 0000 bf66 | 0100 0049 
+  0x00000166a2355d30: 2bca 8948 | 0848 33c9 | 8948 0c48 | 33c9 4889 | 4810 4c8b 
+
+  0x00000166a2355d44: ;   {metadata(method data for {method} {0x00000166bf0085b8} 'toString' '()Ljava/lang/String;' in 'java/lang/StringBuilder')}
+  0x00000166a2355d44: c049 b918 | ba00 0167 | 0100 0049 | 8381 1801 
+
+  0x00000166a2355d54: ;   {metadata(method data for {method} {0x00000166bf41d558} '<init>' '(Ljava/lang/StringBuilder;)V' in 'java/lang/String')}
+  0x00000166a2355d54: 0000 0149 | b898 bb00 | 0167 0100 | 0045 8b88 | cc00 0000 | 4183 c102 | 4589 88cc | 0000 0041 
+  0x00000166a2355d74: 81e1 feff | 1f00 4585 | c90f 84ae | 0300 004c 
+
+  0x00000166a2355d84: ;   {metadata(method data for {method} {0x00000166bf41d558} '<init>' '(Ljava/lang/StringBuilder;)V' in 'java/lang/String')}
+  0x00000166a2355d84: 8bc0 49b9 | 98bb 0001 | 6701 0000 | 4983 8118 | 0100 0001 | 4c8b 4424 
+
+  0x00000166a2355d9c: ;   {oop(nullptr)}
+  0x00000166a2355d9c: 6849 b900 | 0000 0000 | 0000 0048 | 8bd0 4889 | 8424 b000 | 0000 0f1f 
+
+  0x00000166a2355db4: ;   {optimized virtual_call}
+  0x00000166a2355db4: 4400 00e8 
+
+  0x00000166a2355db8: ; ImmutableOopMap {[120]=Oop [176]=Oop }
+                      ;*invokespecial <init> {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.lang.String::<init>@3 (line 1534)
+                      ; - java.lang.StringBuilder::toString@5 (line 475)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@224 (line 301)
+  0x00000166a2355db8: c48c 2b07 
+
+  0x00000166a2355dbc: ;   {other}
+  0x00000166a2355dbc: 0f1f 8400 | 2c18 000f | 488b 4424 
+
+  0x00000166a2355dc8: ;   {metadata(method data for {method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2355dc8: 7849 b8e0 | 4275 0167 | 0100 0049 | 8380 1007 | 0000 014c | 8b84 24b0 | 0000 0048 | 8b54 2478 
+  0x00000166a2355de8: 0f1f 8000 
+
+  0x00000166a2355dec: ;   {optimized virtual_call}
+  0x00000166a2355dec: 0000 00e8 
+
+  0x00000166a2355df0: ; ImmutableOopMap {[120]=Oop }
+                      ;*invokespecial <init> {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@227 (line 301)
+  0x00000166a2355df0: 8c8c 2b07 
+
+  0x00000166a2355df4: ;   {other}
+  0x00000166a2355df4: 0f1f 8400 | 6418 0010 | 488b 4424 | 78e9 6903 
+
+  0x00000166a2355e04: ;   {metadata({method} {0x0000016701686ec0} 'glDrawElements' '(IIILjava/nio/Buffer;)V' in 'com/badlogic/gdx/backends/lwjgl3/Lwjgl3GL20')}
+  0x00000166a2355e04: 0000 49ba | b86e 6801 | 6701 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000166a2355e1c: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2355e1c: ffe8 5e15 
+
+  0x00000166a2355e20: ; ImmutableOopMap {rdx=Oop rsi=Oop }
+                      ;*synchronization entry
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@-1 (line 279)
+  0x00000166a2355e20: 3807 e987 
+
+  0x00000166a2355e24: ;   {metadata(nullptr)}
+  0x00000166a2355e24: ebff ff48 | ba00 0000 | 0000 0000 | 00b8 000f 
+
+  0x00000166a2355e34: ;   {runtime_call load_klass_patching Runtime1 stub}
+  0x00000166a2355e34: 050a e8c5 
+
+  0x00000166a2355e38: ; ImmutableOopMap {[112]=Oop }
+                      ;*new {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@192 (line 301)
+  0x00000166a2355e38: 0438 07e9 | 18ef ffff 
+
+  0x00000166a2355e40: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000166a2355e40: e8bb ba37 
+
+  0x00000166a2355e44: ; ImmutableOopMap {[112]=Oop }
+                      ;*new {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@192 (line 301)
+  0x00000166a2355e44: 0748 8bd2 
+
+  0x00000166a2355e48: ;   {runtime_call fast_new_instance_init_check Runtime1 stub}
+  0x00000166a2355e48: e8b3 c637 
+
+  0x00000166a2355e4c: ; ImmutableOopMap {[112]=Oop }
+                      ;*new {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@192 (line 301)
+  0x00000166a2355e4c: 07e9 6bef 
+
+  0x00000166a2355e50: ;   {metadata(nullptr)}
+  0x00000166a2355e50: ffff 48ba | 0000 0000 | 0000 0000 | b800 0f05 
+
+  0x00000166a2355e60: ;   {runtime_call load_klass_patching Runtime1 stub}
+  0x00000166a2355e60: 0ae8 9a04 
+
+  0x00000166a2355e64: ; ImmutableOopMap {rax=Oop [112]=Oop [120]=Oop }
+                      ;*new {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@196 (line 301)
+  0x00000166a2355e64: 3807 e95d | efff ff48 
+
+  0x00000166a2355e6c: ;   {runtime_call fast_new_instance Runtime1 stub}
+  0x00000166a2355e6c: 8bd2 e88d 
+
+  0x00000166a2355e70: ; ImmutableOopMap {[112]=Oop [120]=Oop }
+                      ;*new {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@196 (line 301)
+  0x00000166a2355e70: c337 07e9 | a0ef ffff 
+
+  0x00000166a2355e78: ;   {metadata({method} {0x00000166bf427e20} '<init>' '()V' in 'java/lang/StringBuilder')}
+  0x00000166a2355e78: 49ba 187e | 42bf 6601 | 0000 4c89 | 5424 0848 | c704 24ff 
+
+  0x00000166a2355e8c: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2355e8c: ffff ffe8 
+
+  0x00000166a2355e90: ; ImmutableOopMap {rax=Oop [104]=Oop [112]=Oop [120]=Oop }
+                      ;*synchronization entry
+                      ; - java.lang.StringBuilder::<init>@-1 (line 106)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@200 (line 301)
+  0x00000166a2355e90: ec14 3807 | e9c2 efff 
+
+  0x00000166a2355e98: ;   {metadata({method} {0x00000166bf427c10} 'append' '(Ljava/lang/String;)Ljava/lang/StringBuilder;' in 'java/lang/StringBuilder')}
+  0x00000166a2355e98: ff49 ba08 | 7c42 bf66 | 0100 004c | 8954 2408 | 48c7 0424 | ffff ffff 
+
+  0x00000166a2355eb0: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2355eb0: e8cb 1438 
+
+  0x00000166a2355eb4: ; ImmutableOopMap {[104]=Oop [112]=Oop [120]=Oop }
+                      ;*synchronization entry
+                      ; - java.lang.StringBuilder::append@-1 (line 179)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@205 (line 301)
+  0x00000166a2355eb4: 07e9 12f0 
+
+  0x00000166a2355eb8: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000166a2355eb8: ffff e841 
+
+  0x00000166a2355ebc: ; ImmutableOopMap {rsi=Oop [104]=Oop [120]=Oop }
+                      ;*invokevirtual getClass {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@210 (line 301)
+                      ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000166a2355ebc: ba37 07e8 
+
+  0x00000166a2355ec0: ; ImmutableOopMap {rdx=Oop [104]=Oop [120]=Oop }
+                      ;*invokevirtual getName {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@213 (line 301)
+  0x00000166a2355ec0: 3cba 3707 
+
+  0x00000166a2355ec4: ;   {metadata({method} {0x00000166bf42f600} 'getName' '()Ljava/lang/String;' in 'java/lang/Class')}
+  0x00000166a2355ec4: 49ba f8f5 | 42bf 6601 | 0000 4c89 | 5424 0848 | c704 24ff 
+
+  0x00000166a2355ed8: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2355ed8: ffff ffe8 
+
+  0x00000166a2355edc: ; ImmutableOopMap {rdx=Oop [104]=Oop [120]=Oop }
+                      ;*synchronization entry
+                      ; - java.lang.Class::getName@-1 (line 987)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@213 (line 301)
+  0x00000166a2355edc: a014 3807 | e992 f0ff | ff48 8934 
+
+  0x00000166a2355ee8: ;   {runtime_call throw_class_cast_exception Runtime1 stub}
+  0x00000166a2355ee8: 24e8 12de 
+
+  0x00000166a2355eec: ; ImmutableOopMap {}
+                      ;*checkcast {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@146 (line 294)
+                      ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000166a2355eec: 3707 e80d 
+
+  0x00000166a2355ef0: ; ImmutableOopMap {rsi=Oop }
+                      ;*invokevirtual position {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@153 (line 295)
+                      ;   {metadata({method} {0x0000016701626a58} 'glDrawElements' '(ILjava/nio/ByteBuffer;)V' in 'org/lwjgl/opengl/GL11')}
+  0x00000166a2355ef0: ba37 0749 | ba50 6a62 | 0167 0100 | 004c 8954 | 2408 48c7 | 0424 ffff 
+
+  0x00000166a2355f08: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2355f08: ffff e871 
+
+  0x00000166a2355f0c: ; ImmutableOopMap {[136]=Oop }
+                      ;*synchronization entry
+                      ; - org.lwjgl.opengl.GL11::glDrawElements@-1 (line 1899)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@178 (line 298)
+  0x00000166a2355f0c: 1438 07e9 | d6f2 ffff 
+
+  0x00000166a2355f14: ;   {internal_word}
+  0x00000166a2355f14: 49ba f452 | 35a2 6601 | 0000 4d89 | 9770 0400 
+
+  0x00000166a2355f24: ;   {runtime_call SafepointBlob}
+  0x00000166a2355f24: 00e9 d6f7 | 2b07 4889 
+
+  0x00000166a2355f2c: ;   {runtime_call throw_class_cast_exception Runtime1 stub}
+  0x00000166a2355f2c: 3424 e8cd 
+
+  0x00000166a2355f30: ; ImmutableOopMap {}
+                      ;*checkcast {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@80 (line 287)
+                      ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000166a2355f30: dd37 07e8 
+
+  0x00000166a2355f34: ; ImmutableOopMap {rdx=Oop }
+                      ;*invokevirtual asShortBuffer {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@83 (line 287)
+  0x00000166a2355f34: c8b9 3707 
+
+  0x00000166a2355f38: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000166a2355f38: e8c3 b937 
+
+  0x00000166a2355f3c: ; ImmutableOopMap {rax=Oop }
+                      ;*invokevirtual position {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@90 (line 288)
+                      ;   {metadata({method} {0x000001670108cdf8} 'limit' '(I)Ljava/nio/Buffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2355f3c: 0749 baf0 | cd08 0167 | 0100 004c | 8954 2408 | 48c7 0424 | ffff ffff 
+
+  0x00000166a2355f54: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2355f54: e827 1438 
+
+  0x00000166a2355f58: ; ImmutableOopMap {rax=Oop }
+                      ;*synchronization entry
+                      ; - java.nio.ShortBuffer::limit@-1 (line 288)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@108 (line 290)
+  0x00000166a2355f58: 07e9 1cf6 
+
+  0x00000166a2355f5c: ;   {metadata({method} {0x000001670108bb20} 'limit' '(I)Ljava/nio/ShortBuffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2355f5c: ffff 49ba | 18bb 0801 | 6701 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000166a2355f74: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2355f74: ffe8 0614 
+
+  0x00000166a2355f78: ; ImmutableOopMap {rax=Oop }
+                      ;*synchronization entry
+                      ; - java.nio.ShortBuffer::limit@-1 (line 1571)
+                      ; - java.nio.ShortBuffer::limit@2 (line 288)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@108 (line 290)
+  0x00000166a2355f78: 3807 e937 
+
+  0x00000166a2355f7c: ;   {metadata({method} {0x0000016701626b38} 'glDrawElements' '(ILjava/nio/ShortBuffer;)V' in 'org/lwjgl/opengl/GL11')}
+  0x00000166a2355f7c: f6ff ff49 | ba30 6b62 | 0167 0100 | 004c 8954 | 2408 48c7 | 0424 ffff 
+
+  0x00000166a2355f94: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2355f94: ffff e8e5 
+
+  0x00000166a2355f98: ; ImmutableOopMap {[152]=Oop }
+                      ;*synchronization entry
+                      ; - org.lwjgl.opengl.GL11::glDrawElements@-1 (line 1913)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@115 (line 291)
+  0x00000166a2355f98: 1338 07e9 | 8af6 ffff 
+
+  0x00000166a2355fa0: ;   {metadata({method} {0x000001670108cdf8} 'limit' '(I)Ljava/nio/Buffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2355fa0: 49ba f0cd | 0801 6701 | 0000 4c89 | 5424 0848 | c704 24ff 
+
+  0x00000166a2355fb4: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2355fb4: ffff ffe8 
+
+  0x00000166a2355fb8: ; ImmutableOopMap {[152]=Oop }
+                      ;*synchronization entry
+                      ; - java.nio.ShortBuffer::limit@-1 (line 288)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@122 (line 292)
+  0x00000166a2355fb8: c413 3807 | e95c f7ff 
+
+  0x00000166a2355fc0: ;   {metadata({method} {0x000001670108bb20} 'limit' '(I)Ljava/nio/ShortBuffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2355fc0: ff49 ba18 | bb08 0167 | 0100 004c | 8954 2408 | 48c7 0424 | ffff ffff 
+
+  0x00000166a2355fd8: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2355fd8: e8a3 1338 
+
+  0x00000166a2355fdc: ; ImmutableOopMap {[152]=Oop }
+                      ;*synchronization entry
+                      ; - java.nio.ShortBuffer::limit@-1 (line 1571)
+                      ; - java.nio.ShortBuffer::limit@2 (line 288)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@122 (line 292)
+  0x00000166a2355fdc: 07e9 7ef7 
+
+  0x00000166a2355fe0: ;   {internal_word}
+  0x00000166a2355fe0: ffff 49ba | b557 35a2 | 6601 0000 | 4d89 9770 
+
+  0x00000166a2355ff0: ;   {runtime_call SafepointBlob}
+  0x00000166a2355ff0: 0400 00e9 | 08f7 2b07 | 4889 3424 
+
+  0x00000166a2355ffc: ;   {runtime_call throw_class_cast_exception Runtime1 stub}
+  0x00000166a2355ffc: e8ff dc37 
+
+  0x00000166a2356000: ; ImmutableOopMap {}
+                      ;*checkcast {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@17 (line 280)
+                      ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000166a2356000: 07e8 fab8 
+
+  0x00000166a2356004: ; ImmutableOopMap {rsi=Oop }
+                      ;*invokevirtual position {reexecute=0 rethrow=0 return_oop=0}
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@24 (line 281)
+                      ;   {metadata({method} {0x000001670108cdf8} 'limit' '(I)Ljava/nio/Buffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2356004: 3707 49ba | f0cd 0801 | 6701 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000166a235601c: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a235601c: ffe8 5e13 
+
+  0x00000166a2356020: ; ImmutableOopMap {rsi=Oop }
+                      ;*synchronization entry
+                      ; - java.nio.ShortBuffer::limit@-1 (line 288)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@42 (line 283)
+  0x00000166a2356020: 3807 e955 
+
+  0x00000166a2356024: ;   {metadata({method} {0x000001670108bb20} 'limit' '(I)Ljava/nio/ShortBuffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2356024: f9ff ff49 | ba18 bb08 | 0167 0100 | 004c 8954 | 2408 48c7 | 0424 ffff 
+
+  0x00000166a235603c: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a235603c: ffff e83d 
+
+  0x00000166a2356040: ; ImmutableOopMap {rsi=Oop }
+                      ;*synchronization entry
+                      ; - java.nio.ShortBuffer::limit@-1 (line 1571)
+                      ; - java.nio.ShortBuffer::limit@2 (line 288)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@42 (line 283)
+  0x00000166a2356040: 1338 07e9 | 6ff9 ffff 
+
+  0x00000166a2356048: ;   {metadata({method} {0x0000016701626b38} 'glDrawElements' '(ILjava/nio/ShortBuffer;)V' in 'org/lwjgl/opengl/GL11')}
+  0x00000166a2356048: 49ba 306b | 6201 6701 | 0000 4c89 | 5424 0848 | c704 24ff 
+
+  0x00000166a235605c: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a235605c: ffff ffe8 
+
+  0x00000166a2356060: ; ImmutableOopMap {[160]=Oop }
+                      ;*synchronization entry
+                      ; - org.lwjgl.opengl.GL11::glDrawElements@-1 (line 1913)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@49 (line 284)
+  0x00000166a2356060: 1c13 3807 | e9c9 f9ff 
+
+  0x00000166a2356068: ;   {metadata({method} {0x000001670108cdf8} 'limit' '(I)Ljava/nio/Buffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2356068: ff49 baf0 | cd08 0167 | 0100 004c | 8954 2408 | 48c7 0424 | ffff ffff 
+
+  0x00000166a2356080: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2356080: e8fb 1238 
+
+  0x00000166a2356084: ; ImmutableOopMap {[160]=Oop }
+                      ;*synchronization entry
+                      ; - java.nio.ShortBuffer::limit@-1 (line 288)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@56 (line 285)
+  0x00000166a2356084: 07e9 9bfa 
+
+  0x00000166a2356088: ;   {metadata({method} {0x000001670108bb20} 'limit' '(I)Ljava/nio/ShortBuffer;' in 'java/nio/ShortBuffer')}
+  0x00000166a2356088: ffff 49ba | 18bb 0801 | 6701 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000166a23560a0: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a23560a0: ffe8 da12 
+
+  0x00000166a23560a4: ; ImmutableOopMap {[160]=Oop }
+                      ;*synchronization entry
+                      ; - java.nio.ShortBuffer::limit@-1 (line 1571)
+                      ; - java.nio.ShortBuffer::limit@2 (line 288)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@56 (line 285)
+  0x00000166a23560a4: 3807 e9bd 
+
+  0x00000166a23560a8: ;   {internal_word}
+  0x00000166a23560a8: faff ff49 | babd 5b35 | a266 0100 | 004d 8997 | 7004 0000 
+
+  0x00000166a23560bc: ;   {runtime_call SafepointBlob}
+  0x00000166a23560bc: e93f f62b 
+
+  0x00000166a23560c0: ;   {metadata({method} {0x00000166bf427c10} 'append' '(Ljava/lang/String;)Ljava/lang/StringBuilder;' in 'java/lang/StringBuilder')}
+  0x00000166a23560c0: 0749 ba08 | 7c42 bf66 | 0100 004c | 8954 2408 | 48c7 0424 | ffff ffff 
+
+  0x00000166a23560d8: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a23560d8: e8a3 1238 
+
+  0x00000166a23560dc: ; ImmutableOopMap {rsi=Oop rax=Oop [104]=Oop [120]=Oop }
+                      ;*synchronization entry
+                      ; - java.lang.StringBuilder::append@-1 (line 179)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@216 (line 301)
+  0x00000166a23560dc: 07e9 2cfb 
+
+  0x00000166a23560e0: ;   {metadata({method} {0x00000166bf427c10} 'append' '(Ljava/lang/String;)Ljava/lang/StringBuilder;' in 'java/lang/StringBuilder')}
+  0x00000166a23560e0: ffff 49ba | 087c 42bf | 6601 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000166a23560f8: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a23560f8: ffe8 8212 
+
+  0x00000166a23560fc: ; ImmutableOopMap {[104]=Oop [120]=Oop }
+                      ;*synchronization entry
+                      ; - java.lang.StringBuilder::append@-1 (line 179)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@221 (line 301)
+  0x00000166a23560fc: 3807 e979 
+
+  0x00000166a2356100: ;   {metadata({method} {0x00000166bf0085b8} 'toString' '()Ljava/lang/String;' in 'java/lang/StringBuilder')}
+  0x00000166a2356100: fbff ff49 | bab0 8500 | bf66 0100 | 004c 8954 | 2408 48c7 | 0424 ffff 
+
+  0x00000166a2356118: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2356118: ffff e861 
+
+  0x00000166a235611c: ; ImmutableOopMap {[104]=Oop [120]=Oop }
+                      ;*synchronization entry
+                      ; - java.lang.StringBuilder::toString@-1 (line 475)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@224 (line 301)
+  0x00000166a235611c: 1238 07e9 | cefb ffff 
+
+  0x00000166a2356124: ;   {runtime_call fast_new_instance Runtime1 stub}
+  0x00000166a2356124: 488b d2e8 
+
+  0x00000166a2356128: ; ImmutableOopMap {[104]=Oop [120]=Oop }
+                      ;*new {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.lang.StringBuilder::toString@0 (line 475)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@224 (line 301)
+  0x00000166a2356128: d4c0 3707 | e911 fcff 
+
+  0x00000166a2356130: ;   {metadata({method} {0x00000166bf41d558} '<init>' '(Ljava/lang/StringBuilder;)V' in 'java/lang/String')}
+  0x00000166a2356130: ff49 ba50 | d541 bf66 | 0100 004c | 8954 2408 | 48c7 0424 | ffff ffff 
+
+  0x00000166a2356148: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000166a2356148: e833 1238 
+
+  0x00000166a235614c: ; ImmutableOopMap {rax=Oop [104]=Oop [120]=Oop }
+                      ;*synchronization entry
+                      ; - java.lang.String::<init>@-1 (line 1534)
+                      ; - java.lang.StringBuilder::toString@5 (line 475)
+                      ; - com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDrawElements@224 (line 301)
+  0x00000166a235614c: 07e9 31fc | ffff 498b | 8708 0500 | 0049 c787 | 0805 0000 | 0000 0000 | 49c7 8710 | 0500 0000 
+  0x00000166a235616c: 0000 0048 | 81c4 c000 
+
+  0x00000166a2356174: ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00000166a2356174: 0000 5de9 | 84a8 3707 | f4f4 f4f4 
+[Stub Code]
+  0x00000166a2356180: ;   {no_reloc}
+  0x00000166a2356180: 0f1f 4400 
+
+  0x00000166a2356184: ;   {static_stub}
+  0x00000166a2356184: 0048 bb00 | 0000 0000 
+
+  0x00000166a235618c: ;   {runtime_call}
+  0x00000166a235618c: 0000 00e9 | fbff ffff 
+
+  0x00000166a2356194: ;   {static_stub}
+  0x00000166a2356194: 9048 bb00 | 0000 0000 
+
+  0x00000166a235619c: ;   {runtime_call}
+  0x00000166a235619c: 0000 00e9 | fbff ffff 
+
+  0x00000166a23561a4: ;   {static_stub}
+  0x00000166a23561a4: 9048 bb00 | 0000 0000 
+
+  0x00000166a23561ac: ;   {runtime_call}
+  0x00000166a23561ac: 0000 00e9 | fbff ffff 
+
+  0x00000166a23561b4: ;   {static_stub}
+  0x00000166a23561b4: 9048 bb00 | 0000 0000 
+
+  0x00000166a23561bc: ;   {runtime_call}
+  0x00000166a23561bc: 0000 00e9 | fbff ffff 
+
+  0x00000166a23561c4: ;   {static_stub}
+  0x00000166a23561c4: 9048 bb00 | 0000 0000 
+
+  0x00000166a23561cc: ;   {runtime_call}
+  0x00000166a23561cc: 0000 00e9 | fbff ffff 
+
+  0x00000166a23561d4: ;   {static_stub}
+  0x00000166a23561d4: 9048 bb00 | 0000 0000 
+
+  0x00000166a23561dc: ;   {runtime_call}
+  0x00000166a23561dc: 0000 00e9 | fbff ffff 
+
+  0x00000166a23561e4: ;   {static_stub}
+  0x00000166a23561e4: 9048 bb00 | 0000 0000 
+
+  0x00000166a23561ec: ;   {runtime_call}
+  0x00000166a23561ec: 0000 00e9 | fbff ffff 
+
+  0x00000166a23561f4: ;   {static_stub}
+  0x00000166a23561f4: 9048 bb00 | 0000 0000 
+
+  0x00000166a23561fc: ;   {runtime_call}
+  0x00000166a23561fc: 0000 00e9 | fbff ffff 
+
+  0x00000166a2356204: ;   {static_stub}
+  0x00000166a2356204: 9048 bb00 | 0000 0000 
+
+  0x00000166a235620c: ;   {runtime_call}
+  0x00000166a235620c: 0000 00e9 | fbff ffff 
+
+  0x00000166a2356214: ;   {static_stub}
+  0x00000166a2356214: 9048 bb00 | 0000 0000 
+
+  0x00000166a235621c: ;   {runtime_call}
+  0x00000166a235621c: 0000 00e9 | fbff ffff 
+
+  0x00000166a2356224: ;   {static_stub}
+  0x00000166a2356224: 9048 bb00 | 0000 0000 
+
+  0x00000166a235622c: ;   {runtime_call}
+  0x00000166a235622c: 0000 00e9 | fbff ffff 
+
+  0x00000166a2356234: ;   {static_stub}
+  0x00000166a2356234: 48bb 0000 | 0000 0000 
+
+  0x00000166a235623c: ;   {runtime_call}
+  0x00000166a235623c: 0000 e9fb 
+
+  0x00000166a2356240: ;   {static_stub}
+  0x00000166a2356240: ffff ff48 | bb00 0000 | 0000 0000 
+
+  0x00000166a235624c: ;   {runtime_call}
+  0x00000166a235624c: 00e9 fbff 
+
+  0x00000166a2356250: ;   {static_stub}
+  0x00000166a2356250: ffff 48bb | 0000 0000 | 0000 0000 
+
+  0x00000166a235625c: ;   {runtime_call}
+  0x00000166a235625c: e9fb ffff 
+
+  0x00000166a2356260: ;   {static_stub}
+  0x00000166a2356260: ff48 bb00 | 0000 0000 
+
+  0x00000166a2356268: ;   {runtime_call}
+  0x00000166a2356268: 0000 00e9 | fbff ffff 
+
+  0x00000166a2356270: ;   {static_stub}
+  0x00000166a2356270: 48bb 0000 | 0000 0000 
+
+  0x00000166a2356278: ;   {runtime_call}
+  0x00000166a2356278: 0000 e9fb 
+
+  0x00000166a235627c: ;   {runtime_call handle_exception_from_callee Runtime1 stub}
+  0x00000166a235627c: ffff ffe8 | 7cd4 3707 
+
+  0x00000166a2356284: ;   {external_word}
+  0x00000166a2356284: 48b9 c018 | 3757 ff7f | 0000 4883 
+
+  0x00000166a2356290: ;   {runtime_call}
+  0x00000166a2356290: e4f0 48b8 | c094 fe56 | ff7f 0000 
+
+  0x00000166a235629c: ;   {section_word}
+  0x00000166a235629c: ffd0 f449 | ba9f 6235 | a266 0100 
+
+  0x00000166a23562a8: ;   {runtime_call DeoptimizationBlob}
+  0x00000166a23562a8: 0041 52e9 | f0e6 2b07 
+[/MachCode]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000016707dce330, length=15, elements={
+0x00000166983e8810, 0x000001670002a780, 0x000001670002b3e0, 0x000001670002c6c0,
+0x000001670002d6b0, 0x000001670003a5d0, 0x00000167000628d0, 0x00000167000656f0,
+0x00000167000729c0, 0x000001670012f4e0, 0x0000016700062f60, 0x00000167000635f0,
+0x0000016700242d20, 0x0000016700063c80, 0x000001670ab3aa70
+}
+
+Java Threads: ( => current thread )
+=>0x00000166983e8810 JavaThread "main"                              [_thread_in_native, id=13208, stack(0x0000000255600000,0x0000000255700000) (1024K)]
+  0x000001670002a780 JavaThread "Reference Handler"          daemon [_thread_blocked, id=24460, stack(0x0000000255e00000,0x0000000255f00000) (1024K)]
+  0x000001670002b3e0 JavaThread "Finalizer"                  daemon [_thread_blocked, id=42284, stack(0x0000000255f00000,0x0000000256000000) (1024K)]
+  0x000001670002c6c0 JavaThread "Signal Dispatcher"          daemon [_thread_blocked, id=31008, stack(0x0000000256000000,0x0000000256100000) (1024K)]
+  0x000001670002d6b0 JavaThread "Attach Listener"            daemon [_thread_blocked, id=41960, stack(0x0000000256100000,0x0000000256200000) (1024K)]
+  0x000001670003a5d0 JavaThread "Service Thread"             daemon [_thread_blocked, id=42192, stack(0x0000000256200000,0x0000000256300000) (1024K)]
+  0x00000167000628d0 JavaThread "Monitor Deflation Thread"   daemon [_thread_blocked, id=29568, stack(0x0000000256300000,0x0000000256400000) (1024K)]
+  0x00000167000656f0 JavaThread "C2 CompilerThread0"         daemon [_thread_blocked, id=46804, stack(0x0000000256400000,0x0000000256500000) (1024K)]
+  0x00000167000729c0 JavaThread "C1 CompilerThread0"         daemon [_thread_blocked, id=48908, stack(0x0000000256500000,0x0000000256600000) (1024K)]
+  0x000001670012f4e0 JavaThread "C1 CompilerThread1"         daemon [_thread_blocked, id=45116, stack(0x0000000256600000,0x0000000256700000) (1024K)]
+  0x0000016700062f60 JavaThread "Notification Thread"        daemon [_thread_blocked, id=13436, stack(0x0000000256700000,0x0000000256800000) (1024K)]
+  0x00000167000635f0 JavaThread "Common-Cleaner"             daemon [_thread_blocked, id=9660, stack(0x0000000256800000,0x0000000256900000) (1024K)]
+  0x0000016700242d20 JavaThread "C1 CompilerThread2"         daemon [_thread_blocked, id=26680, stack(0x0000000256900000,0x0000000256a00000) (1024K)]
+  0x0000016700063c80 JavaThread "Thread-0"                   daemon [_thread_blocked, id=26524, stack(0x0000000256a00000,0x0000000256b00000) (1024K)]
+  0x000001670ab3aa70 JavaThread "LWJGL3 Timer"               daemon [_thread_blocked, id=31972, stack(0x0000000257a00000,0x0000000257b00000) (1024K)]
+Total: 15
+
+Other Threads:
+  0x0000016700012480 VMThread "VM Thread"                           [id=48856, stack(0x0000000255d00000,0x0000000255e00000) (1024K)]
+  0x00000166be314890 WatcherThread "VM Periodic Task Thread"        [id=30016, stack(0x0000000255c00000,0x0000000255d00000) (1024K)]
+  0x00000166986db980 WorkerThread "GC Thread#0"                     [id=45224, stack(0x0000000255700000,0x0000000255800000) (1024K)]
+  0x00000166986ec670 ConcurrentGCThread "G1 Main Marker"            [id=46244, stack(0x0000000255800000,0x0000000255900000) (1024K)]
+  0x00000166986ed180 WorkerThread "G1 Conc#0"                       [id=42504, stack(0x0000000255900000,0x0000000255a00000) (1024K)]
+  0x00000166be1e8150 ConcurrentGCThread "G1 Refine#0"               [id=28044, stack(0x0000000255a00000,0x0000000255b00000) (1024K)]
+  0x00000166be1e8cd0 ConcurrentGCThread "G1 Service"                [id=32392, stack(0x0000000255b00000,0x0000000255c00000) (1024K)]
+Total: 7
+
+Threads with active compile tasks:
+Total: 0
+
+VM state: not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000606000000, size: 8096 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x00000166bf000000-0x00000166bfc60000-0x00000166bfc60000), size 12976128, SharedBaseAddress: 0x00000166bf000000, ArchiveRelocationMode: 1.
+Compressed class space mapped at: 0x00000166c0000000-0x0000016700000000, reserved size: 1073741824
+Narrow klass base: 0x00000166bf000000, Narrow klass shift: 0, Narrow klass range: 0x41000000
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 32 size 80 Howl #buckets 8 coarsen threshold 7372 Howl Bitmap #cards 1024 size 144 coarsen threshold 921 Card regions per heap region 1 cards per card region 8192
+ CPUs: 16 total, 16 available
+ Memory: 32372M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (Zero based)
+ Heap Region Size: 4M
+ Heap Min Capacity: 8M
+ Heap Initial Capacity: 508M
+ Heap Max Capacity: 8096M
+ Pre-touch: Disabled
+ Parallel Workers: 13
+ Concurrent Workers: 3
+ Concurrent Refinement Workers: 13
+ Periodic GC: Disabled
+
+Heap:
+ garbage-first heap   total reserved 8290304K, committed 520192K, used 16384K [0x0000000606000000, 0x0000000800000000)
+  region size 4096K, 5 young (20480K), 0 survivors (0K)
+ Metaspace       used 5668K, committed 5888K, reserved 1114112K
+  class space    used 383K, committed 512K, reserved 1048576K
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, TAMS=top-at-mark-start, PB=parsable bottom
+|   0|0x0000000606000000, 0x0000000606400000, 0x0000000606400000|100%|HS|  |TAMS 0x0000000606000000| PB 0x0000000606000000| Complete |  0
+|   1|0x0000000606400000, 0x0000000606400000, 0x0000000606800000|  0%| F|  |TAMS 0x0000000606400000| PB 0x0000000606400000| Untracked |  0
+|   2|0x0000000606800000, 0x0000000606800000, 0x0000000606c00000|  0%| F|  |TAMS 0x0000000606800000| PB 0x0000000606800000| Untracked |  0
+|   3|0x0000000606c00000, 0x0000000606c00000, 0x0000000607000000|  0%| F|  |TAMS 0x0000000606c00000| PB 0x0000000606c00000| Untracked |  0
+|   4|0x0000000607000000, 0x0000000607000000, 0x0000000607400000|  0%| F|  |TAMS 0x0000000607000000| PB 0x0000000607000000| Untracked |  0
+|   5|0x0000000607400000, 0x0000000607400000, 0x0000000607800000|  0%| F|  |TAMS 0x0000000607400000| PB 0x0000000607400000| Untracked |  0
+|   6|0x0000000607800000, 0x0000000607800000, 0x0000000607c00000|  0%| F|  |TAMS 0x0000000607800000| PB 0x0000000607800000| Untracked |  0
+|   7|0x0000000607c00000, 0x0000000607c00000, 0x0000000608000000|  0%| F|  |TAMS 0x0000000607c00000| PB 0x0000000607c00000| Untracked |  0
+|   8|0x0000000608000000, 0x0000000608000000, 0x0000000608400000|  0%| F|  |TAMS 0x0000000608000000| PB 0x0000000608000000| Untracked |  0
+|   9|0x0000000608400000, 0x0000000608400000, 0x0000000608800000|  0%| F|  |TAMS 0x0000000608400000| PB 0x0000000608400000| Untracked |  0
+|  10|0x0000000608800000, 0x0000000608800000, 0x0000000608c00000|  0%| F|  |TAMS 0x0000000608800000| PB 0x0000000608800000| Untracked |  0
+|  11|0x0000000608c00000, 0x0000000608c00000, 0x0000000609000000|  0%| F|  |TAMS 0x0000000608c00000| PB 0x0000000608c00000| Untracked |  0
+|  12|0x0000000609000000, 0x0000000609000000, 0x0000000609400000|  0%| F|  |TAMS 0x0000000609000000| PB 0x0000000609000000| Untracked |  0
+|  13|0x0000000609400000, 0x0000000609400000, 0x0000000609800000|  0%| F|  |TAMS 0x0000000609400000| PB 0x0000000609400000| Untracked |  0
+|  14|0x0000000609800000, 0x0000000609800000, 0x0000000609c00000|  0%| F|  |TAMS 0x0000000609800000| PB 0x0000000609800000| Untracked |  0
+|  15|0x0000000609c00000, 0x0000000609c00000, 0x000000060a000000|  0%| F|  |TAMS 0x0000000609c00000| PB 0x0000000609c00000| Untracked |  0
+|  16|0x000000060a000000, 0x000000060a000000, 0x000000060a400000|  0%| F|  |TAMS 0x000000060a000000| PB 0x000000060a000000| Untracked |  0
+|  17|0x000000060a400000, 0x000000060a400000, 0x000000060a800000|  0%| F|  |TAMS 0x000000060a400000| PB 0x000000060a400000| Untracked |  0
+|  18|0x000000060a800000, 0x000000060a800000, 0x000000060ac00000|  0%| F|  |TAMS 0x000000060a800000| PB 0x000000060a800000| Untracked |  0
+|  19|0x000000060ac00000, 0x000000060ac00000, 0x000000060b000000|  0%| F|  |TAMS 0x000000060ac00000| PB 0x000000060ac00000| Untracked |  0
+|  20|0x000000060b000000, 0x000000060b000000, 0x000000060b400000|  0%| F|  |TAMS 0x000000060b000000| PB 0x000000060b000000| Untracked |  0
+|  21|0x000000060b400000, 0x000000060b400000, 0x000000060b800000|  0%| F|  |TAMS 0x000000060b400000| PB 0x000000060b400000| Untracked |  0
+|  22|0x000000060b800000, 0x000000060b800000, 0x000000060bc00000|  0%| F|  |TAMS 0x000000060b800000| PB 0x000000060b800000| Untracked |  0
+|  23|0x000000060bc00000, 0x000000060bc00000, 0x000000060c000000|  0%| F|  |TAMS 0x000000060bc00000| PB 0x000000060bc00000| Untracked |  0
+|  24|0x000000060c000000, 0x000000060c000000, 0x000000060c400000|  0%| F|  |TAMS 0x000000060c000000| PB 0x000000060c000000| Untracked |  0
+|  25|0x000000060c400000, 0x000000060c400000, 0x000000060c800000|  0%| F|  |TAMS 0x000000060c400000| PB 0x000000060c400000| Untracked |  0
+|  26|0x000000060c800000, 0x000000060c800000, 0x000000060cc00000|  0%| F|  |TAMS 0x000000060c800000| PB 0x000000060c800000| Untracked |  0
+|  27|0x000000060cc00000, 0x000000060cc00000, 0x000000060d000000|  0%| F|  |TAMS 0x000000060cc00000| PB 0x000000060cc00000| Untracked |  0
+|  28|0x000000060d000000, 0x000000060d000000, 0x000000060d400000|  0%| F|  |TAMS 0x000000060d000000| PB 0x000000060d000000| Untracked |  0
+|  29|0x000000060d400000, 0x000000060d400000, 0x000000060d800000|  0%| F|  |TAMS 0x000000060d400000| PB 0x000000060d400000| Untracked |  0
+|  30|0x000000060d800000, 0x000000060d800000, 0x000000060dc00000|  0%| F|  |TAMS 0x000000060d800000| PB 0x000000060d800000| Untracked |  0
+|  31|0x000000060dc00000, 0x000000060dc00000, 0x000000060e000000|  0%| F|  |TAMS 0x000000060dc00000| PB 0x000000060dc00000| Untracked |  0
+|  32|0x000000060e000000, 0x000000060e000000, 0x000000060e400000|  0%| F|  |TAMS 0x000000060e000000| PB 0x000000060e000000| Untracked |  0
+|  33|0x000000060e400000, 0x000000060e400000, 0x000000060e800000|  0%| F|  |TAMS 0x000000060e400000| PB 0x000000060e400000| Untracked |  0
+|  34|0x000000060e800000, 0x000000060e800000, 0x000000060ec00000|  0%| F|  |TAMS 0x000000060e800000| PB 0x000000060e800000| Untracked |  0
+|  35|0x000000060ec00000, 0x000000060ec00000, 0x000000060f000000|  0%| F|  |TAMS 0x000000060ec00000| PB 0x000000060ec00000| Untracked |  0
+|  36|0x000000060f000000, 0x000000060f000000, 0x000000060f400000|  0%| F|  |TAMS 0x000000060f000000| PB 0x000000060f000000| Untracked |  0
+|  37|0x000000060f400000, 0x000000060f400000, 0x000000060f800000|  0%| F|  |TAMS 0x000000060f400000| PB 0x000000060f400000| Untracked |  0
+|  38|0x000000060f800000, 0x000000060f800000, 0x000000060fc00000|  0%| F|  |TAMS 0x000000060f800000| PB 0x000000060f800000| Untracked |  0
+|  39|0x000000060fc00000, 0x000000060fc00000, 0x0000000610000000|  0%| F|  |TAMS 0x000000060fc00000| PB 0x000000060fc00000| Untracked |  0
+|  40|0x0000000610000000, 0x0000000610000000, 0x0000000610400000|  0%| F|  |TAMS 0x0000000610000000| PB 0x0000000610000000| Untracked |  0
+|  41|0x0000000610400000, 0x0000000610400000, 0x0000000610800000|  0%| F|  |TAMS 0x0000000610400000| PB 0x0000000610400000| Untracked |  0
+|  42|0x0000000610800000, 0x0000000610800000, 0x0000000610c00000|  0%| F|  |TAMS 0x0000000610800000| PB 0x0000000610800000| Untracked |  0
+|  43|0x0000000610c00000, 0x0000000610c00000, 0x0000000611000000|  0%| F|  |TAMS 0x0000000610c00000| PB 0x0000000610c00000| Untracked |  0
+|  44|0x0000000611000000, 0x0000000611000000, 0x0000000611400000|  0%| F|  |TAMS 0x0000000611000000| PB 0x0000000611000000| Untracked |  0
+|  45|0x0000000611400000, 0x0000000611400000, 0x0000000611800000|  0%| F|  |TAMS 0x0000000611400000| PB 0x0000000611400000| Untracked |  0
+|  46|0x0000000611800000, 0x0000000611800000, 0x0000000611c00000|  0%| F|  |TAMS 0x0000000611800000| PB 0x0000000611800000| Untracked |  0
+|  47|0x0000000611c00000, 0x0000000611c00000, 0x0000000612000000|  0%| F|  |TAMS 0x0000000611c00000| PB 0x0000000611c00000| Untracked |  0
+|  48|0x0000000612000000, 0x0000000612000000, 0x0000000612400000|  0%| F|  |TAMS 0x0000000612000000| PB 0x0000000612000000| Untracked |  0
+|  49|0x0000000612400000, 0x0000000612400000, 0x0000000612800000|  0%| F|  |TAMS 0x0000000612400000| PB 0x0000000612400000| Untracked |  0
+|  50|0x0000000612800000, 0x0000000612800000, 0x0000000612c00000|  0%| F|  |TAMS 0x0000000612800000| PB 0x0000000612800000| Untracked |  0
+|  51|0x0000000612c00000, 0x0000000612c00000, 0x0000000613000000|  0%| F|  |TAMS 0x0000000612c00000| PB 0x0000000612c00000| Untracked |  0
+|  52|0x0000000613000000, 0x0000000613000000, 0x0000000613400000|  0%| F|  |TAMS 0x0000000613000000| PB 0x0000000613000000| Untracked |  0
+|  53|0x0000000613400000, 0x0000000613400000, 0x0000000613800000|  0%| F|  |TAMS 0x0000000613400000| PB 0x0000000613400000| Untracked |  0
+|  54|0x0000000613800000, 0x0000000613800000, 0x0000000613c00000|  0%| F|  |TAMS 0x0000000613800000| PB 0x0000000613800000| Untracked |  0
+|  55|0x0000000613c00000, 0x0000000613c00000, 0x0000000614000000|  0%| F|  |TAMS 0x0000000613c00000| PB 0x0000000613c00000| Untracked |  0
+|  56|0x0000000614000000, 0x0000000614000000, 0x0000000614400000|  0%| F|  |TAMS 0x0000000614000000| PB 0x0000000614000000| Untracked |  0
+|  57|0x0000000614400000, 0x0000000614400000, 0x0000000614800000|  0%| F|  |TAMS 0x0000000614400000| PB 0x0000000614400000| Untracked |  0
+|  58|0x0000000614800000, 0x0000000614800000, 0x0000000614c00000|  0%| F|  |TAMS 0x0000000614800000| PB 0x0000000614800000| Untracked |  0
+|  59|0x0000000614c00000, 0x0000000614c00000, 0x0000000615000000|  0%| F|  |TAMS 0x0000000614c00000| PB 0x0000000614c00000| Untracked |  0
+|  60|0x0000000615000000, 0x0000000615000000, 0x0000000615400000|  0%| F|  |TAMS 0x0000000615000000| PB 0x0000000615000000| Untracked |  0
+|  61|0x0000000615400000, 0x0000000615400000, 0x0000000615800000|  0%| F|  |TAMS 0x0000000615400000| PB 0x0000000615400000| Untracked |  0
+|  62|0x0000000615800000, 0x0000000615800000, 0x0000000615c00000|  0%| F|  |TAMS 0x0000000615800000| PB 0x0000000615800000| Untracked |  0
+|  63|0x0000000615c00000, 0x0000000615c00000, 0x0000000616000000|  0%| F|  |TAMS 0x0000000615c00000| PB 0x0000000615c00000| Untracked |  0
+|  64|0x0000000616000000, 0x0000000616000000, 0x0000000616400000|  0%| F|  |TAMS 0x0000000616000000| PB 0x0000000616000000| Untracked |  0
+|  65|0x0000000616400000, 0x0000000616400000, 0x0000000616800000|  0%| F|  |TAMS 0x0000000616400000| PB 0x0000000616400000| Untracked |  0
+|  66|0x0000000616800000, 0x0000000616800000, 0x0000000616c00000|  0%| F|  |TAMS 0x0000000616800000| PB 0x0000000616800000| Untracked |  0
+|  67|0x0000000616c00000, 0x0000000616c00000, 0x0000000617000000|  0%| F|  |TAMS 0x0000000616c00000| PB 0x0000000616c00000| Untracked |  0
+|  68|0x0000000617000000, 0x0000000617000000, 0x0000000617400000|  0%| F|  |TAMS 0x0000000617000000| PB 0x0000000617000000| Untracked |  0
+|  69|0x0000000617400000, 0x0000000617400000, 0x0000000617800000|  0%| F|  |TAMS 0x0000000617400000| PB 0x0000000617400000| Untracked |  0
+|  70|0x0000000617800000, 0x0000000617800000, 0x0000000617c00000|  0%| F|  |TAMS 0x0000000617800000| PB 0x0000000617800000| Untracked |  0
+|  71|0x0000000617c00000, 0x0000000617c00000, 0x0000000618000000|  0%| F|  |TAMS 0x0000000617c00000| PB 0x0000000617c00000| Untracked |  0
+|  72|0x0000000618000000, 0x0000000618000000, 0x0000000618400000|  0%| F|  |TAMS 0x0000000618000000| PB 0x0000000618000000| Untracked |  0
+|  73|0x0000000618400000, 0x0000000618400000, 0x0000000618800000|  0%| F|  |TAMS 0x0000000618400000| PB 0x0000000618400000| Untracked |  0
+|  74|0x0000000618800000, 0x0000000618800000, 0x0000000618c00000|  0%| F|  |TAMS 0x0000000618800000| PB 0x0000000618800000| Untracked |  0
+|  75|0x0000000618c00000, 0x0000000618c00000, 0x0000000619000000|  0%| F|  |TAMS 0x0000000618c00000| PB 0x0000000618c00000| Untracked |  0
+|  76|0x0000000619000000, 0x0000000619000000, 0x0000000619400000|  0%| F|  |TAMS 0x0000000619000000| PB 0x0000000619000000| Untracked |  0
+|  77|0x0000000619400000, 0x0000000619400000, 0x0000000619800000|  0%| F|  |TAMS 0x0000000619400000| PB 0x0000000619400000| Untracked |  0
+|  78|0x0000000619800000, 0x0000000619800000, 0x0000000619c00000|  0%| F|  |TAMS 0x0000000619800000| PB 0x0000000619800000| Untracked |  0
+|  79|0x0000000619c00000, 0x0000000619c00000, 0x000000061a000000|  0%| F|  |TAMS 0x0000000619c00000| PB 0x0000000619c00000| Untracked |  0
+|  80|0x000000061a000000, 0x000000061a000000, 0x000000061a400000|  0%| F|  |TAMS 0x000000061a000000| PB 0x000000061a000000| Untracked |  0
+|  81|0x000000061a400000, 0x000000061a400000, 0x000000061a800000|  0%| F|  |TAMS 0x000000061a400000| PB 0x000000061a400000| Untracked |  0
+|  82|0x000000061a800000, 0x000000061a800000, 0x000000061ac00000|  0%| F|  |TAMS 0x000000061a800000| PB 0x000000061a800000| Untracked |  0
+|  83|0x000000061ac00000, 0x000000061ac00000, 0x000000061b000000|  0%| F|  |TAMS 0x000000061ac00000| PB 0x000000061ac00000| Untracked |  0
+|  84|0x000000061b000000, 0x000000061b000000, 0x000000061b400000|  0%| F|  |TAMS 0x000000061b000000| PB 0x000000061b000000| Untracked |  0
+|  85|0x000000061b400000, 0x000000061b400000, 0x000000061b800000|  0%| F|  |TAMS 0x000000061b400000| PB 0x000000061b400000| Untracked |  0
+|  86|0x000000061b800000, 0x000000061b800000, 0x000000061bc00000|  0%| F|  |TAMS 0x000000061b800000| PB 0x000000061b800000| Untracked |  0
+|  87|0x000000061bc00000, 0x000000061bc00000, 0x000000061c000000|  0%| F|  |TAMS 0x000000061bc00000| PB 0x000000061bc00000| Untracked |  0
+|  88|0x000000061c000000, 0x000000061c000000, 0x000000061c400000|  0%| F|  |TAMS 0x000000061c000000| PB 0x000000061c000000| Untracked |  0
+|  89|0x000000061c400000, 0x000000061c400000, 0x000000061c800000|  0%| F|  |TAMS 0x000000061c400000| PB 0x000000061c400000| Untracked |  0
+|  90|0x000000061c800000, 0x000000061c800000, 0x000000061cc00000|  0%| F|  |TAMS 0x000000061c800000| PB 0x000000061c800000| Untracked |  0
+|  91|0x000000061cc00000, 0x000000061cc00000, 0x000000061d000000|  0%| F|  |TAMS 0x000000061cc00000| PB 0x000000061cc00000| Untracked |  0
+|  92|0x000000061d000000, 0x000000061d000000, 0x000000061d400000|  0%| F|  |TAMS 0x000000061d000000| PB 0x000000061d000000| Untracked |  0
+|  93|0x000000061d400000, 0x000000061d400000, 0x000000061d800000|  0%| F|  |TAMS 0x000000061d400000| PB 0x000000061d400000| Untracked |  0
+|  94|0x000000061d800000, 0x000000061d800000, 0x000000061dc00000|  0%| F|  |TAMS 0x000000061d800000| PB 0x000000061d800000| Untracked |  0
+|  95|0x000000061dc00000, 0x000000061dc00000, 0x000000061e000000|  0%| F|  |TAMS 0x000000061dc00000| PB 0x000000061dc00000| Untracked |  0
+|  96|0x000000061e000000, 0x000000061e000000, 0x000000061e400000|  0%| F|  |TAMS 0x000000061e000000| PB 0x000000061e000000| Untracked |  0
+|  97|0x000000061e400000, 0x000000061e400000, 0x000000061e800000|  0%| F|  |TAMS 0x000000061e400000| PB 0x000000061e400000| Untracked |  0
+|  98|0x000000061e800000, 0x000000061e800000, 0x000000061ec00000|  0%| F|  |TAMS 0x000000061e800000| PB 0x000000061e800000| Untracked |  0
+|  99|0x000000061ec00000, 0x000000061ec00000, 0x000000061f000000|  0%| F|  |TAMS 0x000000061ec00000| PB 0x000000061ec00000| Untracked |  0
+| 100|0x000000061f000000, 0x000000061f000000, 0x000000061f400000|  0%| F|  |TAMS 0x000000061f000000| PB 0x000000061f000000| Untracked |  0
+| 101|0x000000061f400000, 0x000000061f400000, 0x000000061f800000|  0%| F|  |TAMS 0x000000061f400000| PB 0x000000061f400000| Untracked |  0
+| 102|0x000000061f800000, 0x000000061f800000, 0x000000061fc00000|  0%| F|  |TAMS 0x000000061f800000| PB 0x000000061f800000| Untracked |  0
+| 103|0x000000061fc00000, 0x000000061fc00000, 0x0000000620000000|  0%| F|  |TAMS 0x000000061fc00000| PB 0x000000061fc00000| Untracked |  0
+| 104|0x0000000620000000, 0x0000000620000000, 0x0000000620400000|  0%| F|  |TAMS 0x0000000620000000| PB 0x0000000620000000| Untracked |  0
+| 105|0x0000000620400000, 0x0000000620400000, 0x0000000620800000|  0%| F|  |TAMS 0x0000000620400000| PB 0x0000000620400000| Untracked |  0
+| 106|0x0000000620800000, 0x0000000620800000, 0x0000000620c00000|  0%| F|  |TAMS 0x0000000620800000| PB 0x0000000620800000| Untracked |  0
+| 107|0x0000000620c00000, 0x0000000620c00000, 0x0000000621000000|  0%| F|  |TAMS 0x0000000620c00000| PB 0x0000000620c00000| Untracked |  0
+| 108|0x0000000621000000, 0x0000000621000000, 0x0000000621400000|  0%| F|  |TAMS 0x0000000621000000| PB 0x0000000621000000| Untracked |  0
+| 109|0x0000000621400000, 0x0000000621400000, 0x0000000621800000|  0%| F|  |TAMS 0x0000000621400000| PB 0x0000000621400000| Untracked |  0
+| 110|0x0000000621800000, 0x0000000621800000, 0x0000000621c00000|  0%| F|  |TAMS 0x0000000621800000| PB 0x0000000621800000| Untracked |  0
+| 111|0x0000000621c00000, 0x0000000621c00000, 0x0000000622000000|  0%| F|  |TAMS 0x0000000621c00000| PB 0x0000000621c00000| Untracked |  0
+| 112|0x0000000622000000, 0x0000000622000000, 0x0000000622400000|  0%| F|  |TAMS 0x0000000622000000| PB 0x0000000622000000| Untracked |  0
+| 113|0x0000000622400000, 0x0000000622400000, 0x0000000622800000|  0%| F|  |TAMS 0x0000000622400000| PB 0x0000000622400000| Untracked |  0
+| 114|0x0000000622800000, 0x0000000622800000, 0x0000000622c00000|  0%| F|  |TAMS 0x0000000622800000| PB 0x0000000622800000| Untracked |  0
+| 115|0x0000000622c00000, 0x0000000622c00000, 0x0000000623000000|  0%| F|  |TAMS 0x0000000622c00000| PB 0x0000000622c00000| Untracked |  0
+| 116|0x0000000623000000, 0x0000000623000000, 0x0000000623400000|  0%| F|  |TAMS 0x0000000623000000| PB 0x0000000623000000| Untracked |  0
+| 117|0x0000000623400000, 0x0000000623400000, 0x0000000623800000|  0%| F|  |TAMS 0x0000000623400000| PB 0x0000000623400000| Untracked |  0
+| 118|0x0000000623800000, 0x0000000623800000, 0x0000000623c00000|  0%| F|  |TAMS 0x0000000623800000| PB 0x0000000623800000| Untracked |  0
+| 119|0x0000000623c00000, 0x0000000623c00000, 0x0000000624000000|  0%| F|  |TAMS 0x0000000623c00000| PB 0x0000000623c00000| Untracked |  0
+| 120|0x0000000624000000, 0x0000000624000000, 0x0000000624400000|  0%| F|  |TAMS 0x0000000624000000| PB 0x0000000624000000| Untracked |  0
+| 121|0x0000000624400000, 0x0000000624400000, 0x0000000624800000|  0%| F|  |TAMS 0x0000000624400000| PB 0x0000000624400000| Untracked |  0
+| 122|0x0000000624800000, 0x0000000624875528, 0x0000000624c00000| 11%| E|  |TAMS 0x0000000624800000| PB 0x0000000624800000| Complete |  0
+| 123|0x0000000624c00000, 0x0000000625000000, 0x0000000625000000|100%| E|  |TAMS 0x0000000624c00000| PB 0x0000000624c00000| Complete |  0
+| 124|0x0000000625000000, 0x0000000625400000, 0x0000000625400000|100%| E|CS|TAMS 0x0000000625000000| PB 0x0000000625000000| Complete |  0
+| 125|0x0000000625400000, 0x0000000625800000, 0x0000000625800000|100%| E|CS|TAMS 0x0000000625400000| PB 0x0000000625400000| Complete |  0
+| 126|0x0000000625800000, 0x0000000625c00000, 0x0000000625c00000|100%| E|CS|TAMS 0x0000000625800000| PB 0x0000000625800000| Complete |  0
+
+Card table byte_map: [0x00000166b30f0000,0x00000166b40c0000] _byte_map_base: 0x00000166b00c0000
+
+Marking Bits: (CMBitMap*) 0x00000166986dc090
+ Bits: [0x00000166b40c0000, 0x00000166bbf40000)
+
+Polling page: 0x00000166983a0000
+
+Metaspace:
+
+Usage:
+  Non-class:      5.16 MB used.
+      Class:    383.60 KB used.
+       Both:      5.54 MB used.
+
+Virtual space:
+  Non-class space:       64.00 MB reserved,       5.25 MB (  8%) committed,  1 nodes.
+      Class space:        1.00 GB reserved,     512.00 KB ( <1%) committed,  1 nodes.
+             Both:        1.06 GB reserved,       5.75 MB ( <1%) committed. 
+
+Chunk freelists:
+   Non-Class:  8.61 MB
+       Class:  15.48 MB
+        Both:  24.09 MB
+
+MaxMetaspaceSize: unlimited
+CompressedClassSpaceSize: 1.00 GB
+Initial GC threshold: 21.00 MB
+Current GC threshold: 21.00 MB
+CDS: on
+ - commit_granule_bytes: 65536.
+ - commit_granule_words: 8192.
+ - virtual_space_node_default_size: 8388608.
+ - enlarge_chunks_in_place: 1.
+ - use_allocation_guard: 0.
+
+
+Internal statistics:
+
+num_allocs_failed_limit: 0.
+num_arena_births: 70.
+num_arena_deaths: 0.
+num_vsnodes_births: 2.
+num_vsnodes_deaths: 0.
+num_space_committed: 91.
+num_space_uncommitted: 0.
+num_chunks_returned_to_freelist: 0.
+num_chunks_taken_from_freelist: 230.
+num_chunk_merges: 0.
+num_chunk_splits: 160.
+num_chunks_enlarged: 120.
+num_inconsistent_stats: 0.
+
+CodeHeap 'non-profiled nmethods': size=119168Kb used=333Kb max_used=333Kb free=118834Kb
+ bounds [0x00000166a9d10000, 0x00000166a9f80000, 0x00000166b1170000]
+CodeHeap 'profiled nmethods': size=119104Kb used=2063Kb max_used=2063Kb free=117040Kb
+ bounds [0x00000166a2170000, 0x00000166a23e0000, 0x00000166a95c0000]
+CodeHeap 'non-nmethods': size=7488Kb used=3261Kb max_used=3840Kb free=4226Kb
+ bounds [0x00000166a95c0000, 0x00000166a9990000, 0x00000166a9d10000]
+ total_blobs=2299 nmethods=1203 adapters=999
+ compilation: enabled
+              stopped_count=0, restarted_count=0
+ full_count=0
+
+Compilation events (20 events):
+Event: 6.909 Thread 0x0000016700242d20 1195       3       com.badlogic.gdx.graphics.g2d.SpriteBatch::setProjectionMatrix (32 bytes)
+Event: 6.910 Thread 0x0000016700242d20 nmethod 1195 0x00000166a236c010 code [0x00000166a236c1e0, 0x00000166a236c4c0]
+Event: 6.910 Thread 0x0000016700242d20 1196       3       com.badlogic.gdx.graphics.g2d.SpriteBatch::begin (65 bytes)
+Event: 6.911 Thread 0x00000167000729c0 nmethod 1189 0x00000166a236c610 code [0x00000166a236c980, 0x00000166a236df60]
+Event: 6.911 Thread 0x00000167000729c0 1197       3       com.badlogic.gdx.graphics.glutils.ShaderProgram::bind (19 bytes)
+Event: 6.911 Thread 0x0000016700242d20 nmethod 1196 0x00000166a236e990 code [0x00000166a236ec20, 0x00000166a236f5d8]
+Event: 6.911 Thread 0x0000016700242d20 1198       3       com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glUseProgram (5 bytes)
+Event: 6.912 Thread 0x000001670012f4e0 nmethod 1194 0x00000166a236fa10 code [0x00000166a236fde0, 0x00000166a2371100]
+Event: 6.912 Thread 0x0000016700242d20 nmethod 1198 0x00000166a2371810 code [0x00000166a23719c0, 0x00000166a2371b58]
+Event: 6.912 Thread 0x00000167000729c0 nmethod 1197 0x00000166a2371c10 code [0x00000166a2371de0, 0x00000166a2372138]
+Event: 6.912 Thread 0x0000016700242d20 1199       3       com.badlogic.gdx.graphics.g2d.SpriteBatch::end (66 bytes)
+Event: 6.912 Thread 0x000001670012f4e0 1200       3       com.badlogic.gdx.graphics.g2d.SpriteBatch::isBlendingEnabled (13 bytes)
+Event: 6.912 Thread 0x000001670012f4e0 nmethod 1200 0x00000166a2372310 code [0x00000166a23724a0, 0x00000166a2372600]
+Event: 6.913 Thread 0x0000016700242d20 nmethod 1199 0x00000166a2372690 code [0x00000166a23728c0, 0x00000166a2372f28]
+Event: 6.924 Thread 0x00000167000729c0 1201       3       com.badlogic.gdx.backends.lwjgl3.Lwjgl3Window::shouldClose (8 bytes)
+Event: 6.924 Thread 0x0000016700242d20 1202       3       org.lwjgl.glfw.GLFW::glfwWindowShouldClose (29 bytes)
+Event: 6.924 Thread 0x000001670012f4e0 1203       3       org.lwjgl.glfw.GLFW::glfwPollEvents (9 bytes)
+Event: 6.924 Thread 0x00000167000729c0 nmethod 1201 0x00000166a2373210 code [0x00000166a23733c0, 0x00000166a2373500]
+Event: 6.924 Thread 0x000001670012f4e0 nmethod 1203 0x00000166a2373590 code [0x00000166a2373740, 0x00000166a2373860]
+Event: 6.925 Thread 0x0000016700242d20 nmethod 1202 0x00000166a2373910 code [0x00000166a2373ae0, 0x00000166a2373dc8]
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (9 events):
+Event: 0.007 Loaded shared library C:\Program Files\Java\jdk-22\bin\java.dll
+Event: 0.034 Loaded shared library C:\Program Files\Java\jdk-22\bin\jsvml.dll
+Event: 0.078 Loaded shared library C:\Program Files\Java\jdk-22\bin\net.dll
+Event: 0.080 Loaded shared library C:\Program Files\Java\jdk-22\bin\nio.dll
+Event: 0.083 Loaded shared library C:\Program Files\Java\jdk-22\bin\zip.dll
+Event: 0.163 Loaded shared library C:\Program Files\Java\jdk-22\bin\jimage.dll
+Event: 0.170 Loaded shared library C:\ProgramData\libGDX-temp\libgdxL2\2a9d7f76\gdx64.dll
+Event: 0.245 Loaded shared library C:\ProgramData\libGDX-temp\lwjgl_L2\3.3.3+5\x64\lwjgl.dll
+Event: 2.122 Loaded shared library C:\ProgramData\libGDX-temp\lwjgl_L2\3.3.3+5\x64\lwjgl_opengl.dll
+
+Deoptimization events (20 events):
+Event: 0.230 Thread 0x00000166983e8810 DEOPT PACKING pc=0x00000166a9d204cc sp=0x00000002556fbbb0
+Event: 0.230 Thread 0x00000166983e8810 DEOPT UNPACKING pc=0x00000166a96146a2 sp=0x00000002556fbb38 mode 2
+Event: 0.366 Thread 0x00000166983e8810 DEOPT PACKING pc=0x00000166a21a5425 sp=0x00000002556fe390
+Event: 0.366 Thread 0x00000166983e8810 DEOPT UNPACKING pc=0x00000166a9614e42 sp=0x00000002556fd7e0 mode 0
+Event: 0.384 Thread 0x00000166983e8810 Uncommon trap: trap_request=0xffffff6e fr.pc=0x00000166a9d45304 relative=0x0000000000000444
+Event: 0.384 Thread 0x00000166983e8810 Uncommon trap: reason=loop_limit_check action=maybe_recompile pc=0x00000166a9d45304 method=java.lang.StringLatin1.indexOf([BI[BII)I @ 37 c2
+Event: 0.384 Thread 0x00000166983e8810 DEOPT PACKING pc=0x00000166a9d45304 sp=0x00000002556fdfd0
+Event: 0.384 Thread 0x00000166983e8810 DEOPT UNPACKING pc=0x00000166a96146a2 sp=0x00000002556fdf30 mode 2
+Event: 1.955 Thread 0x0000016700063c80 Uncommon trap: trap_request=0xffffff45 fr.pc=0x00000166a9d1a74c relative=0x000000000000012c
+Event: 1.955 Thread 0x0000016700063c80 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000166a9d1a74c method=java.lang.StringCoding.countPositives([BII)I @ 17 c2
+Event: 1.955 Thread 0x0000016700063c80 DEOPT PACKING pc=0x00000166a9d1a74c sp=0x0000000256aff2c0
+Event: 1.955 Thread 0x0000016700063c80 DEOPT UNPACKING pc=0x00000166a96146a2 sp=0x0000000256aff248 mode 2
+Event: 1.967 Thread 0x00000166983e8810 DEOPT PACKING pc=0x00000166a21a5ac3 sp=0x00000002556faad0
+Event: 1.967 Thread 0x00000166983e8810 DEOPT UNPACKING pc=0x00000166a9614e42 sp=0x00000002556f9f48 mode 0
+Event: 2.374 Thread 0x00000166983e8810 DEOPT PACKING pc=0x00000166a21ca077 sp=0x00000002556faa50
+Event: 2.374 Thread 0x00000166983e8810 DEOPT UNPACKING pc=0x00000166a9614e42 sp=0x00000002556f9ec0 mode 0
+Event: 2.380 Thread 0x00000166983e8810 DEOPT PACKING pc=0x00000166a22d8649 sp=0x00000002556faa20
+Event: 2.380 Thread 0x00000166983e8810 DEOPT UNPACKING pc=0x00000166a9614e42 sp=0x00000002556f9e90 mode 0
+Event: 3.529 Thread 0x00000166983e8810 DEOPT PACKING pc=0x00000166a233c20f sp=0x00000002556ff200
+Event: 3.529 Thread 0x00000166983e8810 DEOPT UNPACKING pc=0x00000166a9614e42 sp=0x00000002556fe748 mode 0
+
+Classes loaded (20 events):
+Event: 1.953 Loading class java/util/concurrent/SynchronousQueue$Transferer
+Event: 1.953 Loading class java/util/concurrent/LinkedTransferQueue
+Event: 1.953 Loading class java/util/concurrent/TransferQueue
+Event: 1.953 Loading class java/util/concurrent/TransferQueue done
+Event: 1.953 Loading class java/util/concurrent/LinkedTransferQueue done
+Event: 1.953 Loading class java/util/concurrent/SynchronousQueue$Transferer done
+Event: 1.953 Loading class java/util/concurrent/LinkedTransferQueue$DualNode
+Event: 1.953 Loading class java/util/concurrent/LinkedTransferQueue$DualNode done
+Event: 1.954 Loading class java/lang/invoke/VarHandleInts$FieldInstanceReadWrite
+Event: 1.954 Loading class java/lang/invoke/VarHandleInts$FieldInstanceReadOnly
+Event: 1.954 Loading class java/lang/invoke/VarHandleInts$FieldInstanceReadOnly done
+Event: 1.954 Loading class java/lang/invoke/VarHandleInts$FieldInstanceReadWrite done
+Event: 2.100 Loading class java/io/UnsupportedEncodingException
+Event: 2.100 Loading class java/io/UnsupportedEncodingException done
+Event: 2.370 Loading class java/lang/NumberFormatException
+Event: 2.370 Loading class java/lang/NumberFormatException done
+Event: 2.450 Loading class java/util/NoSuchElementException
+Event: 2.450 Loading class java/util/NoSuchElementException done
+Event: 2.729 Loading class jdk/internal/event/ThreadSleepEvent
+Event: 2.729 Loading class jdk/internal/event/ThreadSleepEvent done
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (20 events):
+Event: 0.294 Thread 0x00000166983e8810 Exception <a 'java/lang/NoSuchMethodError'{0x0000000625751df0}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.newInvokeSpecial(java.lang.Object, java.lang.Object, int)'> (0x0000000625751df0) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.296 Thread 0x00000166983e8810 Exception <a 'java/lang/NoSuchMethodError'{0x00000006257638b0}: 'int java.lang.invoke.DirectMethodHandle$Holder.invokeStaticInit(java.lang.Object, java.lang.Object, long, long)'> (0x00000006257638b0) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.296 Thread 0x00000166983e8810 Exception <a 'java/lang/NoSuchMethodError'{0x0000000625769338}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.newInvokeSpecial(java.lang.Object, java.lang.Object, long)'> (0x0000000625769338) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.297 Thread 0x00000166983e8810 Exception <a 'java/lang/NoSuchMethodError'{0x000000062576d218}: 'java.lang.Object java.lang.invoke.Invokers$Holder.linkToTargetMethod(java.lang.Object, long, java.lang.Object)'> (0x000000062576d218) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.297 Thread 0x00000166983e8810 Exception <a 'java/lang/NoSuchMethodError'{0x0000000625774440}: 'int java.lang.invoke.DirectMethodHandle$Holder.invokeStaticInit(java.lang.Object, java.lang.Object, java.lang.Object, long)'> (0x0000000625774440) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.317 Thread 0x00000166983e8810 Exception <a 'sun/nio/fs/WindowsException'{0x00000006257fb768}> (0x00000006257fb768) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 0.317 Thread 0x00000166983e8810 Exception <a 'sun/nio/fs/WindowsException'{0x00000006257fbac0}> (0x00000006257fbac0) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 0.342 Thread 0x00000166983e8810 Exception <a 'sun/nio/fs/WindowsException'{0x00000006250a7038}> (0x00000006250a7038) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 0.343 Thread 0x00000166983e8810 Exception <a 'sun/nio/fs/WindowsException'{0x00000006250a7360}> (0x00000006250a7360) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 0.348 Thread 0x00000166983e8810 Exception <a 'java/lang/NoSuchMethodError'{0x00000006250ae388}: 'int java.lang.invoke.Invokers$Holder.invokeExact_MT(java.lang.Object, java.lang.Object)'> (0x00000006250ae388) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 0.395 Thread 0x00000166983e8810 Exception <a 'sun/nio/fs/WindowsException'{0x0000000625173488}> (0x0000000625173488) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 0.395 Thread 0x00000166983e8810 Exception <a 'sun/nio/fs/WindowsException'{0x00000006251737c8}> (0x00000006251737c8) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 1.941 Thread 0x00000166983e8810 Exception <a 'java/lang/NoSuchMethodError'{0x000000062522cf38}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.newInvokeSpecial(java.lang.Object, long)'> (0x000000062522cf38) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 2.109 Thread 0x00000166983e8810 Exception <a 'java/lang/NoSuchMethodError'{0x00000006253e0458}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, long)'> (0x00000006253e0458) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 2.116 Thread 0x00000166983e8810 Exception <a 'java/lang/NoSuchMethodError'{0x0000000624c03b18}: 'void java.lang.System.load(java.lang.String, java.lang.Class)'> (0x0000000624c03b18) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 2.117 Thread 0x00000166983e8810 Exception <a 'java/lang/NoSuchMethodError'{0x0000000624c06568}: 'void java.lang.System.loadLibrary(java.lang.String, java.lang.Class)'> (0x0000000624c06568) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 774]
+Event: 2.120 Thread 0x00000166983e8810 Exception <a 'sun/nio/fs/WindowsException'{0x0000000624c17470}> (0x0000000624c17470) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 2.120 Thread 0x00000166983e8810 Exception <a 'sun/nio/fs/WindowsException'{0x0000000624c177d0}> (0x0000000624c177d0) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 2.125 Thread 0x00000166983e8810 Exception <a 'sun/nio/fs/WindowsException'{0x0000000624c237b8}> (0x0000000624c237b8) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 2.125 Thread 0x00000166983e8810 Exception <a 'sun/nio/fs/WindowsException'{0x0000000624c23a58}> (0x0000000624c23a58) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (12 events):
+Event: 0.087 Executing VM operation: HandshakeAllThreads (Deoptimize)
+Event: 0.087 Executing VM operation: HandshakeAllThreads (Deoptimize) done
+Event: 0.166 Executing VM operation: HandshakeAllThreads (Deoptimize)
+Event: 0.166 Executing VM operation: HandshakeAllThreads (Deoptimize) done
+Event: 0.219 Executing VM operation: HandshakeAllThreads (Deoptimize)
+Event: 0.219 Executing VM operation: HandshakeAllThreads (Deoptimize) done
+Event: 1.233 Executing VM operation: Cleanup
+Event: 1.233 Executing VM operation: Cleanup done
+Event: 2.234 Executing VM operation: Cleanup
+Event: 2.245 Executing VM operation: Cleanup done
+Event: 3.250 Executing VM operation: Cleanup
+Event: 3.250 Executing VM operation: Cleanup done
+
+Events (19 events):
+Event: 0.019 Thread 0x00000166983e8810 Thread added: 0x00000166983e8810
+Event: 0.031 Thread 0x000001670002a780 Thread added: 0x000001670002a780
+Event: 0.031 Thread 0x000001670002b3e0 Thread added: 0x000001670002b3e0
+Event: 0.031 Thread 0x000001670002c6c0 Thread added: 0x000001670002c6c0
+Event: 0.031 Thread 0x000001670002d6b0 Thread added: 0x000001670002d6b0
+Event: 0.031 Thread 0x000001670003a5d0 Thread added: 0x000001670003a5d0
+Event: 0.031 Thread 0x00000167000628d0 Thread added: 0x00000167000628d0
+Event: 0.031 Thread 0x00000167000656f0 Thread added: 0x00000167000656f0
+Event: 0.032 Thread 0x00000167000729c0 Thread added: 0x00000167000729c0
+Event: 0.069 Thread 0x000001670012f4e0 Thread added: 0x000001670012f4e0
+Event: 0.072 Thread 0x0000016700062f60 Thread added: 0x0000016700062f60
+Event: 0.074 Thread 0x00000167000635f0 Thread added: 0x00000167000635f0
+Event: 0.086 Thread 0x0000016700242d20 Thread added: 0x0000016700242d20
+Event: 0.286 Thread 0x0000016700771f10 Thread added: 0x0000016700771f10
+Event: 0.394 Thread 0x0000016700caebe0 Thread added: 0x0000016700caebe0
+Event: 1.940 Thread 0x0000016700771f10 Thread exited: 0x0000016700771f10
+Event: 1.950 Thread 0x0000016700063c80 Thread added: 0x0000016700063c80
+Event: 2.726 Thread 0x000001670ab3aa70 Thread added: 0x000001670ab3aa70
+Event: 6.075 Thread 0x0000016700caebe0 Thread exited: 0x0000016700caebe0
+
+
+Dynamic libraries:
+0x00007ff6ee9f0000 - 0x00007ff6eea00000 	C:\Program Files\Java\jdk-22\bin\java.exe
+0x00007fffe8d70000 - 0x00007fffe8f87000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fffe87e0000 - 0x00007fffe88a4000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fffe6240000 - 0x00007fffe65f7000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fffe6600000 - 0x00007fffe6711000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fffc7e40000 - 0x00007fffc7e5b000 	C:\Program Files\Java\jdk-22\bin\VCRUNTIME140.dll
+0x00007fffc8320000 - 0x00007fffc8337000 	C:\Program Files\Java\jdk-22\bin\jli.dll
+0x00007fffe6b80000 - 0x00007fffe6c32000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fffe8130000 - 0x00007fffe81d7000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fffe6aa0000 - 0x00007fffe6b48000 	C:\WINDOWS\System32\sechost.dll
+0x00007fffe6900000 - 0x00007fffe6928000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007fffe7de0000 - 0x00007fffe7ef4000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fffe8920000 - 0x00007fffe8acf000 	C:\WINDOWS\System32\USER32.dll
+0x00007fffe6720000 - 0x00007fffe6746000 	C:\WINDOWS\System32\win32u.dll
+0x00007fffc8a90000 - 0x00007fffc8d23000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.3672_none_2713b9d173822955\COMCTL32.dll
+0x00007fffe6b50000 - 0x00007fffe6b79000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fffe6080000 - 0x00007fffe6198000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fffe61a0000 - 0x00007fffe623a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fffd2a90000 - 0x00007fffd2a9a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fffe8700000 - 0x00007fffe8731000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007fffd6c80000 - 0x00007fffd6c8c000 	C:\Program Files\Java\jdk-22\bin\vcruntime140_1.dll
+0x00007fff96df0000 - 0x00007fff96e7e000 	C:\Program Files\Java\jdk-22\bin\msvcp140.dll
+0x00007fff569b0000 - 0x00007fff576f7000 	C:\Program Files\Java\jdk-22\bin\server\jvm.dll
+0x00007fffe6e20000 - 0x00007fffe6e91000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fffe4ef0000 - 0x00007fffe4f3d000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007fffe1460000 - 0x00007fffe1494000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fffe4ed0000 - 0x00007fffe4ee3000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007fffe5180000 - 0x00007fffe5198000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007fffcaf20000 - 0x00007fffcaf2a000 	C:\Program Files\Java\jdk-22\bin\jimage.dll
+0x00007fffe2ed0000 - 0x00007fffe3102000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007fffe7980000 - 0x00007fffe7d0e000 	C:\WINDOWS\System32\combase.dll
+0x00007fffe6c40000 - 0x00007fffe6d17000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007fffdec40000 - 0x00007fffdec72000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007fffe6750000 - 0x00007fffe67cb000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fffc7160000 - 0x00007fffc717e000 	C:\Program Files\Java\jdk-22\bin\java.dll
+0x00007fffe6eb0000 - 0x00007fffe7719000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007fffe7780000 - 0x00007fffe7925000 	C:\WINDOWS\System32\ole32.dll
+0x00007fffe3fb0000 - 0x00007fffe48af000 	C:\WINDOWS\SYSTEM32\windows.storage.dll
+0x00007fffe3e70000 - 0x00007fffe3faf000 	C:\WINDOWS\SYSTEM32\wintypes.dll
+0x00007fffe6d20000 - 0x00007fffe6e19000 	C:\WINDOWS\System32\SHCORE.dll
+0x00007fffe80d0000 - 0x00007fffe812e000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007fffe5fb0000 - 0x00007fffe5fd7000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007fff924f0000 - 0x00007fff925c7000 	C:\Program Files\Java\jdk-22\bin\jsvml.dll
+0x00007fffcad00000 - 0x00007fffcad10000 	C:\Program Files\Java\jdk-22\bin\net.dll
+0x00007fffe55e0000 - 0x00007fffe5649000 	C:\WINDOWS\system32\mswsock.dll
+0x00007fffc4590000 - 0x00007fffc45a6000 	C:\Program Files\Java\jdk-22\bin\nio.dll
+0x00007fffc18c0000 - 0x00007fffc18d7000 	C:\Program Files\Java\jdk-22\bin\zip.dll
+0x000000006e700000 - 0x000000006e72d000 	C:\ProgramData\libGDX-temp\libgdxL2\2a9d7f76\gdx64.dll
+0x00007fff95180000 - 0x00007fff951fb000 	C:\ProgramData\libGDX-temp\lwjgl_L2\3.3.3+5\x64\lwjgl.dll
+0x00007fff61060000 - 0x00007fff612d0000 	C:\ProgramData\libGDX-temp\lwjgl_L2\3.3.3+5\x64\jemalloc.dll
+0x00007fff950f0000 - 0x00007fff95172000 	C:\ProgramData\libGDX-temp\lwjgl_L2\3.3.3+5\x64\glfw.dll
+0x00007fff9c3b0000 - 0x00007fff9c3f6000 	C:\WINDOWS\SYSTEM32\dinput8.dll
+0x00007fffc1900000 - 0x00007fffc1911000 	C:\WINDOWS\SYSTEM32\xinput1_4.dll
+0x00007fffe5d40000 - 0x00007fffe5d8e000 	C:\WINDOWS\SYSTEM32\cfgmgr32.dll
+0x00007fffe5d90000 - 0x00007fffe5dbc000 	C:\WINDOWS\SYSTEM32\DEVOBJ.dll
+0x00007fffe3720000 - 0x00007fffe374b000 	C:\WINDOWS\SYSTEM32\dwmapi.dll
+0x00007fffd6d50000 - 0x00007fffd6f63000 	C:\WINDOWS\SYSTEM32\inputhost.dll
+0x00007fffe0860000 - 0x00007fffe0993000 	C:\WINDOWS\SYSTEM32\CoreMessaging.dll
+0x00007fffe3490000 - 0x00007fffe3541000 	C:\WINDOWS\system32\uxtheme.dll
+0x00007fffe8bd0000 - 0x00007fffe8d30000 	C:\WINDOWS\System32\MSCTF.dll
+0x00007fffe5910000 - 0x00007fffe591c000 	C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL
+0x00007fff7be40000 - 0x00007fff7c007000 	C:\ProgramData\libGDX-temp\lwjgl_L2\3.3.3+5\x64\OpenAL.dll
+0x00007fffe7d10000 - 0x00007fffe7dc0000 	C:\WINDOWS\System32\clbcatq.dll
+0x00007fffd80f0000 - 0x00007fffd818e000 	C:\WINDOWS\System32\MMDevApi.dll
+0x00007fffd3d80000 - 0x00007fffd3f6d000 	C:\WINDOWS\SYSTEM32\AUDIOSES.DLL
+0x00007fffe3b30000 - 0x00007fffe3b45000 	C:\WINDOWS\SYSTEM32\resourcepolicyclient.dll
+0x00007fff8e440000 - 0x00007fff8e540000 	C:\WINDOWS\SYSTEM32\opengl32.dll
+0x00007fffabca0000 - 0x00007fffabccd000 	C:\WINDOWS\SYSTEM32\GLU32.dll
+0x00007fffe3790000 - 0x00007fffe37c7000 	C:\WINDOWS\SYSTEM32\dxcore.dll
+0x00007fffde490000 - 0x00007fffde4d9000 	C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll
+0x00007fffdd160000 - 0x00007fffdd2a4000 	C:\Windows\System32\AppXDeploymentClient.dll
+0x00007fff1a180000 - 0x00007fff1b53b000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d21d010cf98461f3\igxelpicd64.dll
+0x00007fffdf0a0000 - 0x00007fffdf0c6000 	C:\WINDOWS\SYSTEM32\d3d12.dll
+0x00007fffe3610000 - 0x00007fffe3707000 	C:\WINDOWS\SYSTEM32\dxgi.dll
+0x00007fff58540000 - 0x00007fff58877000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d21d010cf98461f3\igdml64.dll
+0x00007fffd79e0000 - 0x00007fffd7e1f000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d21d010cf98461f3\igdgmm64.dll
+0x00007fff7fb40000 - 0x00007fff7fd42000 	C:\WINDOWS\SYSTEM32\D3D12Core.dll
+0x00007fffd58f0000 - 0x00007fffd5a52000 	C:\WINDOWS\SYSTEM32\drvstore.dll
+0x00007fffda710000 - 0x00007fffda734000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d21d010cf98461f3\igc64.dll
+0x00007fffcdd30000 - 0x00007fffd249b000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d21d010cf98461f3\igc1464.dll
+0x00007fffab6c0000 - 0x00007fffab6ef000 	C:\WINDOWS\SYSTEM32\D3DSCache.dll
+0x00007fffe5680000 - 0x00007fffe56a8000 	C:\WINDOWS\SYSTEM32\USERENV.dll
+0x00007fffdb960000 - 0x00007fffdbc02000 	C:\WINDOWS\SYSTEM32\twinapi.appcore.dll
+0x00007fffe01e0000 - 0x00007fffe0435000 	C:\WINDOWS\SYSTEM32\dcomp.dll
+0x00007fffe24b0000 - 0x00007fffe256d000 	C:\WINDOWS\SYSTEM32\mscms.dll
+0x00007fffe0be0000 - 0x00007fffe0c2a000 	C:\WINDOWS\SYSTEM32\icm32.dll
+0x00007fff91490000 - 0x00007fff914ee000 	C:\ProgramData\libGDX-temp\lwjgl_L2\3.3.3+5\x64\lwjgl_opengl.dll
+0x00007fffdc070000 - 0x00007fffdc1b3000 	C:\WINDOWS\SYSTEM32\textinputframework.dll
+0x00007fffde120000 - 0x00007fffde48d000 	C:\WINDOWS\SYSTEM32\CoreUIComponents.dll
+0x00007fff9fff0000 - 0x00007fffa0059000 	C:\WINDOWS\system32\Oleacc.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-22\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.3672_none_2713b9d173822955;C:\Program Files\Java\jdk-22\bin\server;C:\ProgramData\libGDX-temp\libgdxL2\2a9d7f76;C:\ProgramData\libGDX-temp\lwjgl_L2\3.3.3+5\x64;C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d21d010cf98461f3
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -Duser.country=GB -Duser.language=en -Duser.variant 
+java_command: com.bitbrawlers.angrybirds.lwjgl3.Lwjgl3Launcher
+java_class_path (initial): C:\Users\L2\IdeaProjects\bitbrawlers\lwjgl3\build\classes\java\main;C:\Users\L2\IdeaProjects\bitbrawlers\lwjgl3\build\resources\main;C:\Users\L2\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-backend-lwjgl3\1.12.1\12a144cacb34f0392cd8354f798d99e4836a51a8\gdx-backend-lwjgl3-1.12.1.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-platform\1.12.1\5737be5ce3a4e8f9f77c2d9ab95ab479f9c3705f\gdx-platform-1.12.1-natives-desktop.jar;C:\Users\L2\IdeaProjects\bitbrawlers\core\build\libs\core-$projectVersion.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx\1.12.1\a2d066c09329c457045c284c42d6f37122840aa\gdx-1.12.1.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.3\efa1eb78c5ccd840e9f329717109b5e892d72f8e\lwjgl-glfw-3.3.3.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.3\a03684c5e4b1b1dbbe0d29dbbdc27b985b6840f2\lwjgl-glfw-3.3.3-natives-linux.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.3\d9af485c32545b37dd5359b163161d42d7534dcf\lwjgl-glfw-3.3.3-natives-linux-arm32.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.3\492a0f11f85b85899a6568f07511160c1b87cd38\lwjgl-glfw-3.3.3-natives-linux-arm64.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.3\a1bf400f6bc64e6195596cb1430dafda46090751\lwjgl-glfw-3.3.3-natives-macos.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.3\ee8cc78d0a4a5b3b4600fade6d927c9fc320c858\lwjgl-glfw-3.3.3-natives-macos-arm64.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.3\e449e28b4891fc423c54c85fbc5bb0b9efece67a\lwjgl-glfw-3.3.3-natives-windows.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.3\32334f3fd5270a59bad9939a93115acb6de36dcf\lwjgl-glfw-3.3.3-natives-windows-x86.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.3\b543467b7ff3c6920539a88ee602d34098628be5\lwjgl-jemalloc-3.3.3.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.3\4f86728bf449b1dd61251c4e0ac01df1389cb51e\lwjgl-jemalloc-3.3.3-natives-linux.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.3\109b6931880d02d4e65ced38928a16e41d19873e\lwjgl-jemalloc-3.3.3-natives-linux-arm32.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.3\eff8b86798191192fe2cba2dc2776109f30c239d\lwjgl-jemalloc-3.3.3-natives-linux-arm64.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.3\2906637657a57579847238c9c72d2c4bde7083f8\lwjgl-jemalloc-3.3.3-natives-macos.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.3\e9412c3ff8cb3a3bad1d3f52909ad74d8a5bdad1\lwjgl-jemalloc-3.3.3-natives-macos-arm64.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.3\426222fc027602a5f21b9c0fe79cde6a4c7a011f\lwjgl-jemalloc-3.3.3-natives-windows.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.3\f6063b6e0f23be483c5c88d84ce51b39dc69126c\lwjgl-jemalloc-3.3.3-natives-windows-x86.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.3\daada81ceb5fc0c291fbfdd4433cb8d9423577f2\lwjgl-openal-3.3.3.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.3\3037360cc4595079bea240af250b6d1a527e0905\lwjgl-openal-3.3.3-natives-linux.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.3\e1702aa09d20359d6cf5cb2999fa7685a785eca7\lwjgl-openal-3.3.3-natives-linux-arm32.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.3\ad8f302118a65bb8d615f8a2a680db58fb8f835e\lwjgl-openal-3.3.3-natives-linux-arm64.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.3\8df8338bfa77f2ebabef4e58964bd04d24805cbf\lwjgl-openal-3.3.3-natives-macos.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.3\c78b078de2fb52f45aa55d04db889a560f3544f\lwjgl-openal-3.3.3-natives-macos-arm64.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.3\cf83862ae95d98496b26915024c7e666d8ab1c8f\lwjgl-openal-3.3.3-natives-windows.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.3\87b8d5050e3adb46bb58fe1cb2669a4a48fce10d\lwjgl-openal-3.3.3-natives-windows-x86.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.3\2f6b0147078396a58979125a4c947664e98293a\lwjgl-opengl-3.3.3.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.3\62c70a4b00ca5391882b0f4b787c1588d24f1c86\lwjgl-opengl-3.3.3-natives-linux.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.3\dbba17fc5ac0985d14a57c11f9537617d67b9952\lwjgl-opengl-3.3.3-natives-linux-arm32.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.3\2096f6b94b2d68745d858fbfe53aacf5f0c8074c\lwjgl-opengl-3.3.3-natives-linux-arm64.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.3\1bd45997551ae8a28469f3a2b678f4b7289e12c0\lwjgl-opengl-3.3.3-natives-macos.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.3\d213ddef27637b1af87961ffa94d6b27036becc8\lwjgl-opengl-3.3.3-natives-macos-arm64.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.3\e6c1eec8be8a71951b830a4d69efc01c6531900c\lwjgl-opengl-3.3.3-natives-windows.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.3\d32d833dcaa2f355a886eaf21f0408b5f03241d\lwjgl-opengl-3.3.3-natives-windows-x86.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.3\25dd6161988d7e65f71d5065c99902402ee32746\lwjgl-stb-3.3.3.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.3\fd1271ccd9d85eff2fa31f3fd543e02ccfaf5041\lwjgl-stb-3.3.3-natives-linux.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.3\1ae28ff044699ff29b0e980ffabd73fba8a664b3\lwjgl-stb-3.3.3-natives-linux-arm32.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.3\ddc177afc2be1ee8d93684b11363b80589a13fe1\lwjgl-stb-3.3.3-natives-linux-arm64.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.3\472792c98fb2c1557c060cb9da5fca6a9773621f\lwjgl-stb-3.3.3-natives-macos.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.3\51c6955571fbcdb7bb538c6aa589b953b584c6af\lwjgl-stb-3.3.3-natives-macos-arm64.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.3\1d9facdf6541de114b0f963be33505b7679c78cb\lwjgl-stb-3.3.3-natives-windows.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.3\b5c874687b9aac1a936501d4ed2c49567fd1b575\lwjgl-stb-3.3.3-natives-windows-x86.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.3\29589b5f87ed335a6c7e7ee6a5775f81f97ecb84\lwjgl-3.3.3.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.3\1713758e3660ba66e1e954396fd18126038b33c0\lwjgl-3.3.3-natives-linux.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.3\2075c51a80f0ef0f22ba616ba54007ac2b0debd4\lwjgl-3.3.3-natives-linux-arm32.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.3\f35d8b6ffe1ac1e3a5eb1d4e33de80f044ad5fd8\lwjgl-3.3.3-natives-linux-arm64.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.3\33a6efa288390490ce6eb6c3df47ac21ecf648cf\lwjgl-3.3.3-natives-macos.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.3\226246e75f6bd8d4e1895bdce8638ef87808d114\lwjgl-3.3.3-natives-macos-arm64.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.3\a5ed18a2b82fc91b81f40d717cb1f64c9dcb0540\lwjgl-3.3.3-natives-windows.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.3\9e670718e050aeaeea0c2d5b907cffb142f2e58f\lwjgl-3.3.3-natives-windows-x86.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\com.badlogicgames.jlayer\jlayer\1.0.1-gdx\7cca83cec5c1b2f011362f4d85aabd71a73b049d\jlayer-1.0.1-gdx.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\org.jcraft\jorbis\0.0.17\8872d22b293e8f5d7d56ff92be966e6dc28ebdc6\jorbis-0.0.17.jar;C:\Users\L2\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-jnigen-loader\2.3.1\2d472f69243631fbcb3d4c3f93dd2e137a6cb084\gdx-jnigen-loader-2.3.1.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 13                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 4194304                                   {product} {ergonomic}
+   size_t InitialHeapSize                          = 532676608                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 8489271296                                {product} {ergonomic}
+   size_t MaxNewSize                               = 5091885056                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 4194304                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7602480                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122027880                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122027880                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 8489271296                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\L2\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\L2\AppData\Local\Programs\Python\Python312\;C:\Users\L2\AppData\Local\Programs\Python\Launcher\;C:\Users\L2\AppData\Local\Microsoft\WindowsApps;C:\Users\L2\AppData\Local\GitHubDesktop\bin;C:\Users\L2\Desktop\Microsoft VS Code\bin;C:\MinGW\bin;
+USERNAME=L2
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 3, GenuineIntel
+TMP=C:\Users\L2\AppData\Local\Temp
+TEMP=C:\Users\L2\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.3958)
+OS uptime: 7 days 4:02 hours
+Hyper-V role detected
+
+CPU: total 16 (initial active 16) (8 cores per cpu, 2 threads per core) family 6 model 154 stepping 3 microcode 0x434, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, clwb, hv, serialize, rdtscp, rdpid, fsrm, f16c, cet_ibt, cet_ss
+Processor Information for processor 0
+  Max Mhz: 2100, Current Mhz: 2100, Mhz Limit: 2100
+Processor Information for processor 1
+  Max Mhz: 2100, Current Mhz: 2100, Mhz Limit: 2100
+Processor Information for processor 2
+  Max Mhz: 2100, Current Mhz: 2100, Mhz Limit: 2100
+Processor Information for processor 3
+  Max Mhz: 2100, Current Mhz: 1453, Mhz Limit: 2100
+Processor Information for processor 4
+  Max Mhz: 2100, Current Mhz: 2100, Mhz Limit: 2100
+Processor Information for processor 5
+  Max Mhz: 2100, Current Mhz: 2100, Mhz Limit: 2100
+Processor Information for processor 6
+  Max Mhz: 2100, Current Mhz: 2100, Mhz Limit: 2100
+Processor Information for processor 7
+  Max Mhz: 2100, Current Mhz: 2100, Mhz Limit: 2100
+Processor Information for processor 8
+  Max Mhz: 2100, Current Mhz: 1500, Mhz Limit: 1491
+Processor Information for processor 9
+  Max Mhz: 2100, Current Mhz: 1500, Mhz Limit: 1491
+Processor Information for processor 10
+  Max Mhz: 2100, Current Mhz: 1500, Mhz Limit: 1491
+Processor Information for processor 11
+  Max Mhz: 2100, Current Mhz: 1500, Mhz Limit: 1491
+Processor Information for processor 12
+  Max Mhz: 2100, Current Mhz: 1500, Mhz Limit: 1491
+Processor Information for processor 13
+  Max Mhz: 2100, Current Mhz: 1500, Mhz Limit: 1491
+Processor Information for processor 14
+  Max Mhz: 2100, Current Mhz: 1500, Mhz Limit: 1491
+Processor Information for processor 15
+  Max Mhz: 2100, Current Mhz: 1500, Mhz Limit: 1491
+
+Memory: 4k page, system-wide physical 32372M (7058M free)
+TotalPageFile size 37236M (AvailPageFile size 6206M)
+current process WorkingSet (physical memory assigned to process): 208M, peak: 255M
+current process commit charge ("private bytes"): 728M, peak: 748M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (22.0.1+8-16) for windows-amd64 JRE (22.0.1+8-16), built on 2024-03-12T10:33:16Z by "mach5one" with MS VC++ 17.6 (VS2022)
+
+END.
