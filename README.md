@@ -4,14 +4,7 @@
 
 This project is an implementation of a 2D physics-based game inspired by the popular *Angry Birds* franchise. The game was developed using **libGDX**, a Java game development framework, to deliver high-performance graphics, smooth animations, and a responsive gaming experience. The game follows **object-oriented programming (OOP)** principles, ensuring that the code is modular, scalable, and easy to maintain. 
 
-The primary goal of this project is to replicate the core mechanics of *Angry Birds* while introducing additional features, such as multiple levels with varying difficulties, a variety of birds with different abilities, and an engaging physics-based environment that interacts with the player's actions. The game also includes a **persistence system** that allows players to pause and resume their progress, making it more convenient and user-friendly.
-
-Key highlights of the game:
-- **Multiple Levels**: Each level has its own unique layout of blocks and pigs, requiring players to adapt their strategies.
-- **Variety of Bird Types**: Different types of birds with varying abilities, such as explosive impacts or splitting into smaller birds, add complexity and strategic depth.
-- **Physics-Based Gameplay**: The core of the gameplay is based on realistic projectile motion, where birds interact with various types of blocks (wood, stone, etc.), causing them to collapse, break, or react in realistic ways.
-- **Score Tracking**: Players accumulate points based on their performance, with higher scores for more efficient use of birds.
-- **Pause and Resume**: Players can save their progress and pick up where they left off later, making the game experience more flexible and enjoyable.
+The primary goal of this project is to replicate the core mechanics of *Angry Birds* at a very basic level, while introducing features, such as multiple levels with varying difficulties, a variety of birds with different abilities, and an engaging physics-based environment that interacts with the player's actions. The game also includes a **persistence system** that allows players to pause and resume their progress, making it more convenient and user-friendly.
 
 ### **Key Features**
 
@@ -20,8 +13,6 @@ Key highlights of the game:
 - **Bird Types**: There are different types of birds, each with its own unique abilities. Some birds may explode on impact, while others may split into smaller projectiles after being launched. The player must choose the right bird for the right situation.
   
 - **Physics-Based Gameplay**: The game simulates realistic physics using **libGDX’s** physics engine. Birds fly in arcs, collide with structures, and react with realistic forces. Blocks of different materials (wood, stone, etc.) respond differently when hit.
-  
-- **Score Tracking**: The game tracks the player's score based on the number of birds used and the destruction caused. Higher scores are achieved by using fewer birds or by causing massive destruction. The score is updated live as the player progresses through the game.
   
 - **Pause and Resume**: The game allows players to pause and resume their progress. When the game is paused, the current level, bird positions, and any destroyed objects are saved. The player can then return to the game later and pick up where they left off.
 
@@ -34,6 +25,7 @@ Key highlights of the game:
 - **JUnit**: A testing framework used for writing unit tests to ensure the correctness of game logic and mechanics. Tests are written for key functionalities, such as bird movement, collision detection, and score calculation, to ensure that the game operates as expected.
 
 - **Gradle**: A build automation tool that is used to manage dependencies, compile code, and package the game. Gradle simplifies the development process by automating repetitive tasks, such as downloading dependencies and building the project.
+  
 
 ### **Gameplay Instructions**
 
