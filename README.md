@@ -1,7 +1,5 @@
 # AngryBirds
 
----
-
 ## **Project Overview**
 
 This project is an implementation of a 2D physics-based game inspired by the popular *Angry Birds* franchise. The game was developed using **libGDX**, a Java game development framework, to deliver high-performance graphics, smooth animations, and a responsive gaming experience. The game follows **object-oriented programming (OOP)** principles, ensuring that the code is modular, scalable, and easy to maintain. 
