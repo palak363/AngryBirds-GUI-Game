@@ -1,5 +1,27 @@
 # AngryBirds_AP
 
+## **Project Overview**
+
+This project is an implementation of a game inspired by the popular Angry Birds franchise. The game is developed using libGDX in Java, following object-oriented programming (OOP) principles. The main goal is to provide a fun and engaging gameplay experience with features such as multiple levels, different bird types, and interactive physics-based environments.
+
+### **Key Features**
+
+- Multiple Levels: The game includes multiple levels with increasing difficulty.
+- Bird Types: Different types of birds with unique abilities.
+- Physics-Based Gameplay: Realistic projectile motion using physics simulations.
+- Score Tracking: Keep track of the player's progress and score across levels.
+- Pause and Resume: Ability to pause and resume the game from where it left off.
+
+### **Technologies Used**
+
+- Java: The core programming language used to implement the game logic and gameplay.
+- libGDX: A Java game development framework used for rendering the game’s graphics, handling user inputs, and managing assets.
+- JUnit: For unit testing different components of the game.
+- Gradle: Used for dependency management and project build automation.
+
+
+---
+
 A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
 
 ### Platforms
@@ -79,8 +101,6 @@ Useful Gradle tasks and flags:
    ./gradlew clean
    ```
 
----
-
 ### **Additional Setup for IDE (optional)**
 
 - **For Eclipse**:
@@ -95,11 +115,10 @@ Useful Gradle tasks and flags:
 
 ---
 
-These steps should guide you from setting up the project to running the game and verifying it with tests.
 
 ### Online Sources Referenced
 
-- libGDX Documentation
-- Serialization in Java
-- JUnit 5 User Guide
-- Stack Overflow discussions for resolving technical issues
+- libGDX Documentation: https://libgdx.badlogicgames.com/
+- Angry Birds Wiki: https://angrybirds.fandom.com/wiki/Angry_Birds_Wiki
+- Unit Testing in Java: https://junit.org/junit5/
+- Stack Overflow discussions (for resolving technical issues)
