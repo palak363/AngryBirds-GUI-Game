@@ -34,7 +34,7 @@ For example, `core:clean` removes `build` folder only from the `core` project.
 
 ### Online Sources Referenced
 
-libGDX Documentation
-Serialization in Java
-JUnit 5 User Guide
-Stack Overflow discussions for resolving technical issues.
+- libGDX Documentation
+- Serialization in Java
+- JUnit 5 User Guide
+- Stack Overflow discussions for resolving technical issues
