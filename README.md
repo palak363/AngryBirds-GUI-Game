@@ -19,6 +19,21 @@ This project is an implementation of a game inspired by the popular Angry Birds 
 - JUnit: For unit testing different components of the game.
 - Gradle: Used for dependency management and project build automation.
 
+### **Gameplay Instructions**
+
+- Objective: The goal is to launch birds using a catapult and hit various structures to defeat the pigs.
+- Launching Birds: Drag to aim and release to launch a bird.
+- Controls: Use the mouse or touch to interact with the game’s interface.
+  
+### **Project Structure**
+
+- AngryBirds: The main class that starts the game and manages screens.
+- Level1, Level2, Level3: Different levels of the game, each with different setups and challenges.
+- Bird: Represents a bird in the game with methods to handle movement and collision.
+- Pig: Represents the enemies (pigs) in the game.
+- Block: Represents various types of blocks that are destroyed when hit by birds.
+- Catapult: The mechanism used to launch the birds.
+
 
 ---
 
@@ -112,6 +127,7 @@ Useful Gradle tasks and flags:
    ```bash
    ./gradlew idea
    ```
+
 
 ---
 
