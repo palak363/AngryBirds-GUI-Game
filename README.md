@@ -60,13 +60,12 @@ The project is organized into several main classes and modules, each handling a 
 
 ---
 
-
-A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
-
 ### Platforms
 
 - `core`: Main module with the application logic shared by all platforms.
 - `lwjgl3`: Primary desktop platform using LWJGL3; was called 'desktop' in older docs.
+
+  This is a [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
 
 ## **Setup Instructions**
 
