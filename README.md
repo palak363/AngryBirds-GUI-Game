@@ -2,9 +2,9 @@
 
 ## **Project Overview**
 
-This project is an implementation of a 2D physics-based game inspired by the popular *Angry Birds* franchise. The game was developed using **libGDX**, a Java game development framework, to deliver high-performance graphics, smooth animations, and a responsive gaming experience. The game follows **object-oriented programming (OOP)** principles, ensuring that the code is modular, scalable, and easy to maintain. 
+This project is an implementation of a 2D physics-based game called *Angry Birds*. The game was developed using **libGDX**, a Java game development framework. The game follows **object-oriented programming (OOP)** principles, ensuring that the code is modular and easy to maintain. 
 
-The primary goal of this project is to replicate the core mechanics of *Angry Birds* at a very basic level, while introducing features, such as multiple levels with varying difficulties, a variety of birds with different abilities, and an engaging physics-based environment that interacts with the player's actions. The game also includes a **persistence system** that allows players to pause and resume their progress, making it more convenient and user-friendly.
+The primary goal of this project is to replicate the core mechanics of *Angry Birds* at a very basic level, while introducing features, such as multiple levels with varying difficulties, a variety of birds with different abilities, and an engaging physics-based environment that interacts with the player's actions. 
 
 ### **Key Features**
 
@@ -17,15 +17,11 @@ The primary goal of this project is to replicate the core mechanics of *Angry Bi
 - **Pause and Resume**: The game allows players to pause and resume their progress. When the game is paused, the current level, bird positions, and any destroyed objects are saved. The player can then return to the game later and pick up where they left off.
 
 ### **Technologies Used**
-
-- **Java**: The core programming language used for implementing the game logic, handling user input, updating game states, and rendering the graphics. Java offers platform independence, which ensures that the game can run on different systems without modification.
-
-- **libGDX**: A powerful, open-source game development framework that simplifies the process of rendering graphics, handling input, playing sounds, and managing assets. libGDX provides a comprehensive suite of tools to help developers create rich, interactive 2D and 3D games.
-
-- **JUnit**: A testing framework used for writing unit tests to ensure the correctness of game logic and mechanics. Tests are written for key functionalities, such as bird movement, collision detection, and score calculation, to ensure that the game operates as expected.
-
-- **Gradle**: A build automation tool that is used to manage dependencies, compile code, and package the game. Gradle simplifies the development process by automating repetitive tasks, such as downloading dependencies and building the project.
-  
+- Java
+- libGDX
+- Unit
+- Gradle
+ 
 
 ### **Gameplay Instructions**
 
@@ -41,8 +37,6 @@ The primary goal of this project is to replicate the core mechanics of *Angry Bi
   - The game provides feedback with sound effects when birds hit targets or collide with blocks.
 
 ### **Project Structure**
-
-The project is organized into several main classes and modules, each handling a specific part of the game:
 
 - **AngryBirds**: The main class responsible for initializing the game and managing different screens. It handles transitions between screens, such as switching from the start screen to the level screen and from one level to the next.
 
