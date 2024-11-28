@@ -46,7 +46,7 @@ The primary goal of this project is to replicate the core mechanics of *Angry Bi
 
 - **Pig**: Represents the pig enemies. Pigs are placed on top or inside structures, and their objective is to avoid being hit by birds. When a pig is hit, it is removed from the game, and the player earns points.
 
-- **Block**: Represents the destructible blocks that make up the environment. These blocks are of different types (e.g., wood, stone, ice), and they react differently when hit by birds. Blocks can be destroyed when impacted by a bird, and their state is updated during the game.
+- **Block**: Represents the destructible blocks that make up the environment. These blocks are of different types (e.g., wood, stone, glass), and they react differently when hit by birds. Blocks can be destroyed when impacted by a bird, and their state is updated during the game.
 
 - **Catapult**: The mechanism used to launch the birds. The `Catapult` class handles the bird-launching logic, including calculating the trajectory and applying force to the bird when it is released.
 
