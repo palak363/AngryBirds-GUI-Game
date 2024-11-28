@@ -9,28 +9,19 @@
 
 ### **Key Features**
 
-- **Multiple Levels**: The game includes a variety of levels with increasing complexity and difficulty. Each level has its own set of obstacles and challenges, keeping the game fresh and exciting. Players must adapt their strategies to progress.
+- **Multiple Levels**: The game includes a variety of levels with increasing complexity and difficulty. Each level has its own set of obstacles and challenges, keeping the game fresh and exciting.
   
-- **Bird Types**: There are different types of birds, each with its own unique abilities. Some birds may explode on impact, while others may split into smaller projectiles after being launched. The player must choose the right bird for the right situation.
+- **Bird Types**: There are different types of birds provided at every level.
   
-- **Physics-Based Gameplay**: The game simulates realistic physics using **libGDX’s** physics engine. Birds fly in arcs, collide with structures, and react with realistic forces. Blocks of different materials (wood, stone, etc.) respond differently when hit.
+- **Physics-Based Gameplay**: The game simulates realistic physics using **libGDX’s** physics engine. Birds fly in arcs, collide with structures, and react with realistic forces.
   
 - **Pause and Resume**: The game allows players to pause and resume their progress. When the game is paused, the current level, bird positions, and any destroyed objects are saved. The player can then return to the game later and pick up where they left off.
-
-### **Technologies Used**
-- Java
-- libGDX
-- Unit
-- Gradle
  
-
 ### **Gameplay Instructions**
 
 - **Objective**: The primary goal of the game is to defeat the pigs by launching birds at their structures. Players must use a catapult to launch the birds at various blocks, causing them to collapse and defeat the pigs hiding inside or on top of the structures.
 
 - **Launching Birds**: Players drag to aim and release to launch a bird from a catapult. The bird follows a projectile path and collides with the environment, interacting with blocks and pigs. Players need to carefully choose the angle and force of the launch for maximum effect.
-
-- **Controls**: The game is controlled via mouse or touch input. On a touch device, players drag their finger to aim and release to launch birds. On a desktop, players click and drag the mouse to aim and click to release the bird.
 
 ### **Project Structure**
 
@@ -42,14 +33,20 @@
 
 - **Pig**: Represents the pig enemies. Pigs are placed on top or inside structures, and their objective is to avoid being hit by birds. When a pig is hit, it is removed from the game, and the player earns points.
 
-- **Block**: Represents the destructible blocks that make up the environment. These blocks are of different types (e.g., wood, stone, glass), and they react differently when hit by birds. Blocks can be destroyed when impacted by a bird, and their state is updated during the game.
+- **Block**: Represents the destructible blocks that make up the environment. These blocks are of different types (e.g., wood, stone, glass). Blocks can be destroyed when impacted by a bird, and their state is updated during the game.
 
 - **Catapult**: The mechanism used to launch the birds. The `Catapult` class handles the bird-launching logic, including calculating the trajectory and applying force to the bird when it is released.
+
+### **How to RUN**
+
+
+Run the Lwjgl3Launcher.java
+PATH: C:\Users\L2\IdeaProjects\bitbrawlers\lwjgl3\src\main\java\com\bitbrawlers\angrybirds\lwjgl3\Lwjgl3Launcher.java
 
 
 ### Online Sources Referenced
 
-- libGDX Documentation: https://libgdx.badlogicgames.com/
-- Angry Birds Wiki: https://angrybirds.fandom.com/wiki/Angry_Birds_Wiki
-- Unit Testing in Java: https://junit.org/junit5/
-- Stack Overflow discussions (for resolving technical issues)
+-https://libgdx.badlogicgames.com/
+-https://angrybirds.fandom.com/wiki/Angry_Birds_Wiki
+-https://junit.org/junit5/
+-https://libgdx.com/wiki/start/project-generation
