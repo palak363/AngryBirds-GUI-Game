@@ -2,9 +2,10 @@
 
 ## **Project Overview**
 
-This project is an implementation of a 2D physics-based game called *Angry Birds*. The game was developed using **libGDX**, a Java game development framework. The game follows **object-oriented programming (OOP)** principles, ensuring that the code is modular and easy to maintain. 
+- This project is an implementation of a 2D physics-based game called *Angry Birds*. The game was developed using **libGDX**, a Java game development framework. The game follows **object-oriented programming (OOP)** principles, ensuring that the code is modular and easy to maintain. 
+- This project implements serialization to enable saving and resuming the game state. Serialization allows the game to store the current state of a level, including the positions of objects, scores, and other relevant data, in a file. This data can later be deserialized to resume the game from the saved state.
+- The primary goal of this project is to replicate the core mechanics of *Angry Birds* at a very basic level, while introducing features, such as multiple levels with varying difficulties, a variety of birds with different abilities, and an engaging physics-based environment that interacts with the player's actions. 
 
-The primary goal of this project is to replicate the core mechanics of *Angry Birds* at a very basic level, while introducing features, such as multiple levels with varying difficulties, a variety of birds with different abilities, and an engaging physics-based environment that interacts with the player's actions. 
 
 ### **Key Features**
 
