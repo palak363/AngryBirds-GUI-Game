@@ -31,11 +31,6 @@ The primary goal of this project is to replicate the core mechanics of *Angry Bi
 
 - **Controls**: The game is controlled via mouse or touch input. On a touch device, players drag their finger to aim and release to launch birds. On a desktop, players click and drag the mouse to aim and click to release the bird.
 
-- **Game Features**: 
-  - Birds can be launched from the catapult, one at a time.
-  - Structures built from different materials (wood, stone, etc.) react differently when hit by birds.
-  - The game provides feedback with sound effects when birds hit targets or collide with blocks.
-
 ### **Project Structure**
 
 - **AngryBirds**: The main class responsible for initializing the game and managing different screens. It handles transitions between screens, such as switching from the start screen to the level screen and from one level to the next.
