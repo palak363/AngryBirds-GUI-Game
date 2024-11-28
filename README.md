@@ -40,7 +40,7 @@
 ### **How to RUN**
 
 
-Run the Lwjgl3Launcher.java
+Run the Lwjgl3Launcher.java file and enjoy playing the game
 
 PATH: C:\Users\L2\IdeaProjects\bitbrawlers\lwjgl3\src\main\java\com\bitbrawlers\angrybirds\lwjgl3\Lwjgl3Launcher.java
 
