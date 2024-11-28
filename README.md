@@ -41,6 +41,7 @@
 
 
 Run the Lwjgl3Launcher.java
+
 PATH: C:\Users\L2\IdeaProjects\bitbrawlers\lwjgl3\src\main\java\com\bitbrawlers\angrybirds\lwjgl3\Lwjgl3Launcher.java
 
 
