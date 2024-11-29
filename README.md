@@ -18,7 +18,7 @@ The primary goal is to replicate the core mechanics of Angry Birds at a basic le
   Various levels with increasing complexity and difficulty. Each level presents unique obstacles and challenges to keep the gameplay fresh and exciting.
 
 - **Bird Types:**  
-  Different types of birds are provided at every level, each with unique abilities.
+  Different types of birds are provided at every level
 
 - **Physics-Based Gameplay:**  
   Simulates realistic physics using libGDX’s physics engine. Birds fly in arcs, collide with structures, and react to realistic forces.
