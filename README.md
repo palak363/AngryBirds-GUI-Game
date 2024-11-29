@@ -73,8 +73,11 @@ The primary goal is to replicate the core mechanics of Angry Birds at a basic le
 ## Online Sources Referenced
 
 -https://libgdx.badlogicgames.com/
+
 -https://angrybirds.fandom.com/wiki/Angry_Birds_Wiki
+
 -https://junit.org/junit5/
+
 -https://libgdx.com/wiki/start/project-generation
 
 ---
