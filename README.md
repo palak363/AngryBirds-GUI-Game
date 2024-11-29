@@ -1,86 +1,43 @@
-# Angry Birds Game
+#AngryBirds
 
-## Project Overview
-The second submission is a static GUI implementation of the **Angry Birds** game using **libGDX**. It features birds, pigs, and materials typically found in the game but focuses on static game screens and does not yet include dynamic gameplay elements.
+##Project Overview
+This project is an implementation of a 2D physics-based game called Angry Birds. The game was developed using libGDX, a Java game development framework. The game follows object-oriented programming (OOP) principles, ensuring that the code is modular and easy to maintain.
+This project implements serialization to enable saving and resuming the game state. Serialization allows the game to store the current state of a level, including the positions of objects, scores, and other relevant data, in a file. This data can later be deserialized to resume the game from the saved state.
+The primary goal of this project is to replicate the core mechanics of Angry Birds at a very basic level, while introducing features, such as multiple levels with varying difficulties, a variety of birds with different abilities, and an engaging physics-based environment that interacts with the player's actions.
+Key Features
+Multiple Levels: The game includes a variety of levels with increasing complexity and difficulty. Each level has its own set of obstacles and challenges, keeping the game fresh and exciting.
 
-## Birds
-The game includes a variety of birds with different characteristics:
-1. **Red Bird** – no special ability (default characterstic)
-2. **Blue Bird** – Freezes upon clicking
-3. **Black Bird** – Explodes upon impact
-4. **Pink Bird** – Expands like bubble upon hitting
-5. **Yellow Bird** – Splits into multiple upon clicking
-6. **Green Bird** – Boomerang effect upon clicking
+Bird Types: There are different types of birds provided at every level.
 
-## Pigs
-Different sizes and types of pigs act as the enemies:
-1. **Small Pig** – weakest enemy
-2. **Medium Pig** – moderate challenge
-3. **Large Pig** – Stronger than small and medium pigs
-4. **King Pig** – The strongest enemy
+Physics-Based Gameplay: The game simulates realistic physics using libGDX’s physics engine. Birds fly in arcs, collide with structures, and react with realistic forces.
 
-## Materials
-The game objects are built using the following materials:
-1. **Wood** – Weak, breaks easily
-2. **Glass** – Shatters quickly but lightweight
-3. **Rock** – The toughest material, hard to destroy
+Pause and Resume: The game allows players to pause and resume their progress. When the game is paused, the current level, bird positions, and any destroyed objects are saved. The player can then return to the game later and pick up where they left off.
 
-## How to Run the Game
-The main class that launches the game is `Lwjgl3Launcher`. To run the game:
-1. Open your preferred IDE (such as IntelliJ or Eclipse).
-2. Ensure the **libGDX** dependencies are correctly set up.
-3. Run the `Lwjgl3Launcher` class to launch the game.
+###Gameplay Instructions
+Objective: The primary goal of the game is to defeat the pigs by launching birds at their structures. Players must use a catapult to launch the birds at various blocks, causing them to collapse and defeat the pigs hiding inside or on top of the structures.
 
+Launching Birds: Players drag to aim and release to launch a bird from a catapult. The bird follows a projectile path and collides with the environment, interacting with blocks and pigs. Players need to carefully choose the angle and force of the launch for maximum effect.
 
-## OOP Concepts:
+###Project Structure
+AngryBirds: The main class responsible for initializing the game and managing different screens. It handles transitions between screens, such as switching from the start screen to the level screen and from one level to the next.
 
-## 1. Encapsulation:
+Level1, Level2, Level3: These are different levels in the game, each having a unique setup with various obstacles and pigs. The levels are structured as Screen classes in libGDX, with each level containing its own blocks, birds, and physics objects.
 
-All member variables, such as background, back, level1, spriteBatch, and game, are declared as private, limiting their visibility to within the class. Only methods within each class (render, dispose, etc.) have direct access to the encapsulated data, providing an interface to interact with the underlying details.
+Bird: Represents the bird objects in the game. The Bird class is the parent class for all bird types, and it contains methods for movement, collision detection, and interaction with the environment. Different bird types (e.g., red, yellow, or explosive birds) inherit from the Bird class.
 
-## 2. Abstraction(through Interface): 
+Pig: Represents the pig enemies. Pigs are placed on top or inside structures, and their objective is to avoid being hit by birds. When a pig is hit, it is removed from the game, and the player earns points.
 
-Screen Interface Implementation: All classes (SelectLevelScreen, StartScreen, WinScreen) implement the Screen interface, hiding specific implementation details of each screen type. Users of these classes only need to know they can call render, resize, show, hide, pause, resume, and dispose without needing to understand each screen's internal workings.
+Block: Represents the destructible blocks that make up the environment. These blocks are of different types (e.g., wood, stone, glass). Blocks can be destroyed when impacted by a bird, and their state is updated during the game.
 
-Game Screen Transitions: The game.setScreen(new MenuScreen(game)); or game.setScreen(new SelectLevelScreen(game)); calls abstract the details of screen transitions, allowing the main game to switch screens without knowing their specifics.
+Catapult: The mechanism used to launch the birds. The Catapult class handles the bird-launching logic, including calculating the trajectory and applying force to the bird when it is released.
 
+###How to RUN
+Run the Lwjgl3Launcher.java file and enjoy playing the game
 
-## 3. Inheritance: 
+PATH: C:\Users\L2\IdeaProjects\bitbrawlers\lwjgl3\src\main\java\com\bitbrawlers\angrybirds\lwjgl3\Lwjgl3Launcher.java
 
-Screen Interface: The SelectLevelScreen, StartScreen, and WinScreen classes inherit from the Screen interface, gaining access to a set of expected methods (render, resize, etc.) that each screen must define. This provides a uniform structure for all screens in the game.
-Use of OrthographicCamera and Texture Classes: The game also inherits basic rendering and positioning functionalities through OrthographicCamera and Texture, though they are not explicitly extended. 
+###Online Sources Referenced
+-https://libgdx.badlogicgames.com/ -https://angrybirds.fandom.com/wiki/Angry_Birds_Wiki -https://junit.org/junit5/ -https://libgdx.com/wiki/start/project-generation
 
-All types of bird inherit from Bird class, All types of Blocks inherit froom Block class and all types of Pigs inherit from Pig class.
-
-## 4. Composition: 
-
-AngryBirds Game Reference: Each screen class (SelectLevelScreen, StartScreen, WinScreen) has a reference to the AngryBirds game instance, allowing each screen to interact with the core game state and resources.
-Textures and Sounds: Textures (e.g., background, mainMenu, exit) and sounds (e.g., buttonSound) are composed within each screen, illustrating the "has-a" relationship where each screen "has" its own textures and sounds.
-
-Camera and SpriteBatch: Each screen includes its OrthographicCamera and SpriteBatch objects, allowing for independent rendering and camera management for each screen without interdependence.
-
-## 5. Method overriding: 
-
-Screen Interface Methods: The render, resize, show, hide, pause, resume, and dispose methods in SelectLevelScreen, StartScreen, and WinScreen override the methods defined in the Screen interface. Each screen provides unique functionality for these methods.
-
-## 6. Polymorphism:
-
-Screen Interface Polymorphism: By implementing the Screen interface, each screen class (SelectLevelScreen, StartScreen, WinScreen) provides its specific implementation of render, dispose, and other methods. This is achieved through method overriding.
-
-Game Screen Switching: The setScreen call demonstrate polymorphism as the setScreen method in the AngryBirds game object can accept any object implementing Screen, allowing flexible screen transitions without altering the game’s logic.
-
-
-Resources 
---------------------------------------------------
-https://libgdx.com/wiki/start/a-simple-game
-https://libgdx.com/wiki/graphics/2d/scene2d/scene2d
-https://libgdx.com/wiki/extensions/physics/box2d
-https://github.com/encryptedcation/TankStars/tree/master
-
-# Group members 
-Palak Yadav: 2023363
-Umang Aggarwal: 2023567
-
-#GITHUB
-https://github.com/palak363/AngryBirds
-
+###GITHUB LINK
+https://github.com/palak363/AngryBirds_Deadline3/tree/main
